@@ -1,6 +1,8 @@
-bower_components/
+public/bower_components/
 build/
 node_modules/
 
 .idea/
 *.iml
+
+firebase-debug.log
