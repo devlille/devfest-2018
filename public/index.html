@@ -13,10 +13,11 @@
     <link rel="manifest" href="/manifest.json">
 
     <meta name="theme-color" content="#1A237E">
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
 
     <!-- Add to homescreen for Chrome on Android. Fallback for manifest.json -->
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="My App">
+    <meta name="application-name" content="Devfest Lille">
     <link rel="icon"
           sizes="192x192"
           href="/images/manifest/icon-192x192.png">
@@ -24,7 +25,7 @@
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="My App">
+    <meta name="apple-mobile-web-app-title" content="Devfest Lille">
 
     <!-- Homescreen icons -->
     <link rel="apple-touch-icon" href="/images/manifest/icon-48x48.png">
@@ -35,7 +36,7 @@
 
     <!-- Tile icon for Windows 8 (144x144 + tile color) -->
     <meta name="msapplication-TileImage" content="/images/manifest/icon-144x144.png">
-    <meta name="msapplication-TileColor" content="#3f51b5">
+    <meta name="msapplication-TileColor" content="#1a237e">
     <meta name="msapplication-tap-highlight" content="no">
 
     <!-- Web animation polyfill -->
@@ -78,46 +79,39 @@
                 onload();
             }
         })();
-
-        // Load pre-caching Service Worker
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function () {
-                navigator.serviceWorker.register('/service-worker.js');
-            });
-        }
     </script>
 
     <link rel="import" href="/bower_components/polymer/polymer.html">
     <link rel="import" href="/bower_components/platinum-sw/platinum-sw-elements.html">
+    <link rel="import" href="/bower_components/platinum-sw/service-worker.js">
     <link rel="import" href="/bower_components/polymerfire/firebase-app.html">
-    <link rel="import" href="/my-app.html">
+    <link rel="import" href="/df-app.html">
 
     <style media="screen">
         body {
-            font-family: 'Roboto', 'Noto', sans-serif;
+            font-family: 'Didact Gothic', sans-serif;
             line-height: 1.5;
             min-height: 100vh;
             background-color: #eeeeee;
         }
     </style>
+
+    <platinum-sw-register
+            auto-register
+            skip-waiting
+            clients-claim
+            reload-on-install
+            href="sw-import.js">
+        <platinum-sw-cache
+                default-cache-strategy="networkFirst">
+        </platinum-sw-cache>
+    </platinum-sw-register>
+    <firebase-app
+            name="devfest-lille"
+            api-key="AIzaSyDQesGq0mAV9ElKMSDpxtKK4uTDuQZGgDE"
+            auth-domain="devfest-lille.firebaseapp.com"
+            database-url="https://devfest-lille.firebaseio.com">
+    </firebase-app>
 </head>
-<body>
-<platinum-sw-register
-        auto-register
-        skip-waiting
-        clients-claim
-        reload-on-install
-        href="sw-import.js">
-    <platinum-sw-cache
-            default-cache-strategy="networkFirst">
-    </platinum-sw-cache>
-</platinum-sw-register>
-<firebase-app
-        name="devfest-lille"
-        api-key="AIzaSyDQesGq0mAV9ElKMSDpxtKK4uTDuQZGgDE"
-        auth-domain="devfest-lille.firebaseapp.com"
-        database-url="https://devfest-lille.firebaseio.com">
-</firebase-app>
-<my-app></my-app>
-</body>
+<df-app></df-app>
 </html>
