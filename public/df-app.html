@@ -16,16 +16,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <dom-module id="df-app">
 	<template>
-		<style>
-			body {
-				margin: 0;
-				font-family: 'Roboto', 'Noto', sans-serif;
-				background-color: #eee;
-				scroll-behavior: smooth;
-			}
-			
+		<style>			
 			header {
 				background-color: white;
+				height: 364px;
 			}
 			
 			app-toolbar {
@@ -40,29 +34,37 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 			.nav {
 				height: 64px;
 				margin: 0;
-				padding: 0;
+				padding: 0 0 0 60px;
 				text-align: center;
-				background-color: rgba(255, 255, 255, 0.8);
+				background-color: #1a237e;
+				box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
 			}
 			
 			.nav li {
 				display: inline-block;
 				list-style: none;
+   	 		vertical-align: top;
 			}
 			
 			.nav a {
 				display: inline-block;
-				font-weight: 12px;
+				font-size: 20px;
 				line-height: 64px;
 				text-decoration: none;
-				color: black;
+				color: #fff;
 				font-weight: 300;
 				margin: 0 10px;
 			}
 			
 			.nav a:hover {
-				color: #444;
-				border-bottom: 1px solid #999;
+				color: #FFCCBC;
+				border-bottom: 4px solid #FF5722;
+			}
+
+			.nav .icon {
+				left: 0;
+				margin: 6px;
+				position: absolute;
 			}
 			
 			[threshold-triggered] {
@@ -79,7 +81,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 			.second,
 			.third,
 			.fourth {
-				height: 640px;
+				height: 300px;
+			}
+			
+			.first {
+				--app-box-background-front-layer: {
+					background-image: url(/images/e-artsup-1.jpg);
+					background-position: bottom;
+					padding-bottom: 120px;
+					margin-top: -20px;
+					height: 100%;
+				}
+				;
 			}
 			
 			.second {
@@ -116,7 +129,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 			}
 			
 			section {
-				padding-top: 100px;
+				padding-top: 50px;
 			}
 			
 			article {
@@ -144,36 +157,37 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 				margin: 20px auto;
 				background-color: black;
 			}
+
+			.logo {
+				max-height: 250px;
+				max-width: 100%;
+			}
 		</style>
 
-    <body fullbleed>
       <header>
         <app-toolbar>
           <div main-title>
-            <img src="/images/logo.svg"/>
-            <h1>09 Juin 2017 - e-artsup</h1>
+            <img class=logo src="/images/logo.png"/>
           </div> 
         </app-toolbar>
         <app-box threshold="300">
-          <!--<ul role="navigation" class="nav">
-            <li><a href="#speed">Speed</a></li>
-            <li><a href="#modern">Modern</a></li>
-            <li><a href="#standard">Standard</a></li>
-            <li><a href="#create">Create</a></li>
-          </ul>-->
+          <ul role="navigation" class="nav">
+						<li class="icon"><img src="/images/icon.png" /></li>
+            <li><a href="#speed">Le devfest</a></li>
+            <!--<li><a href="#modern">Agenda</a></li>
+            <li><a href="#standard">Lieu</a></li>-->
+          </ul>
         </app-box>
       </header>
 
-      <!--<main>
+      <main>
         <section id="speed">
           <article>
             <hr />
-            <h2>Built for Speed</h2>
-            <p>Polymer 1.0 replaces the shadow DOM polyfill with a lightweight shim, uses a new, faster data-binding system, and significantly reduces code size.</p>
+            <h2>Devfest Lille 2017</h2>
+            <p>Rejoignez nous pour une journée de conférences, de code labs, d'échanges sur les sujets du Web, du Mobile, du Cloud, des technologies Google et de leur utilisation par les acteurs locaux.</p>
           </article>
-          <app-box class="first" effects="parallax-background">
-            <img background src="//app-layout-assets.appspot.com/assets/bg1.jpg" style="width:100%; height: 900px" />
-          </app-box>
+          <app-box class="first" effects="parallax-background"></app-box>
         </section>
 
         <section id="modern">
@@ -185,7 +199,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <app-box class="second" effects="parallax-background"></app-box>
         </section>
 
-        <section id="standard">
+        <!--<section id="standard">
           <article>
             <hr />
             <h2>Using Web Components</h2>
@@ -201,9 +215,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <p>The Polymer library makes it easy to create your own powerful elements. Give your element some markup and properties, and then use it on a site. Polymer provides useful features like templating and data binding to reduce the amount of boilerplate you need to write.</p>
           </article>
           <app-box class="fourth" effects="parallax-background"></app-box>
-        </section>
-      </main>-->
-    </body>
+        </section>-->
+      </main>
 	</template>
 
 	<script>

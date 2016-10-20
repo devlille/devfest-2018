@@ -88,14 +88,17 @@
     <link rel="import" href="/df-app.html">
 
     <style media="screen">
-        body {
+        body { 
+            margin: 0;
             font-family: 'Didact Gothic', sans-serif;
-            line-height: 1.5;
-            min-height: 100vh;
-            background-color: #eeeeee;
-        }
+            background-color: #eee;
+            scroll-behavior: smooth;
+            color: #777777;
+        }   
     </style>
+</head>
 
+<body fullbleed>
     <platinum-sw-register
             auto-register
             skip-waiting
@@ -112,6 +115,6 @@
             auth-domain="devfest-lille.firebaseapp.com"
             database-url="https://devfest-lille.firebaseio.com">
     </firebase-app>
-</head>
 <df-app></df-app>
+</body> 
 </html>
