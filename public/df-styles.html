@@ -1,0 +1,42 @@
+
+<link rel="import" href="/bower_components/paper-styles/color.html">
+
+<dom-module id="shared-styles">
+  <template>
+
+	<style is="shared-styles">
+        :root {
+            --primary-color: var(--paper-indigo-900);
+            --secondary-color: var(--paper-deep-orange-500);
+        }
+
+        paper-button {
+            color: white;
+            font-size: 14px;
+            width: 185px;
+            margin-bottom: 8px;
+            justify-content: center;    
+            text-transform: uppercase;
+            outline-width: 0;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+        
+        paper-button.primary {
+            background-color: var(--primary-color);
+        }
+        
+        paper-button.secondary {
+            background-color: var(--secondary-color);
+        }
+
+        .text.primary {
+            color: var(--primary-color);
+        }
+
+        .text.secondary {
+            color: var(--secondary-color);
+        }
+	</style>
+  </template>
+</dom-module>

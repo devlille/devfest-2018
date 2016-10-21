@@ -1,0 +1,147 @@
+
+<dom-module id="df-header">
+	<template>
+
+		<style include="shared-styles"></style>
+		
+		<style>			
+			header {
+				height: 364px;
+			}
+
+			header app-toolbar {
+                height: 300px;
+				z-index: 0;
+			}
+
+			header app-toolbar, header .header-cta .header-cta-content::before {
+				background: url("/images/header.png") 0 / cover local;
+				background-position: top center;
+				background-size: 100vw;
+			}	
+			
+			header .header-cta {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+				font-size: 18px;
+				font-weight: 400;
+				letter-spacing: 5px;
+				text-align: center;
+				color: var(--primary-color);
+                height: 300px;
+				width: 100%;
+			}
+
+			header .header-cta-content {
+				padding: 16px;
+				padding-bottom: 8px;
+				position: relative; 
+				background: hsla(0,0%,100%,.7) border-box;
+				overflow: hidden; 
+				max-width: 475px;
+				margin: 0 auto;
+				border-radius: 3px;
+				box-shadow: 0 0 0 1px hsla(0,0%,100%,.3) inset, 0 .5em 1em rgba(0, 0, 0, 0.6);
+				width: 70%;
+			} 
+
+			header .header-cta .header-cta-content::before { 
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				filter: blur(10px);
+				margin: -39px;    
+				z-index: -1;
+			}
+			
+			.nav {
+				height: 64px;
+				margin: 0;
+				padding: 0;
+				text-align: center;
+				background-color: var(--primary-color);
+				box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+			}
+			
+			.nav li {
+				display: inline-block;
+				list-style: none;
+   	 		    vertical-align: top;
+			}
+			
+			.nav a {
+				display: inline-block;
+				font-size: 20px;
+				line-height: 64px;
+				text-decoration: none;
+				color: #fff;
+				font-weight: 300;
+				margin: 0 10px;
+			}
+
+			.nav .icon a {
+				line-height: 0;
+			}
+
+			.nav a:hover {
+				color: #FFCCBC;
+				border-bottom: 4px solid #FF5722;
+			}
+
+			.nav .icon img {
+				height: 64px;
+			} 
+			
+			[threshold-triggered] {
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				z-index: 1;
+				-webkit-backdrop-filter: saturate(180%) blur(20px);
+				backdrop-filter: saturate(180%) blur(20px);
+			}
+
+			.logo {
+				max-height: 150px;
+				max-width: 100%;
+				position: relative;
+			}
+		</style>
+
+      <header>
+        <app-toolbar>
+          <div class="header-cta">
+            <div class="header-cta-content">
+                <img class=logo src="/images/logo.svg"/>
+                <div>
+                    <paper-button raised class="primary">Inscription</paper-button>
+                    <paper-button raised class="secondary">Call for paper</paper-button>
+                </div>
+            </div>
+          </div> 
+        </app-toolbar>
+        <app-box threshold="300">
+          <ul role="navigation" class="nav">
+            <li class="icon">
+                <a href="#speed">
+                    <img src="/images/icon.svg" />
+                </a>
+            </li>
+            <li><a href="#modern">Agenda</a></li>
+            <li><a href="#standard">Lieu</a></li>
+          </ul>
+        </app-box>
+      </header>
+	</template>
+
+	<script>
+    Polymer({
+      is: 'df-header'
+    });
+  </script>
+</dom-module>

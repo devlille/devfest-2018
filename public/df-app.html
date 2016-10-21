@@ -1,82 +1,22 @@
-<!--
-@license
-Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
-This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-Code distributed by Google as part of the polymer project is also
-subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
--->
-
 <link rel="import" href="/bower_components/polymer/polymer.html">
 <link rel="import" href="/bower_components/app-layout/app-toolbar/app-toolbar.html">
 <link rel="import" href="/bower_components/app-layout/app-box/app-box.html">
 <link rel="import" href="/bower_components/app-layout/app-scroll-effects/app-scroll-effects.html">
-<link rel="import" href="df-icons.html">
+<link rel="import" href="/bower_components/paper-button/paper-button.html">
+<link rel="import" href="/bower_components/google-map/google-map.html">
+<link rel="import" href="df-header.html">
+<link rel="import" href="df-styles.html">
 
 <dom-module id="df-app">
 	<template>
+
+		<style include="shared-styles"></style>
+		
 		<style>			
-			header {
-				background-color: white;
-				height: 364px;
-			}
-			
-			app-toolbar {
-				font-size: 18px;
-				font-weight: 400;
-				letter-spacing: 5px;
-				text-align: center;
-				color: #1a237e;
-        height: 300px;
-			}
-			
-			.nav {
-				height: 64px;
-				margin: 0;
-				padding: 0 0 0 60px;
-				text-align: center;
-				background-color: #1a237e;
-				box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
-			}
-			
-			.nav li {
-				display: inline-block;
-				list-style: none;
-   	 		vertical-align: top;
-			}
-			
-			.nav a {
-				display: inline-block;
-				font-size: 20px;
-				line-height: 64px;
-				text-decoration: none;
-				color: #fff;
-				font-weight: 300;
-				margin: 0 10px;
-			}
-			
-			.nav a:hover {
-				color: #FFCCBC;
-				border-bottom: 4px solid #FF5722;
+			h2 {
+				color: var(--primary-color);	
 			}
 
-			.nav .icon {
-				left: 0;
-				margin: 6px;
-				position: absolute;
-			}
-			
-			[threshold-triggered] {
-				position: fixed;
-				top: 0;
-				left: 0;
-				right: 0;
-				z-index: 1;
-				-webkit-backdrop-filter: saturate(180%) blur(20px);
-				backdrop-filter: saturate(180%) blur(20px);
-			}
-			
 			.first,
 			.second,
 			.third,
@@ -129,86 +69,85 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 			}
 			
 			section {
-				padding-top: 50px;
+				padding-top: 25px;
 			}
 			
 			article {
 				font-weight: 100;
 				max-width: 500px;
 				text-align: center;
-				margin: 0 auto 100px auto;
+				margin: 0 auto 50px auto;
 			}
 			
 			article h2 {
 				font-weight: 100;
-				font-size: 50px;
+				font-size: 34px;
 				margin: 5px;
 			}
 			
 			article p {
-				font-size: 18px;
+				font-size: 20px;
 				line-height: 30px;
+				padding: 0 16px;
 			}
 			
 			article hr {
 				width: 100px;
-				height: 1px;
+				height: 2px;
 				border: none;
 				margin: 20px auto;
-				background-color: black;
+				background-color: #FF5722;
 			}
 
-			.logo {
-				max-height: 250px;
-				max-width: 100%;
+			.navigate-button {
+				position: absolute;
+				bottom: 10px;
+				right: 6px;
 			}
 		</style>
 
-      <header>
-        <app-toolbar>
-          <div main-title>
-            <img class=logo src="/images/logo.png"/>
-          </div> 
-        </app-toolbar>
-        <app-box threshold="300">
-          <ul role="navigation" class="nav">
-						<li class="icon"><img src="/images/icon.png" /></li>
-            <li><a href="#speed">Le devfest</a></li>
-            <!--<li><a href="#modern">Agenda</a></li>
-            <li><a href="#standard">Lieu</a></li>-->
-          </ul>
-        </app-box>
-      </header>
+      <df-header></df-header>
 
       <main>
         <section id="speed">
           <article>
-            <hr />
             <h2>Devfest Lille 2017</h2>
-            <p>Rejoignez nous pour une journée de conférences, de code labs, d'échanges sur les sujets du Web, du Mobile, du Cloud, des technologies Google et de leur utilisation par les acteurs locaux.</p>
+            <hr />
+            <p>Rejoignez nous pour une journée de <span class="primary text">conférences</span>, de <span class="primary text">code labs</span>, d'<span class="primary text">échanges</span> sur les sujets du <span class="secondary text">Web</span>, du <span class="secondary text">Mobile</span>, du <span class="secondary text">Cloud</span>, des <span class="secondary text">technologies Google</span> et de leur utilisation par les <span class="secondary text">acteurs locaux</span>.</p>
           </article>
           <app-box class="first" effects="parallax-background"></app-box>
         </section>
 
         <section id="modern">
           <article>
+            <h2>Le lieu : e-artsup</h2>
             <hr />
-            <h2>For Modern Browsers</h2>
-            <p>Polymer is built from the ground up for modern browsers, using the latest web platform APIs. Polyfills provide support on evergreen browsers for APIs that aren't universal yet.</p>
+            <p>L'école de la passion créative‎</p>
+						<p>10-12 Rue du Bas Jardin, 59000 Lille</p>
           </article>
-          <app-box class="second" effects="parallax-background"></app-box>
+          <app-box class="second" effects="parallax-background">
+						<google-map 
+							latitude="50.62387"
+							longitude="3.066642" 
+							api-key="AIzaSyAIIO4U1G38TKIrJr8-CMi2t5mg7KGfrv8" 
+							zoom="13"
+							additional-map-options='{"draggable": false, "zoomControl": false, "scrollwheel": false, "disableDoubleClickZoom": true}'>
+							<google-map-marker latitude="50.62387" longitude="3.066642"draggable="false" icon="/images/map-marker.png">
+							</google-map-marker>
+						</google-map>
+						<paper-button raised class="primary navigate-button">Y aller !</paper-button>
+					</app-box>
         </section>
 
-        <!--<section id="standard">
+        <section id="standard">
           <article>
+            <h2>Sponsors</h2>
             <hr />
-            <h2>Using Web Components</h2>
-            <p>Polymer leverages web components, a new set of standards designed to provide reusable components for the web.</p>
           </article>
           <app-box class="third" effects="parallax-background"></app-box>
         </section>
 
-        <section id="create">
+        <!--<section id="create">
           <article>
             <hr />
             <h2>Create your own elements</h2>
