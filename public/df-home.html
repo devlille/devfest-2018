@@ -1,0 +1,152 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/app-layout/app-box/app-box.html">
+<link rel="import" href="/bower_components/app-layout/app-scroll-effects/app-scroll-effects.html">
+<link rel="import" href="/bower_components/paper-button/paper-button.html">
+<link rel="import" href="/bower_components/google-map/google-map.html">
+<link rel="import" href="df-styles.html">
+
+<dom-module id="df-home">
+	<template>
+
+		<style include="shared-styles"></style>
+		
+		<style>			
+			h2 {
+				color: var(--primary-color);	
+			}
+
+			.first,
+			.second,
+			.third,
+			.fourth {
+				height: 300px;
+			}
+			
+			.first {
+				--app-box-background-front-layer: {
+					background-image: url(/images/e-artsup-1.jpg);
+					background-position: bottom;
+					padding-bottom: 120px;
+					margin-top: -20px;
+					height: 100%;
+				}
+				;
+			}
+			
+			.second {
+				--app-box-background-front-layer: {
+					background-image: url(//app-layout-assets.appspot.com/assets/bg2.jpg);
+					background-position: bottom;
+					padding-bottom: 120px;
+					margin-top: -20px;
+					height: 100%;
+				}
+				;
+			}
+			
+			.third {
+				--app-box-background-front-layer: {
+					background-image: url(//app-layout-assets.appspot.com/assets/bg3.jpg);
+					background-position: bottom;
+					padding-bottom: 120px;
+					margin-top: -20px;
+					height: 100%;
+				}
+				;
+			}
+			
+			.fourth {
+				--app-box-background-front-layer: {
+					background-image: url(//app-layout-assets.appspot.com/assets/bg4.jpg);
+					background-position: bottom;
+					padding-bottom: 120px;
+					margin-top: -20px;
+					height: 100%;
+				}
+				;
+			}
+			
+			section {
+				padding-top: 25px;
+			}
+			
+			article {
+				font-weight: 100;
+				max-width: 500px;
+				text-align: center;
+				margin: 0 auto 50px auto;
+			}
+			
+			article h2 {
+				font-weight: 100;
+				font-size: 34px;
+				margin: 5px;
+			}
+			
+			article p {
+				font-size: 20px;
+				line-height: 30px;
+				padding: 0 16px;
+			}
+			
+			article hr {
+				width: 100px;
+				height: 2px;
+				border: none;
+				margin: 20px auto;
+				background-color: #FF5722;
+			}
+
+			.navigate-button {
+				position: absolute;
+				bottom: 10px;
+				right: 6px;
+			}
+		</style>
+
+      <main>
+        <section id="devfest">
+          <article>
+            <h2>Devfest Lille 2017</h2>
+            <hr />
+            <p>Rejoignez nous pour une journée de <span class="primary text">conférences</span>, de <span class="primary text">code labs</span>, d'<span class="primary text">échanges</span> sur les sujets du <span class="secondary text">Web</span>, du <span class="secondary text">Mobile</span>, du <span class="secondary text">Cloud</span>, des <span class="secondary text">technologies Google</span> et de leur utilisation par les <span class="secondary text">acteurs locaux</span>.</p>
+          </article>
+          <app-box class="first" effects="parallax-background"></app-box>
+        </section>
+
+        <section id="location">
+          <article>
+            <h2>Le lieu : e-artsup</h2>
+            <hr />
+            <p>L'école de la passion créative‎</p>
+						<p>10-12 Rue du Bas Jardin, 59000 Lille</p>
+          </article>
+          <app-box class="second" effects="parallax-background">
+            <google-map 
+                latitude="50.62387"
+                longitude="3.066642" 
+                api-key="AIzaSyAIIO4U1G38TKIrJr8-CMi2t5mg7KGfrv8" 
+                zoom="13"
+                additional-map-options='{"draggable": false, "zoomControl": false, "scrollwheel": false, "disableDoubleClickZoom": true}'>
+                <google-map-marker latitude="50.62387" longitude="3.066642"draggable="false" icon="/images/map-marker.png">
+                </google-map-marker>
+            </google-map>
+            <paper-button raised class="primary navigate-button">Y aller !</paper-button>
+            </app-box>
+        </section>
+
+        <section id="sponsors">
+          <article>
+            <h2>Sponsors</h2>
+            <hr />
+          </article>
+        </section>
+      </main>
+	</template>
+
+	<script>
+    Polymer({
+      is: 'df-home'
+    });
+  </script>
+</dom-module>

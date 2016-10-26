@@ -1,3 +1,5 @@
+<link rel="import" href="/bower_components/iron-selector/iron-selector.html">
+<link rel="import" href="/bower_components/paper-button/paper-button.html">
 
 <dom-module id="df-header">
 	<template>
@@ -127,13 +129,15 @@
         </app-toolbar>
         <app-box threshold="300">
           <ul role="navigation" class="nav">
-            <li class="icon">
-                <a href="#speed">
-                    <img src="/images/icon.svg" />
-                </a>
-            </li>
-            <li><a href="#modern">Agenda</a></li>
-            <li><a href="#standard">Lieu</a></li>
+			<iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
+				<li name="home" class="icon">
+					<a href="/home">
+						<img src="/images/icon.svg" />
+					</a>
+				</li>
+				<li name="schedule"><a href="/schedule">Agenda</a></li>
+				<li name="location"><a href="/location">Lieu</a></li>
+			</iron-selector>
           </ul>
         </app-box>
       </header>
