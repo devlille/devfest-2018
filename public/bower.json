@@ -10,7 +10,8 @@
     "web-animations-js": "^2.2.2",
     "polymerfire": "^0.9.7",
     "google-map": "GoogleWebComponents/google-map#^1.1.13",
-    "paper-styles": "PolymerElements/paper-styles#^1.1.5"
+    "paper-styles": "PolymerElements/paper-styles#^1.1.5",
+    "paper-tabs": "PolymerElements/paper-tabs#^1.6.3"
   },
   "devDependencies": {
     "web-component-tester": "^4.0.0"
