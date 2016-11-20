@@ -79,19 +79,20 @@
 			}
 			
 			.nav paper-tab a {
-				display: inline-block;
 				list-style: none;
    	 		    vertical-align: top;
 			}
 			
 			.nav a {
-				display: inline-block;
 				font-size: 20px;
-				line-height: 64px;
 				text-decoration: none;
 				color: #fff;
 				font-weight: 300;
-				margin: 0 10px;
+				margin: 0 5px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                white-space: pre-line;
 			}
 
 			.nav .icon a {
@@ -145,7 +146,9 @@
 				<paper-tab name="utils"><a href="#/utils">Pratique</a></paper-tab>-->
 				<paper-tab name="sponsors"><a href="#/sponsors">Sponsors</a></paper-tab>
 				<paper-tab name="faq"><a href="#/faq">FAQ</a></paper-tab>
-				<paper-tab name="code-of-conduct"><a href="#/code-of-conduct">Code de conduite</a></paper-tab>
+				<paper-tab name="code-of-conduct">
+                    <a id="code-of-conduct" href="#/code-of-conduct">Code de conduite</a>
+                </paper-tab>
 			</paper-tabs>
           </section>
         </app-box>
