@@ -11,68 +11,104 @@
 <link rel="import" href="df-home.html">
 <link rel="import" href="df-schedule.html">
 <link rel="import" href="df-speakers.html">
+<link rel="import" href="df-utils.html">
+<link rel="import" href="df-code-of-conduct.html">
+<link rel="import" href="df-faq.html">
+<link rel="import" href="df-sponsors.html">
 <link rel="import" href="df-styles.html">
 
 <dom-module id="df-app">
-	<template>
+    <template>
 
-		<style include="shared-styles"></style>
-		
-		<style>	
-		</style>
+        <style include="shared-styles"></style>
 
-		<app-location route="{{route}}" use-hash-as-path></app-location>
-    <app-route
-        route="{{route}}"
-        pattern="/:page"
-        data="{{routeData}}"
-        tail="{{subroute}}"></app-route>
+        <style>
+            footer {
+                align-items: center;
+                background-color: #424242;
+                color: #F5F5F5;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-top: 32px;
+                padding: 32px 25%;
+            }
 
-		<df-header
-      page="{{page}}">
-    </df-header>
+            footer > * {
+                margin: 4px;
+            }
 
-		<iron-pages
-				selected="[[page]]"
-				attr-for-selected="name"
-				fallback-selection="view404"
-				role="main">
-			<df-home name="home"></df-home>
-			<df-schedule name="schedule"></df-schedule>
-			<df-speakers name="speakers"></df-speakers>
-			<my-view404 name="view404"></my-view404>
-		</iron-pages>
-	</template>
+            footer a {
+                color: #304FFE;
+            }
 
-	<script>
-    Polymer({
-      is: 'df-app',
+            .gdg-logo {
+                width: 250px;
+            }
+        </style>
 
-      properties: {
-        page: {
-          type: String,
-          reflectToAttribute: true,
-          observer: '_pageChanged'
-        }
-      },
+        <app-location route="{{route}}" use-hash-as-path></app-location>
+        <app-route
+                route="{{route}}"
+                pattern="/:page"
+                data="{{routeData}}"
+                tail="{{subroute}}"></app-route>
 
-      observers: [
-        '_routePageChanged(routeData.page)'
-      ],
+        <df-header
+                page="{{page}}">
+        </df-header>
 
-      _routePageChanged: function(page) {
-        this.page = page || 'home';
-      },
+        <iron-pages
+                selected="[[page]]"
+                attr-for-selected="name"
+                fallback-selection="view404"
+                role="main">
+            <df-home name="home"></df-home>
+            <df-schedule name="schedule"></df-schedule>
+            <df-speakers name="speakers"></df-speakers>
+            <df-sponsors name="sponsors"></df-sponsors>
+            <df-utils name="utils"></df-utils>
+            <df-faq name="faq"></df-faq>
+            <df-code-of-conduct name="code-of-conduct"></df-code-of-conduct>
+            <my-view404 name="view404"></my-view404>
+        </iron-pages>
 
-      _pageChanged: function(page) {
-        // Load page import on demand. Show 404 page if fails
-        var resolvedPageUrl = this.resolveUrl('df-' + page + '.html');
-        this.importHref(resolvedPageUrl, null, this._showPage404, true);
-      },
+        <footer>
+            <span>Le Devfest Lille est organis&eacute; par le</span>
+            <a href="http://www.meetup.com/GDG-Lille"><img class="gdg-logo" src="./images/GDG_Lille_Logo.png"></a>
+            <a href="mailto:contact@gdglille.org">Contactez-nous !</a>
+        </footer>
+    </template>
 
-      _showPage404: function() {
-        this.page = 'view404';
-      }
-    });
-  </script>
+    <script>
+        Polymer({
+            is: 'df-app',
+
+            properties: {
+                page: {
+                    type: String,
+                    reflectToAttribute: true,
+                    observer: '_pageChanged'
+                }
+            },
+
+            observers: [
+                '_routePageChanged(routeData.page)'
+            ],
+
+            _routePageChanged: function (page) {
+                this.page = page || 'home';
+            },
+
+            _pageChanged: function (page) {
+                // Load page import on demand. Show 404 page if fails
+                var resolvedPageUrl = this.resolveUrl('df-' + page + '.html');
+                this.importHref(resolvedPageUrl, null, this._showPage404, true);
+            },
+
+            _showPage404: function () {
+                this.page = 'view404';
+            }
+        });
+    </script>
 </dom-module>

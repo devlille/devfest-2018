@@ -1,0 +1,31 @@
+<dom-module id="df-sponsors">
+
+    <style include="shared-styles"></style>
+
+    <template>
+        <section>
+            <article>
+                <h2>Sponsorisez le Devfest Lille</h2>
+                <hr>
+                <p class="justified">Profitez du Devfest Lille pour gagner en sisibilit&eacute; et échanger avec la communauté des développeurs de la r&eacute;gion
+                    Nord.</p>
+
+                <paper-button raised class="primary large" onclick="navigateToSponsorsDocument(this)">
+                    Consultez notre dossier de sponsoring
+                </paper-button>
+            </article>
+        </section>
+    </template>
+    <script>
+        Polymer({
+            is: 'df-sponsors'
+        });
+
+        function navigateToSponsorsDocument(element) {
+            // Wait for ripple to finish.
+            element.addEventListener('transitionend', function (e) {
+                location.href = './Devfest Lille.pdf';
+            });
+        }
+    </script>
+</dom-module>
