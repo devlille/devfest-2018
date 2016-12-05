@@ -127,8 +127,8 @@
             <div class="header-cta-content">
                 <img class=logo src="/images/logo.svg"/>
                 <div>
-                    <paper-button raised class="primary">Inscription</paper-button>
-                    <paper-button raised class="secondary">Call for paper</paper-button>
+                    <paper-button raised class="primary" onclick="navigateToYurplan(this)">Inscription</paper-button>
+                    <paper-button raised class="secondary" onclick="navigateToCFP(this)">Call for paper</paper-button>
                 </div>
             </div>
           </div> 
@@ -159,5 +159,19 @@
     Polymer({
       is: 'df-header'
     });
+
+    function navigateToYurplan(element) {
+        // Wait for ripple to finish.
+        element.addEventListener('transitionend', function (e) {
+            location.href = 'https://yurplan.com/event/Dev-Fest-Lille-2017/13044';
+        });
+    }
+
+    function navigateToCFP(element) {
+        // Wait for ripple to finish.
+        element.addEventListener('transitionend', function (e) {
+            location.href = 'https://cfp.gdglille.org/';
+        });
+    }
   </script>
 </dom-module>
