@@ -21,37 +21,39 @@
 
             .first {
                 --app-box-background-front-layer: {
-                    background-image: url(/images/e-artsup-1.jpg);
                     background-position: bottom;
                     padding-bottom: 120px;
                     margin-top: -20px;
                     height: 100%;
                 };
+            }
+
+            @media screen and (max-width: 1024px) {
+                .first {
+                    --app-box-background-front-layer: {
+                        background-image: url(/images/e-artsup-small.jpg);
+                    }
+                }
+            }
+
+            @media screen and (min-width: 1024px) {
+                .first {
+                    --app-box-background-front-layer: {
+                        background-image: url(/images/e-artsup-small.jpg);
+                    }
+                }
+            }
+
+            @media screen and (min-width: 1200px) {
+                .first {
+                    --app-box-background-front-layer: {
+                        background-image: url(/images/e-artsup-large.jpg);
+                    }
+                }
             }
 
             .second {
                 --app-box-background-front-layer: {
-                    background-image: url(//app-layout-assets.appspot.com/assets/bg2.jpg);
-                    background-position: bottom;
-                    padding-bottom: 120px;
-                    margin-top: -20px;
-                    height: 100%;
-                };
-            }
-
-            .third {
-                --app-box-background-front-layer: {
-                    background-image: url(//app-layout-assets.appspot.com/assets/bg3.jpg);
-                    background-position: bottom;
-                    padding-bottom: 120px;
-                    margin-top: -20px;
-                    height: 100%;
-                };
-            }
-
-            .fourth {
-                --app-box-background-front-layer: {
-                    background-image: url(//app-layout-assets.appspot.com/assets/bg4.jpg);
                     background-position: bottom;
                     padding-bottom: 120px;
                     margin-top: -20px;
