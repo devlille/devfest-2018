@@ -1,18 +1,120 @@
+<link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
 <dom-module id="df-sponsors">
 
     <style include="shared-styles"></style>
+    <style include="iron-flex iron-flex-alignment"></style>
+    <style>
+
+        .sponsors h3 {
+            font-size: 28px;
+        }
+
+        .sponsors a {
+            text-decoration: none;
+        }
+
+        .sponsors a > div {
+            transition: transform 150ms ease-out;
+        }
+
+        .sponsors a:hover > div {
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+
+        .sponsors > div > a > div {
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .sponsors .gold > a > div {
+            height: 120px;
+            width: 200px;
+        }
+
+        .sponsors .silver > a > div {
+            height: 120px;
+            width: 160px;
+        }
+
+        .sponsors .gold {
+            color: var(--paper-amber-500);
+        }
+
+        .sponsors .silver {
+            color: var(--paper-grey-500);
+        }
+
+        .sponsors .bronze {
+            color: var(--paper-deep-orange-500);
+        }
+
+        .sponsors .bronze > a > div {
+            height: 120px;
+            width: 120px;
+        }
+
+        .sponsors .partner > a > div {
+            height: 120px;
+            width: 100px;
+        }
+
+        .sponsors .google {
+            background-image: url('./images/google.png');
+        }
+
+        .sponsors .zenika {
+            background-image: url('./images/zenika.png');
+        }
+
+        .sponsors .jetbrains {
+            background-image: url('./images/jetbrains.png');
+        }
+    </style>
 
     <template>
         <section>
             <article>
                 <h2>Sponsorisez le Devfest Lille</h2>
                 <hr>
-                <p class="justified">Profitez du Devfest Lille pour gagner en visibilit&eacute; et échanger avec la communauté des développeurs de la r&eacute;gion
+                <p class="justified">Profitez du Devfest Lille pour gagner en visibilit&eacute; et échanger avec la
+                    communauté des développeurs de la r&eacute;gion
                     Haut de France.</p>
 
                 <paper-button raised class="primary large" onclick="navigateToSponsorsDocument(this)">
                     Consultez notre dossier de sponsoring
                 </paper-button>
+            </article>
+            <article class="sponsors">
+                <h2>Merci à nos sponsors !</h2>
+                <hr>
+                <h3>Sponsors <span class="gold">Gold</span></h3>
+                <div class="layout horizontal wrap around-justified gold">
+                    <a href="https://www.google.com" target="_blank">
+                        <div class="sponsor google">&nbsp;</div>
+                    </a>
+                </div>
+                <hr>
+                <h3>Sponsors <span class="silver">Silver</span></h3>
+                <div class="layout horizontal wrap around-justified silver">
+                    <a href="https://www.zenika.com/" target="_blank">
+                        <div class="zenika">&nbsp;</div>
+                    </a>
+                </div>
+                <hr>
+                <h3>Sponsors <span class="bronze">Bronze</span></h3>
+                <div class="layout horizontal wrap around-justified bronze">
+                </div>
+                <hr>
+                <h3>Partenaires</h3>
+                <div class="layout horizontal wrap around-justified partner">
+                    <a href="https://www.jetbrains.com/" target="_blank">
+                        <div class="jetbrains">&nbsp;</div>
+                    </a>
+                </div>
+                <hr>
             </article>
         </section>
     </template>
