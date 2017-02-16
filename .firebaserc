@@ -1,5 +1,5 @@
 {
   "projects": {
-    "devfest-lille-dev": "devfest-lille"
+    "default": "devfest-lille"
   }
 }
