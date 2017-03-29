@@ -1,6 +1,92 @@
+<link rel="import" href="bower_components/paper-card/paper-card.html">
+<link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="./df-speaker.html">
+
 <dom-module id="df-speakers">
+
+    <style include="iron-flex iron-flex-alignment"></style>
+
+    <style include="shared-styles"></style>
+
+    <style>
+        article {
+            max-width: 100%;
+        }
+
+        .df-speaker-card {
+            margin: 16px;
+            position: relative;
+            width: 33%;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .df-speaker-card {
+                width: 50%;
+            }
+        }
+
+        @media screen and (max-width: 640px) {
+            .df-speaker-card {
+                width: 100%;
+            }
+        }
+
+        @media screen and (min-width: 1400px) {
+            .df-speaker-card {
+                width: 25%;
+            }
+        }
+    </style>
+
     <template>
-        Speakers page
+        <section>
+            <article>
+                <h2>Speakers</h2>
+                <hr>
+                <div class="layout horizontal wrap center-justified">
+                    <paper-card class="df-speaker-card">
+                        <df-speaker name="Hubert Sablonnière"
+                                    company="Opendevise"
+                                    avatar="hub.png"
+                                    bio="<p>Hubert est développeur Web et passionné d’HTML, CSS et JavaScript. Il travaille depuis 7
+                                    ans chez INEAT Conseil et passe une bonne partie de sa semaine à développer sur des projets.
+                                    Il intervient de temps en temps chez d'autres clients pour du conseil et de l'audit.</p>
+                                    <p>Il a travaillé avec du PHP, du Java et beaucoup de JavaScript pour des sites et webapp
+                                    Intranet/Internet, mobile/tablettes et desktop. Il a également une casquette CSS/intégration.</p>
+                                    <p>Sur son temps libre, il bidouille beaucoup avec les dernières technologies pour essayer de trouver
+                                    des nouveaux usages pour ses utilisateurs et des facilités pour les développeurs.</p>"
+                                    twitter="https://twitter.com/hsablonniere"
+                                    google-plus=""
+                                    github="https://github.com/hsablonniere"></df-speaker>
+                    </paper-card>
+
+                    <paper-card class="df-speaker-card">
+                        <df-speaker name="Emmanuel Demey"
+                                    company="Zenika"
+                                    avatar="manu.jpg"
+                                    bio="<p>Consultant et Formateur Web chez Zenika Lille depuis avril 2015. Je suis spécialisé
+                                    dans AngularJS / Angular 2 / TypeScript et l'Accessibilité Web. Speaker à ses heures perdues.
+                                    Aime également les bières (et oui quand on vient de Lille c'est normal...), le Jazz et la Domotique.</p>"
+                                    twitter=""
+                                    google-plus="https://plus.google.com/107603600206299479651"
+                                    github=""
+                                    linked-in="https://fr.linkedin.com/in/emmanueldemey/fr"></df-speaker>
+                    </paper-card>
+
+                    <paper-card class="df-speaker-card">
+                        <df-speaker name="Test card"
+                                    company="Zenika"
+                                    bio="<p>Consultant et Formateur Web chez Zenika Lille depuis avril 2015. Je suis spécialisé
+                                    dans AngularJS / Angular 2 / TypeScript et l'Accessibilité Web. Speaker à ses heures perdues.
+                                    Aime également les bières (et oui quand on vient de Lille c'est normal...), le Jazz et la Domotique.</p>"
+                                    twitter="as"
+                                    google-plus="https://plus.google.com/107603600206299479651"
+                                    github="as"
+                                    linked-in="https://fr.linkedin.com/in/emmanueldemey/fr"></df-speaker>
+                    </paper-card>
+                </div>
+            </article>
+        </section>
     </template>
     <script>
         Polymer({
@@ -8,3 +94,4 @@
         });
     </script>
 </dom-module>
+
