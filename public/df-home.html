@@ -82,8 +82,22 @@
                     <hr/>
                     <img src="./images/devfest-icons.svg">
                 </article>
-                <app-box class="first" effects="parallax-background"></app-box>
             </section>
+
+            <app-box class="second" effects="parallax-background">
+                <google-map
+                        latitude="50.62387"
+                        longitude="3.066642"
+                        api-key="AIzaSyAIIO4U1G38TKIrJr8-CMi2t5mg7KGfrv8"
+                        zoom="13"
+                        additional-map-options='{"draggable": false, "zoomControl": false, "scrollwheel": false, "disableDoubleClickZoom": true}'>
+                    <google-map-marker latitude="50.62387" longitude="3.066642" draggable="false"
+                                       icon="/images/map-marker.png">
+                    </google-map-marker>
+                </google-map>
+                <paper-button raised class="primary navigate-button" onclick="navigateToMaps(this)">Y aller !
+                </paper-button>
+            </app-box>
 
             <section id="location">
                 <article>
@@ -102,21 +116,9 @@
                         creative coding, l’animation &amp; 3D et le digital media. L’&eacute;cole est implant&eacute;e dans 7 villes de
                         France : Paris, Bordeaux, Lille, Lyon, Montpellier, Nantes et Toulouse.</p>
                 </article>
-                <app-box class="second" effects="parallax-background">
-                    <google-map
-                            latitude="50.62387"
-                            longitude="3.066642"
-                            api-key="AIzaSyAIIO4U1G38TKIrJr8-CMi2t5mg7KGfrv8"
-                            zoom="13"
-                            additional-map-options='{"draggable": false, "zoomControl": false, "scrollwheel": false, "disableDoubleClickZoom": true}'>
-                        <google-map-marker latitude="50.62387" longitude="3.066642" draggable="false"
-                                           icon="/images/map-marker.png">
-                        </google-map-marker>
-                    </google-map>
-                    <paper-button raised class="primary navigate-button" onclick="navigateToMaps(this)">Y aller !
-                    </paper-button>
-                </app-box>
             </section>
+
+            <app-box class="first" effects="parallax-background"></app-box>
 
             <df-sponsors></df-sponsors>
         </main>
