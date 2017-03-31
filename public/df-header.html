@@ -128,7 +128,7 @@
                 <img class=logo src="/images/logo.svg"/>
                 <div>
                     <paper-button raised class="primary" onclick="navigateToYurplan(this)">Inscription</paper-button>
-                    <paper-button raised class="secondary" onclick="navigateToCFP(this)">Call for paper</paper-button>
+                    <paper-button raised class="secondary" onclick="navigateToAgenda(this)">Ajouter à l'agenda</paper-button>
                 </div>
             </div>
           </div> 
@@ -163,10 +163,10 @@
         });
     }
 
-    function navigateToCFP(element) {
+    function navigateToAgenda(element) {
         // Wait for ripple to finish.
         element.addEventListener('transitionend', function (e) {
-            location.href = 'https://cfp.gdglille.org/';
+            location.href = 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=Devfest+Lille&dates=20170609T070000Z/20170609T170000Z&details=Plus%20d%27infos+ici:+https://devfest.gdglille.org&location=e-artsup%2010-12%20Rue%20du%20Bas%20Jardin,%2059000%20Lille&sf=true&output=xml#eventpage_6';
         });
     }
   </script>
