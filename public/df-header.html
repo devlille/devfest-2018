@@ -7,7 +7,8 @@
 
 		<style include="shared-styles"></style>
 		
-		<style>			
+		<style>
+
 			header {
 				height: 364px;
 			}
@@ -47,7 +48,7 @@
 				border-radius: 3px;
 				box-shadow: 0 0 0 1px hsla(0,0%,100%,.3) inset, 0 .5em 1em rgba(0, 0, 0, 0.6);
 				width: 70%;
-			} 
+			}
 
 			header .header-cta .header-cta-content::before { 
 				content: '';
@@ -60,8 +61,16 @@
 				margin: -39px;    
 				z-index: -1;
 			}
-			
-			.nav {
+
+            header .header-cta-buttons {
+                display: flex;
+            }
+
+            header .header-cta-buttons paper-button {
+                flex: 1 1 0;
+            }
+
+            .nav {
 				height: 64px;
 				margin: 0;
 				padding: 0;
@@ -113,7 +122,7 @@
 				top: 0;
 				left: 0;
 				right: 0;
-				z-index: 1;
+				z-index: 2;
 				-webkit-backdrop-filter: saturate(180%) blur(20px);
 				backdrop-filter: saturate(180%) blur(20px);
 			}
@@ -130,7 +139,7 @@
           <div class="header-cta">
             <div class="header-cta-content">
                 <img class=logo src="/images/logo.svg"/>
-                <div>
+                <div class="header-cta-buttons">
                     <paper-button raised class="primary" onclick="navigateToYurplan(this)">Inscription</paper-button>
                     <paper-button raised class="secondary" onclick="navigateToAgenda(this)">Ajouter à l'agenda</paper-button>
                 </div>
