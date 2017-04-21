@@ -1,8 +1,12 @@
+/*! @license Firebase v3.7.8
+Build: rev-44ec95c
+Terms: https://firebase.google.com/terms/ */
+
 /**
  * @fileoverview Firebase Messaging API.
- * Version: 3.6.6
+ * Version: 3.7.8
  *
- * Copyright 2016 Google Inc. All Rights Reserved.
+ * Copyright 2017 Google Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
