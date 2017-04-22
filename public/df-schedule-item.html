@@ -262,6 +262,7 @@
         }
 
         #dialog .schedule-item {
+            padding: 0;
             position: relative;
         }
 
@@ -306,11 +307,12 @@
         }
 
         #dialog .schedule-item__duration {
-            padding-bottom: 32px;
+            padding-bottom: 22px;
         }
 
         #dialog .schedule-item__description {
-            height: 100%;
+            max-height: 40vh;
+            overflow-y: scroll;
         }
 
         #dialog .schedule-item__time-value {
@@ -332,6 +334,7 @@
         #dialog .schedule-item__time:after {
             display: none;
         }
+
     </style>
 
     <template>
@@ -375,6 +378,7 @@
         <paper-dialog id="dialog"  modal
                       entry-animation="scale-up-animation"
                       exit-animation="fade-out-animation">
+
             <paper-dialog-scrollable>
 
                 <div class="schedule-item">
