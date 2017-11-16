@@ -1,28 +1,15 @@
 {
-  "name": "devfest-lille",
-  "version": "1.0.0",
-  "description": "Website for the devfest lille",
-  "main": "index.js",
-  "dependencies": {
-  },
+  "name": "polymer-starter-kit",
+  "license": "BSD-3-Clause",
   "devDependencies": {
-    "bower": "^1.8.0",
-    "firebase-tools": "^3.3.0"
+    "eslint": "^3.19.0",
+    "eslint-config-google": "^0.7.0",
+    "eslint-plugin-html": "^2.0.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/GDG-Lille/devfest-lille.git"
-  },
-  "keywords": [
-    "Devfest"
-  ],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/GDG-Lille/devfest-lille/issues"
-  },
-  "homepage": "https://github.com/GDG-Lille/devfest-lille#readme"
+    "lint": "npm run lint:javascript && polymer lint",
+    "lint:javascript": "eslint . --ext js,html --ignore-path .gitignore",
+    "test": "polymer test",
+    "test:integration": "polymer build # test that psk builds without error with the CLI"
+  }
 }

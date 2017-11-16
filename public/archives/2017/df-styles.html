@@ -1,0 +1,111 @@
+
+<link rel="import" href="./bower_components/paper-styles/color.html">
+
+<dom-module id="shared-styles">
+  <template>
+
+	<style is="shared-styles">
+        :root {
+            --primary-color: var(--paper-indigo-900);
+            --secondary-color: var(--paper-deep-orange-500);
+        }
+
+        paper-button {
+            color: white;
+            font-size: 14px;
+            width: 185px;
+            margin-bottom: 8px;
+            justify-content: center;    
+            text-transform: uppercase;
+            outline-width: 0;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+        
+        paper-button.primary {
+            background-color: var(--primary-color);
+        }
+        
+        paper-button.secondary {
+            background-color: var(--secondary-color);
+        }
+
+        paper-button.large {
+            margin: 0 auto;
+            width: 50%;
+        }
+
+        .text.primary {
+            color: var(--primary-color);
+        }
+
+        .text.secondary {
+            color: var(--secondary-color);
+        }
+
+        h2 {
+            color: var(--primary-color);
+        }
+
+        h4 {
+            font-size: 28px;
+        }
+
+        section {
+            padding-top: 25px;
+        }
+
+        a {
+            color: #3F51B5;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        article {
+            font-weight: 100;
+            text-align: center;
+            margin: 0 auto 50px auto;
+            max-width: 850px;
+            padding: 0 5%;
+        }
+
+        article h2 {
+            font-weight: 100;
+            font-size: 34px;
+            margin: 5px;
+        }
+
+        article h4 {
+            text-align: left;
+            margin: 16px 0;
+            padding: 0 16px;
+        }
+
+        article p {
+            font-size: 20px;
+            line-height: 30px;
+            padding: 0 16px;
+        }
+
+        article p.justified {
+            text-align: justify;
+        }
+
+        article p.small {
+            max-width: 400px;
+            text-align: justify;
+            margin: 0 auto;
+        }
+
+        article hr {
+            width: 100px;
+            height: 2px;
+            border: none;
+            margin: 20px auto;
+            background-color: #FF5722;
+        }
+	</style>
+  </template>
+</dom-module>
