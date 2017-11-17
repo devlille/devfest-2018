@@ -6,3 +6,5 @@ node_modules/
 .DS_STORE
 
 firebase-debug.log
+bower_components/
+**/bower_components/**
