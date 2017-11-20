@@ -1,0 +1,37 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../shared-styles.html">
+
+<dom-module id="df-intro">
+    <template>
+        <style include="shared-styles"></style>
+
+        <section id="devfest">
+            <article>
+                <h2>Devfest Lille 2017</h2>
+                <hr/>
+                <p class="small">Rejoignez nous pour une journ&eacute;e de <span class="primary text">conf&eacute;rences</span>,
+                    de <span
+                            class="primary text">code labs</span>, d'<span class="primary text">&eacute;changes</span> sur
+                    les
+                    sujets du <span class="secondary text">Web</span>, du <span class="secondary text">Mobile</span>,
+                    du <span class="secondary text">Cloud</span>, des <span class="secondary text">technologies Google</span>
+                    et de leur utilisation par les <span class="secondary text">acteurs locaux</span>.</p>
+                <hr/>
+                <img src="../../images/logo-devfest-lille.svg">
+            </article>
+        </section>         
+    </template>
+
+    <script>
+        class Intro extends Polymer.Element {
+			static get is() { return 'df-intro'; }
+			
+			static get properties() {
+				return { rootPath: String };
+			}
+		}
+
+		customElements.define(Intro.is, Intro);
+    </script>
+</dom-module>

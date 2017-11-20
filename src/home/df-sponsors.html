@@ -1,0 +1,252 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<link rel="import" href="../shared-styles.html">
+
+<dom-module id="df-sponsors">
+    <template>
+        <style include="iron-flex iron-flex-alignment shared-styles">
+            .sponsors h3 {
+                font-size: 28px;
+            }
+
+            .sponsors a {
+                text-decoration: none;
+            }
+
+            .sponsors a > div {
+                transition: transform 150ms ease-out;
+            }
+
+            .sponsors a:hover > div {
+                cursor: pointer;
+                transform: scale(1.05);
+            }
+
+            .sponsors > div > a > div {
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+
+            .sponsors .gold > a > div {
+                height: 120px;
+                width: 200px;
+            }
+
+            .sponsors .silver > a > div {
+                height: 120px;
+                width: 160px;
+            }
+
+            .sponsors .gold {
+                color: var(--paper-amber-500);
+            }
+
+            .sponsors .silver {
+                color: var(--paper-grey-500);
+            }
+
+            .sponsors .bronze {
+                color: var(--paper-deep-orange-500);
+            }
+
+            .sponsors .bronze > a > div {
+                height: 120px;
+                width: 120px;
+            }
+
+            .sponsors .partner > a > div {
+                height: 120px;
+                width: 100px;
+            }
+
+            .sponsors .google {
+                background-image: url('../../images/sponsors/google.png');
+            }
+
+            .sponsors .zenika {
+                background-image: url('../../images/sponsors/zenika.png');
+            }
+
+            .sponsors .worldline {
+                background-image: url('../../images/sponsors/worldline.png');
+            }
+
+            .sponsors .programmez {
+                background-image: url('../../images/sponsors/programmez.png');
+                width: 200px !important;
+            }
+
+            .sponsors .eartsup {
+                background-image: url('../../images/sponsors/e-artsup.png');
+                width: 200px !important;
+            }
+
+            .sponsors .epitech {
+                background-image: url('../../images/sponsors/epitech.png');
+                width: 200px !important;
+            }
+
+            .sponsors .norsys {
+                background-image: url('../../images/sponsors/norsys.png');
+                width: 200px !important;
+            }
+
+            .sponsors .recisio {
+                background-image: url('../../images/sponsors/recisio.png');
+                width: 200px !important;
+            }
+
+            .sponsors .sfeir {
+                background-image: url('../../images/sponsors/sfeir.png');
+            }
+
+            .sponsors .kiabi {
+                background-image: url('../../images/sponsors/kiabi.png');
+            }
+
+            .sponsors .infotel {
+                background-image: url('../../images/sponsors/infotel.png');
+                width: 200px !important;
+            }
+
+            .sponsors .sarbacane {
+                background-image: url('../../images/sponsors/sarbacane.png');
+                width: 200px !important;
+            }
+
+            .sponsors .noconsulting {
+                background-image: url('../../images/sponsors/noconsulting.png');
+                width: 200px !important;
+            }
+
+            .sponsors .github {
+                background-image: url('../../images/sponsors/github.png');
+                width: 200px !important;
+            }
+
+            .sponsors .jetbrains {
+                background-image: url('../../images/sponsors/jetbrains.png');
+            }
+
+            .sponsors .chooseyourboss {
+                background-image: url('../../images/sponsors/chooseyourboss.png');
+            }
+
+            .sponsors .mozilla {
+                background-image: url('../../images/sponsors/mozilla.png');
+                width: 200px !important;
+            }
+
+            .sponsors .sii {
+                background-image: url('../../images/sponsors/sii.png');
+                width: 200px !important;
+            }  
+        </style>
+
+        <section>
+            <article>
+                <h2>Sponsorisez le Devfest Lille</h2>
+                <hr>
+                <p class="justified">Profitez du Devfest Lille pour gagner en visibilit&eacute; et échanger avec la
+                    communauté des développeurs de la r&eacute;gion
+                    Haut de France.</p>
+
+                <paper-button raised class="primary large" on-click="navigateToSponsorsDocument">
+                    Consultez notre dossier de sponsoring
+                </paper-button>
+            </article>
+            <article class="sponsors">
+                <h2>Merci à nos sponsors !</h2>
+                <hr>
+                <h3>Sponsors <span class="gold">Gold</span></h3>
+                <div class="layout horizontal wrap around-justified gold">
+                    <a href="https://www.google.com" target="_blank">
+                        <div class="sponsor google">&nbsp;</div>
+                    </a>
+                </div>
+                <hr>
+                <h3>Sponsors <span class="silver">Silver</span></h3>
+                <div class="layout horizontal wrap around-justified silver">
+                    <a href="https://www.zenika.com/" target="_blank">
+                        <div class="zenika">&nbsp;</div>
+                    </a>
+                    <a href="http://www.programmez.com/" target="_blank">
+                        <div class="programmez">&nbsp;</div>
+                    </a>
+                    <a href="https://worldline.com/" target="_blank">
+                        <div class="worldline">&nbsp;</div>
+                    </a>
+                    <a href="http://www.e-artsup.net/" target="_blank">
+                        <div class="eartsup">&nbsp;</div>
+                    </a>
+                    <a href="http://www.epitech.eu/" target="_blank">
+                        <div class="epitech">&nbsp;</div>
+                    </a>
+                    <a href="http://www.norsys.fr/" target="_blank">
+                        <div class="norsys">&nbsp;</div>
+                    </a>
+                    <a href="http://www.karafun.fr/" target="_blank">
+                        <div class="recisio">&nbsp;</div>
+                    </a>
+                    <a href="https://www.sfeir.com/" target="_blank">
+                        <div class="sfeir">&nbsp;</div>
+                    </a>
+                    <a href="http://www.kiabi.com/" target="_blank">
+                        <div class="kiabi">&nbsp;</div>
+                    </a>
+                    <a href="http://noconsulting.fr/" target="_blank">
+                        <div class="noconsulting">&nbsp;</div>
+                    </a>
+                    <a href="https://github.com/" target="_blank">
+                        <div class="github">&nbsp;</div>
+                    </a>
+                </div>
+                <hr>
+                <h3>Sponsors <span class="bronze">Bronze</span></h3>
+                <div class="layout horizontal wrap around-justified bronze">
+                    <a href="http://www.sarbacane-software.com/" target="_blank">
+                        <div class="sarbacane">&nbsp;</div>
+                    </a>
+                    <a href="http://www.infotel.com/" target="_blank">
+                        <div class="infotel">&nbsp;</div>
+                    </a>
+                    <a href="https://www.mozilla.org/fr/" target="_blank">
+                        <div class="mozilla">&nbsp;</div>
+                    </a>
+                    <a href="http://www.groupe-sii.com/fr" target="_blank">
+                        <div class="sii">&nbsp;</div>
+                    </a>
+                </div>
+                <hr>
+                <h3>Partenaires</h3>
+                <div class="layout horizontal wrap around-justified partner">
+                    <a href="https://www.jetbrains.com/" target="_blank">
+                        <div class="jetbrains">&nbsp;</div>
+                    </a>
+                    <a href="https://www.chooseyourboss.com/" target="_blank">
+                        <div class="chooseyourboss">&nbsp;</div>
+                    </a>
+                </div>
+                <hr>
+            </article>
+        </section>
+    </template>
+
+    <script>
+        class Sponsors extends Polymer.Element {
+			static get is() { return 'df-sponsors'; }
+			
+			static get properties() {
+				return { rootPath: String };
+			}
+
+            navigateToSponsorsDocument() {
+                location.href = './Devfest Lille.pdf';
+            }
+		}
+
+		customElements.define(Sponsors.is, Sponsors);
+    </script>
+</dom-module>
