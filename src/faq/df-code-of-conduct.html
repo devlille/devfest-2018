@@ -1,0 +1,48 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="df-code-of-conduct">
+    <template>
+        <style include="shared-styles"></style>
+
+        <section>
+            <article>
+                <h2>Code de conduite</h2>
+                <hr>
+                <p><strong>Ce texte est une version courte, lisible et explicite du "Code of Conduct policy".</strong>
+                </p>
+
+                <p class="justified">Le GDG Lille est fier d'être une communauté ouverte, respectant les différences et la diversité. Ceci
+                    implique qu'aucun comportement ou propos déplacé n'est accepté à nos réunions. Pour être clair et
+                    que tout le monde comprenne, voici un rappel de ce que nous n'accepterons pas : blagues ou offenses
+                    à propos des sujets sexe / sexualité / race / religion / nationalité / morphologie, montrer des
+                    images à caractère pornographique, toucher une personne sans son consentement, ou continuer
+                    d'interagir avec des personnes vous ayant explicitement demandé d'arrêter. Ce genre de comportements
+                    pourra nous amener à vous faire exclure de nos réunions et du DevFest.</p>
+
+                <p class="justified">Si quelqu'un vous indispose de cette façon, merci de contacter immédiatement les organisateurs qui
+                    s'occuperont de prendre les mesures nécessaires. Nous voulons garder le DevFest respectueux d'autrui
+                    et en faire un événement convivial.</p>
+
+                <paper-button raised class="primary large" on-click="navigateToWikipedia">
+                    Voir la version compl&egrave;te
+                </paper-button>
+            </article>
+        </section>
+    </template>
+
+    <script>
+        class CodeOfConduct extends Polymer.Element {
+			static get is() { return 'df-code-of-conduct'; }
+			
+			static get properties() {
+				return { rootPath: String };
+			}
+
+			navigateToWikipedia() {
+                location.href = 'https://meta.wikimedia.org/wiki/Don%27t_be_a_jerk';
+            }
+		}
+
+		customElements.define(Header.is, Header);
+    </script>
+</dom-module>
