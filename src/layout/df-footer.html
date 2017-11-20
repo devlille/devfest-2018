@@ -1,0 +1,25 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="df-footer">
+  <template>
+    <style include="shared-styles"></style>
+
+    <footer>
+        <span>Le Devfest Lille est organis&eacute; par le</span>
+        <a href="http://www.meetup.com/GDG-Lille"><img class="gdg-logo" src="../../images/logo-gdg-lille.png"></a>
+        <a href="mailto:contact@gdglille.org">Contactez-nous !</a>
+        <a href="https://twitter.com/gdglille">@GDGLille</a>
+    </footer>
+  </template>
+  <script>
+    class Footer extends Polymer.Element {
+        static get is() { return 'df-footer'; }
+        
+        static get properties() {
+            return { rootPath: String };
+        }
+    }
+
+    customElements.define(Footer.is, Footer);
+  </script>
+</dom-module>
