@@ -4,8 +4,9 @@
   <template>
 	<style>
         :root {
-            --primary-color: var(--paper-indigo-900);
-            --secondary-color: var(--paper-deep-orange-500);
+            --primary-color: var(--paper-red-900);
+            --secondary-color: var(--paper-blue-600);
+            --width: 850px;
         }
 
         paper-button {
@@ -33,6 +34,8 @@
             width: 50%;
         }
 
+        h2,
+        a,
         .text.primary {
             color: var(--primary-color);
         }
@@ -41,20 +44,8 @@
             color: var(--secondary-color);
         }
 
-        h2 {
-            color: var(--primary-color);
-        }
-
-        h4 {
-            font-size: 28px;
-        }
-
         section {
             padding-top: 25px;
-        }
-
-        a {
-            color: #3F51B5;
         }
 
         img {
@@ -63,9 +54,8 @@
 
         article {
             font-weight: 100;
-            text-align: center;
             margin: 0 auto 50px auto;
-            max-width: 850px;
+            max-width: var(--width);
             padding: 0 5%;
         }
 
@@ -75,6 +65,10 @@
             margin: 5px;
         }
 
+        article h2 strong {
+            text-transform: uppercase;
+        }
+
         article h4 {
             text-align: left;
             margin: 16px 0;
@@ -82,9 +76,10 @@
         }
 
         article p {
-            font-size: 20px;
+            font-size: 18px;
             line-height: 30px;
-            padding: 0 16px;
+            padding: 0 5px;
+            text-align: left;
         }
 
         article p.justified {
@@ -102,7 +97,7 @@
             height: 2px;
             border: none;
             margin: 20px auto;
-            background-color: #FF5722;
+            background-color: var(--primary-color);
         }
 	</style>
   </template>

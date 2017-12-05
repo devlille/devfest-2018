@@ -17,8 +17,9 @@
 				z-index: 0;
 			}
 
-			header app-toolbar, header .header-cta .header-cta-content::before {
-				background: url("../../images/layout/header.png") 0 / cover local;
+			header app-toolbar, 
+			header .header-cta .header-cta-content::before {
+				background: url("../../images/layout/header.jpg") 0 / cover local;
 				background-position: top center;
 				background-size: 100vw;
 			}	
@@ -83,42 +84,25 @@
 				height: 64px;
 				margin: 0 auto;
 				text-align: center;
-				max-width: 512px;
+				max-width: 850px;
 			}
-			
-			.nav paper-tab {
-				width: 33%;
-   	 		}
 
 			.nav paper-tab a {
 				list-style: none;
-   	 		    vertical-align: top;
-			}
-			
-			.nav a {
-				font-size: 20px;
+   	 		    font-size: 20px;
 				text-decoration: none;
 				color: #fff;
 				font-weight: 300;
 				margin: 0 5px;
                 display: flex;
                 flex-direction: column;
+				align-items: center;
                 justify-content: center;
-                white-space: pre-line;
 			}
 
-			.nav .icon a {
-				line-height: 0;
-			}
-			
-			[threshold-triggered] {
-				position: fixed;
-				top: 0;
-				left: 0;
-				right: 0;
-				z-index: 2;
-				-webkit-backdrop-filter: saturate(180%) blur(20px);
-				backdrop-filter: saturate(180%) blur(20px);
+			.nav paper-tab.icon a img {
+				height: 30px;
+				max-width: 100%;
 			}
 
 			.logo {
@@ -132,7 +116,6 @@
         <app-toolbar>
           <div class="header-cta">
             <div class="header-cta-content">
-                <img class=logo src="../../images/logo-devfest-lille.svg"/>
                 <div class="header-cta-buttons">
                     <paper-button raised class="primary" on-click="navigateToYurplan">Inscription</paper-button>
                     <paper-button raised class="secondary" on-click="navigateToAgenda">Ajouter à l'agenda</paper-button>
@@ -145,11 +128,11 @@
 			<paper-tabs selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
 				<paper-tab name="home" class="icon">
 					<a href="/home">
-						<img src="../../images/manifest/icon.png" />
+						<img src="../../images/logo-devfest-light-white.svg" />
 					</a>
 				</paper-tab>
-				<paper-tab name="schedule"><a href="/schedule">Agenda</a></paper-tab>
-				<paper-tab name="speakers"><a href="/speakers">Speakers</a></paper-tab>
+				<paper-tab name="schedule" disabled><a href="/schedule">Agenda</a></paper-tab>
+				<paper-tab name="speakers" disabled><a href="/speakers">Speakers</a></paper-tab>
 				<paper-tab name="faq"><a href="/faq">FAQ</a></paper-tab>
 			</paper-tabs>
           </section>
@@ -166,7 +149,7 @@
 			}
 
 			navigateToYurplan() {
-				location.href = 'https://yurplan.com/event/Dev-Fest-Lille-2017/13044';
+				location.href = 'https://www.billetweb.fr/devfest-lille-2018';
 			}
 
     		navigateToAgenda() {

@@ -2,13 +2,39 @@
 
 <dom-module id="df-footer">
   <template>
-    <style include="shared-styles"></style>
+    <style include="shared-styles">
+      footer {
+        align-items: center;
+        background-color: #424242;
+        color: #F5F5F5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 32px;
+        padding: 32px 25%;
+      }
+
+      .gdg-logo {
+          width: 250px;
+      }
+
+      footer a {
+          color: white;
+      }
+
+      footer > * {
+          margin: 4px;
+      }
+    </style>
 
     <footer>
         <span>Le Devfest Lille est organis&eacute; par le</span>
         <a href="http://www.meetup.com/GDG-Lille"><img class="gdg-logo" src="../../images/logo-gdg-lille.png"></a>
         <a href="mailto:contact@gdglille.org">Contactez-nous !</a>
         <a href="https://twitter.com/gdglille">@GDGLille</a>
+        <a href="https://www.facebook.com/GoogleDeveloperGroupLille/">GoogleDeveloperGroupLille</a>
+        <a href="https://www.linkedin.com/company/gdg-lille/">gdg-lille</a>
+        <a href="../../public/archives/2017/index.html" target="_blank">Edition 2017</a>
     </footer>
   </template>
   <script>
