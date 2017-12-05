@@ -7,11 +7,7 @@
 <dom-module id="df-map">
     <template>
         <style include="shared-styles">
-            .navigate-button {
-                position: absolute;
-                bottom: 10px;
-                right: 6px;
-            }
+        
         </style>
 
         <google-map
@@ -24,7 +20,7 @@
                 longitude="[[longitude]]" 
                 draggable="false"
                 slot="markers"
-                icon="./images/map-marker.png">
+                icon="../../images/map-marker.png">
             </google-map-marker>
         </google-map>
         <paper-button raised class="primary navigate-button" on-click="navigateToMaps">Y aller !</paper-button>           

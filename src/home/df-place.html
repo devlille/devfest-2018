@@ -5,32 +5,44 @@
 
 <dom-module id="df-place">
     <template>
-        <style include="shared-styles"></style>
+        <style include="shared-styles">
+            #place article {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+            }
 
-        <df-map
-            latitude="50.62387"
-            longitude="3.066642"
-            url="https://www.google.fr/maps/place/e-artsup+Lille/@50.6235565,3.0645593,17z/data=!4m8!1m2!2m1!1se-artsup+lille!3m4!1s0x47c2d586ab0b4165:0x487357673bd13c09!8m2!3d50.62387!4d3.066642">
-        </df-map>
+            #place article df-map {
+                flex: 1.5;
+            }
 
-        <section id="location">
+            #place article > div {
+                flex: 1;
+            }
+        </style>
+
+        <section id="place">
             <article>
-                <h2>Le lieu : <a href="http://www.e-artsup.net/ecole-graphisme-design-infographie-lille.aspx">e-artsup</a></h2>
-                <p>
-                    <strong>
-                        <a href="http://www.e-artsup.net/ecole-graphisme-design-infographie-lille.aspx">
-                            L'&eacute;cole de la passion cr&eacute;ative
-                        </a>
-                    ‎</strong>
-                </p>
-                <p class="justified">
-                    e-artsup est l’&eacute;cole de la passion cr&eacute;ative et propose deux parcours. Le
-                    parcours Grande Ecole forme en 5 ans les futurs directeurs artistiques dans quatre grands
-                    domaines : design &amp; communication, design interactif, game design et motion design ; le parcours
-                    Bachelor, en partenariat avec Epitech, forme des sp&eacute;cialistes dans 3 domaines, le game &
-                    creative coding, l’animation &amp; 3D et le digital media. L’&eacute;cole est implant&eacute;e dans 7 villes de
-                    France : Paris, Bordeaux, Lille, Lyon, Montpellier, Nantes et Toulouse.
-                </p>
+                <df-map
+                    latitude="50.62387"
+                    longitude="3.066642"
+                    url="https://www.google.fr/maps/place/e-artsup+Lille/@50.6235565,3.0645593,17z/data=!4m8!1m2!2m1!1se-artsup+lille!3m4!1s0x47c2d586ab0b4165:0x487357673bd13c09!8m2!3d50.62387!4d3.066642">
+                </df-map>
+
+                <div>    
+                    <h2>
+                        Le lieu :
+                        <a href="http://www.e-artsup.net/ecole-graphisme-design-infographie-lille.aspx">e-artsup</a>
+                    </h2>
+                    <p>
+                        e-artsup est l’&eacute;cole de la passion cr&eacute;ative et propose deux parcours. Le
+                        parcours Grande Ecole forme en 5 ans les futurs directeurs artistiques dans quatre grands
+                        domaines : design &amp; communication, design interactif, game design et motion design ; le parcours
+                        Bachelor, en partenariat avec Epitech, forme des sp&eacute;cialistes dans 3 domaines, le game &
+                        creative coding, l’animation &amp; 3D et le digital media. L’&eacute;cole est implant&eacute;e dans 7 villes de
+                        France : Paris, Bordeaux, Lille, Lyon, Montpellier, Nantes et Toulouse.
+                    </p>
+                </div>
             </article>
         </section>         
     </template>

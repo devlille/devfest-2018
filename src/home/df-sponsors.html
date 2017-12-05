@@ -9,140 +9,140 @@
             .sponsors h3 {
                 font-size: 28px;
             }
-
+    
             .sponsors a {
                 text-decoration: none;
             }
-
+    
             .sponsors a > div {
                 transition: transform 150ms ease-out;
             }
-
+    
             .sponsors a:hover > div {
                 cursor: pointer;
                 transform: scale(1.05);
             }
-
+    
             .sponsors > div > a > div {
                 background-position: center center;
                 background-repeat: no-repeat;
                 background-size: contain;
             }
-
+    
             .sponsors .gold > a > div {
                 height: 120px;
                 width: 200px;
             }
-
+    
             .sponsors .silver > a > div {
                 height: 120px;
                 width: 160px;
             }
-
+    
             .sponsors .gold {
                 color: var(--paper-amber-500);
             }
-
+    
             .sponsors .silver {
                 color: var(--paper-grey-500);
             }
-
+    
             .sponsors .bronze {
                 color: var(--paper-deep-orange-500);
             }
-
+    
             .sponsors .bronze > a > div {
                 height: 120px;
                 width: 120px;
             }
-
+    
             .sponsors .partner > a > div {
                 height: 120px;
                 width: 100px;
             }
-
+    
             .sponsors .google {
                 background-image: url('../../images/sponsors/google.png');
             }
-
+    
             .sponsors .zenika {
                 background-image: url('../../images/sponsors/zenika.png');
             }
-
+    
             .sponsors .worldline {
                 background-image: url('../../images/sponsors/worldline.png');
             }
-
+    
             .sponsors .programmez {
                 background-image: url('../../images/sponsors/programmez.png');
                 width: 200px !important;
             }
-
+    
             .sponsors .eartsup {
                 background-image: url('../../images/sponsors/e-artsup.png');
                 width: 200px !important;
             }
-
+    
             .sponsors .epitech {
                 background-image: url('../../images/sponsors/epitech.png');
                 width: 200px !important;
             }
-
+    
             .sponsors .norsys {
                 background-image: url('../../images/sponsors/norsys.png');
                 width: 200px !important;
             }
-
+    
             .sponsors .recisio {
                 background-image: url('../../images/sponsors/recisio.png');
                 width: 200px !important;
             }
-
+    
             .sponsors .sfeir {
                 background-image: url('../../images/sponsors/sfeir.png');
             }
-
+    
             .sponsors .kiabi {
                 background-image: url('../../images/sponsors/kiabi.png');
             }
-
+    
             .sponsors .infotel {
                 background-image: url('../../images/sponsors/infotel.png');
                 width: 200px !important;
             }
-
+    
             .sponsors .sarbacane {
                 background-image: url('../../images/sponsors/sarbacane.png');
                 width: 200px !important;
             }
-
+    
             .sponsors .noconsulting {
                 background-image: url('../../images/sponsors/noconsulting.png');
                 width: 200px !important;
             }
-
+    
             .sponsors .github {
                 background-image: url('../../images/sponsors/github.png');
                 width: 200px !important;
             }
-
+    
             .sponsors .jetbrains {
                 background-image: url('../../images/sponsors/jetbrains.png');
             }
-
+    
             .sponsors .chooseyourboss {
                 background-image: url('../../images/sponsors/chooseyourboss.png');
             }
-
+    
             .sponsors .mozilla {
                 background-image: url('../../images/sponsors/mozilla.png');
                 width: 200px !important;
             }
-
+    
             .sponsors .sii {
                 background-image: url('../../images/sponsors/sii.png');
                 width: 200px !important;
-            }  
+            }
         </style>
 
         <section>
@@ -153,7 +153,7 @@
                     communauté des développeurs de la r&eacute;gion
                     Haut de France.</p>
 
-                <paper-button raised class="primary large" on-click="navigateToSponsorsDocument">
+                <paper-button raised class="primary large" onclick="navigateToSponsorsDocument(this)">
                     Consultez notre dossier de sponsoring
                 </paper-button>
             </article>
@@ -243,7 +243,7 @@
 			}
 
             navigateToSponsorsDocument() {
-                location.href = './Devfest Lille.pdf';
+                location.href = '../../public/Devfest Lille.pdf';
             }
 		}
 

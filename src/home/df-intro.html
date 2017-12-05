@@ -4,22 +4,63 @@
 
 <dom-module id="df-intro">
     <template>
-        <style include="shared-styles"></style>
+        <style include="shared-styles">
+            #goals {
+                padding: 20px 0;
+                background-color: white;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
 
-        <section id="devfest">
+            #goals .goal {
+                flex: 1;
+                text-align: center;
+            }
+
+            #goals .goal h3,
+            #goals .goal h4 {
+                margin: 0;
+            }
+
+            #goals .goal h3 {
+                color: var(--primary-color);
+                text-transform: uppercase;
+            }
+
+            #goals .goal h4 {
+                font-weight: normal;
+            }
+        </style>
+
+        <section id="intro">
             <article>
-                <h2>Devfest Lille 2017</h2>
-                <hr/>
-                <p class="small">Rejoignez nous pour une journ&eacute;e de <span class="primary text">conf&eacute;rences</span>,
-                    de <span
-                            class="primary text">code labs</span>, d'<span class="primary text">&eacute;changes</span> sur
+                <p class="justified">
+                    Rejoignez nous pour une journ&eacute;e de <span class="primary text">conf&eacute;rences</span>,
+                    de <span class="primary text">code labs</span>, d'<span class="primary text">&eacute;changes</span> sur
                     les
                     sujets du <span class="secondary text">Web</span>, du <span class="secondary text">Mobile</span>,
                     du <span class="secondary text">Cloud</span>, des <span class="secondary text">technologies Google</span>
-                    et de leur utilisation par les <span class="secondary text">acteurs locaux</span>.</p>
-                <hr/>
-                <img src="../../images/logo-devfest-lille.svg">
+                    et de leur utilisation par les <span class="secondary text">acteurs locaux</span>.
+                </p>
             </article>
+        </section> 
+        <section id="goals">
+            <div class="goal">
+                <img src="../../images/layout/share.png" alt="Echanger" />
+                <h3>Echanger</h3>
+                <h4>stands &amp; innovation</h4>
+            </div>
+            <div class="goal">
+                <img src="../../images/layout/learn.png" alt="Apprendre" />
+                <h3>Apprendre</h3>
+                <h4>avec nos conf&eacute;rences</h4>
+            </div>
+            <div class="goal">
+                <img src="../../images/layout/do.png" alt="Pratiquer" />
+                <h3>Pratiquer</h3>
+                <h4>pendant nos codelabs</h4>
+            </div>
         </section>         
     </template>
 
