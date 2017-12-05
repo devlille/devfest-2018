@@ -1,11 +1,14 @@
 {
   "entrypoint": "index.html",
-  "shell": "src/my-app.html",
+  "shell": "src/df-app.html",
   "fragments": [
-    "src/my-view1.html",
-    "src/my-view2.html",
-    "src/my-view3.html",
-    "src/my-view404.html"
+    "src/home/df-home.html",
+    "src/home/df-intro.html",
+    "src/home/df-map.html",
+    "src/home/df-place.html",
+    "src/home/df-sponsors.html",
+    "src/faq/df-faq.html",
+    "src/faq/df-code-of-conduct.html"
   ],
   "sources": [
     "src/**/*",
