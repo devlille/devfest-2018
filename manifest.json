@@ -1,7 +1,7 @@
 {
   "name": "Devfest Lille 2018",
   "short_name": "Devfest Lille 2018",
-  "description": "",
+  "description": "Site du Devfest Lille 2018! Rejoignez-nous pour une journée de conférences et de codelabs pour échanger sur le Web, le Mobile, le Cloud, l'IOT et leur usage par les acteurs locaux.",
   "icons": [
     {
         "src": "/images/manifest/android-chrome-96x96.png",
