@@ -2,47 +2,39 @@
 <link rel="import" href="../../bower_components/paper-card/paper-card.html">
 <link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
 
-<link rel="import" href="."
-
 <link rel="import" href="./df-speaker.html">
 
 <dom-module id="df-speakers">
-
-    <style include="iron-flex iron-flex-alignment"></style>
-
-    <style include="shared-styles"></style>
-
-    <style>
-        article {
-            max-width: 100%;
-        }
-
-        .df-speaker-card {
-            margin: 16px;
-            position: relative;
-            width: 33%;
-        }
-
-        @media screen and (max-width: 1024px) {
-            .df-speaker-card {
-                width: 50%;
-            }
-        }
-
-        @media screen and (max-width: 640px) {
-            .df-speaker-card {
-                width: 100%;
-            }
-        }
-
-        @media screen and (min-width: 1400px) {
-            .df-speaker-card {
-                width: 25%;
-            }
-        }
-    </style>
-
     <template>
+        <style include="iron-flex iron-flex-alignment shared-styles">
+            article {
+                max-width: 100%;
+            }
+
+            .df-speaker-card {
+                margin: 16px;
+                position: relative;
+                width: 33%;
+            }
+
+            @media screen and (max-width: 1024px) {
+                .df-speaker-card {
+                    width: 50%;
+                }
+            }
+
+            @media screen and (max-width: 640px) {
+                .df-speaker-card {
+                    width: 100%;
+                }
+            }
+
+            @media screen and (min-width: 1400px) {
+                .df-speaker-card {
+                    width: 25%;
+                }
+            }
+        </style>
         <section>
             <article>
                 <h2>Speakers</h2>
@@ -226,7 +218,7 @@
                                     google-plus=""
                                     github="https://github.com/jeremiehuchet"></df-speaker>
                     </paper-card>
-                     <paper-card class="df-speaker-card">
+                    <paper-card class="df-speaker-card">
                         <df-speaker name="Jérémie Martinez"
                                     company="Trainline"
                                     avatar="jeremie-martinez.png"
@@ -370,9 +362,15 @@
         </section>
     </template>
     <script>
-        Polymer({
-            is: 'df-speakers'
-        });
+        class Speakers extends Polymer.Element {
+			static get is() { return 'df-speakers'; }
+			
+			static get properties() {
+				return { rootPath: String };
+			}
+		}
+
+		customElements.define(Speakers.is, Speakers);
     </script>
 </dom-module>
 

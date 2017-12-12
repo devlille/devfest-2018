@@ -1,61 +1,59 @@
 <dom-module id="df-speaker">
-    <style include="shared-styles"></style>
-
-    <style>
-        .df-speaker-container {
-            font-family: 'Didact Gothic', sans-serif;
-            margin: 16px;
-            padding-bottom: 38px;
-        }
-
-        .df-speaker-name {
-            margin-bottom: 8px;
-        }
-
-        .df-speaker-subtitle {
-            color: var(--secondary-color);
-            margin-top: 0;
-        }
-
-        .df-speaker-avatar {
-            background: var(--secondary-color);
-            clip-path: circle(49% at 50% 51%);
-            margin: 0 auto;
-            width: 120px;
-        }
-
-        .df-speaker-avatar img {
-            clip-path: circle(49% at 50% 50%);
-            width: 120px;
-        }
-
-        .df-speaker-bio {
-            text-align: left;
-        }
-
-        .df-social-networks {
-            bottom: 0;
-            display: flex;
-            position: absolute;
-            right: 0;
-        }
-
-        .df-social-network {
-            color: var(--primary-color);
-            opacity: 0.5;
-            transition: opacity 100ms ease-out;
-        }
-
-        .df-social-network:hover {
-            opacity: 1;
-        }
-
-        .df-social-network img {
-            width: 48px;
-        }
-    </style>
-
     <template>
+        <style include="shared-styles">
+            .df-speaker-container {
+                font-family: 'Didact Gothic', sans-serif;
+                margin: 16px;
+                padding-bottom: 38px;
+            }
+
+            .df-speaker-name {
+                margin-bottom: 8px;
+            }
+
+            .df-speaker-subtitle {
+                color: var(--secondary-color);
+                margin-top: 0;
+            }
+
+            .df-speaker-avatar {
+                background: var(--secondary-color);
+                clip-path: circle(49% at 50% 51%);
+                margin: 0 auto;
+                width: 120px;
+            }
+
+            .df-speaker-avatar img {
+                clip-path: circle(49% at 50% 50%);
+                width: 120px;
+            }
+
+            .df-speaker-bio {
+                text-align: left;
+            }
+
+            .df-social-networks {
+                bottom: 0;
+                display: flex;
+                position: absolute;
+                right: 0;
+            }
+
+            .df-social-network {
+                color: var(--primary-color);
+                opacity: 0.5;
+                transition: opacity 100ms ease-out;
+            }
+
+            .df-social-network:hover {
+                opacity: 1;
+            }
+
+            .df-social-network img {
+                width: 48px;
+            }
+        </style>
+
         <div class="df-speaker-container">
             <template is="dom-if" if="[[avatargit checkout ]]">
                 <div class="df-speaker-avatar">
