@@ -11,7 +11,7 @@ pipeline {
                 FIREBASE_TOKEN = credentials('FIREBASE_TOKEN')
             }
             when {
-                branch 'develop'
+                branch 'master'
             }
             steps {
                 sh './node_modules/firebase-tools/bin/firebase deploy --token $FIREBASE_TOKEN'
