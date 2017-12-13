@@ -1,0 +1,27 @@
+{
+  "name": "devfest-lille",
+  "authors": [
+    "GDG Lille"
+  ],
+  "private": true,
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.6.0",
+    "platinum-sw": "^1.3.0",
+    "web-animations-js": "^2.2.2",
+    "polymerfire": "^0.9.7",
+    "google-map": "GoogleWebComponents/google-map#^1.1.13",
+    "paper-styles": "PolymerElements/paper-styles#^1.1.5",
+    "paper-tabs": "PolymerElements/paper-tabs#^1.6.3",
+    "iron-pages": "PolymerElements/iron-pages#^1.0.8",
+    "app-layout": "PolymerElements/app-layout#^0.10.6",
+    "app-route": "PolymerElements/app-route#^0.9.3",
+    "paper-button": "PolymerElements/paper-button#^1.0.14",
+    "iron-flex-layout": "PolymerElements/iron-flex-layout#^1.3.1",
+    "paper-card": "PolymerElements/paper-card#^1.1.4",
+    "paper-dialog": "PolymerElements/paper-dialog#^1.1.0",
+    "neon-animation": "PolymerElements/neon-animation#^1.2.4"
+  },
+  "devDependencies": {
+    "web-component-tester": "^4.0.0"
+  }
+}
