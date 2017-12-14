@@ -4,6 +4,9 @@ pipeline {
         stage('build') {
             steps {
                 sh 'npm install'
+                dir ('public') { 
+                    sh 'bower install'
+                }
             }
         }
         stage('deploy') {
