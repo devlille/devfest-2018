@@ -1,0 +1,267 @@
+<link rel="import" href="/bower_components/paper-button/paper-button.html">
+<link rel="import" href="/bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="/bower_components/paper-tabs/paper-tab.html">
+
+<dom-module id="df-header">
+	<template>
+
+		<style include="shared-styles"></style>
+		
+		<style>
+			header {
+				display: block;
+			}
+
+			.app-toolbar-0 {
+				height: 100%;
+				padding: 0;
+			}
+
+			div.header-cta {
+				background-image: url(images/background.svg), linear-gradient(#58C0C2, #118798);
+				background-repeat: no-repeat;
+				background-position: center;
+				padding: 1rem 5%;
+				padding: 5vh 5% 4vh;
+				width: 100%;
+			}
+
+			div.header-cta-content {
+				display: flex;
+				position: relative;
+				flex-wrap: wrap;
+				justify-content: space-between;
+			}
+
+			div.header-cta-buttons [role="button"] {
+				display: block;
+				font-size: 0.9em;
+				text-align: center;
+				color: #000;
+				background-color: rgba(255,255,255,.6);
+				padding: 0.8rem;
+				margin-bottom: 1rem;
+				margin-bottom: 2vh;
+				box-shadow: 0 0 5px rgba(0,0,0,.5);
+			}
+			div.header-cta-buttons [role="button"]:hover {box-shadow: none; cursor: pointer;}
+			h1 {order: 1;}
+			div.header-cta-buttons {order: 2;}
+			p.rdv {
+				order: 3;
+				width: 100%;
+				font-size: 1em;
+				text-align: center;
+				color: #FFF;
+				padding: 0.3em 0;
+				margin-top: 2rem;
+				margin-top: 3vh;
+				border-top: 1px dotted rgba(255,255,255,.8);
+				border-bottom: 1px dotted rgba(255,255,255,.8);
+			}
+
+			.place::before {content: " - ";}
+
+			#tabsContent {
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				color: #FFF;
+				background: #A31E24;
+				border-top: 1px solid rgba(255,255,255,.8);
+			}
+			div.tab-content {position: relative;}
+			a.df-header {
+				display: block;
+				min-height: 30px;
+				font: 0.9em/30px 'sinkin_sans300_light', "Helvetica Neue", Helvetica, Arial, sans-serif;
+				text-transform: uppercase;
+				text-decoration: none;
+				color: #FFF;
+				background: #A31E24;
+				padding: 0.5rem;
+			}
+			a.df-header img {position: relative; top: 0.2em;}
+			a.df-header::after {
+				display: block;
+				position: absolute;
+				width: 100%;
+				height: 5px;
+				bottom: -6px;
+				left: 0;
+				content: "";
+				background-color: #F0F0F0;
+			}
+			[aria-selected=true] a.df-header::after {background-color: #19A6BD;}
+			a.df-header:hover::after {background-color: #19A6BD;}
+
+			#tabsContent paper-tab:first-of-type a.df-header {width: 20px;}
+
+			@media screen and (min-width: 670px) {
+				p.rdv {
+					width: 50%;
+					position: absolute;
+					bottom: 0;
+					right: 0;
+				}
+			}
+			@media screen and (min-width: 1250px) {
+				h1 {max-width: 100%; width: 192px; margin-top: 13vh;}
+				#tabsContent {padding: 0 20%;}
+				div.header-cta-content {position: static;}
+				div.header-cta {
+					min-height: 470px;
+					background-image: url(images/background.jpg);
+					background-position: left;
+					background-repeat: repeat-x;
+					padding: 0 5%;
+				}
+				div.header-cta-buttons {
+					position: absolute;
+					width: 15em;
+					top: 117px;
+					right: -6%;
+				}
+				div.header-cta-buttons [role=button] {}
+				p.rdv {
+					position: absolute;
+					width: 115px;
+					top: 110px;
+					left: 913px;
+					padding: 0;
+					margin: 0;
+					border: none;
+				}
+				p.rdv strong {display: block; font-size: 150%;}
+				p.rdv span {display: block;}
+				.place {margin-top: 3rem;}
+				.place::before {content: none;}
+			}
+
+            .nav {
+				height: 64px;
+				margin: 0;
+				padding: 0;
+				text-align: center;
+				background-color: var(--primary-color);
+				box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+			}
+
+			.nav paper-tabs {
+				--paper-tabs-selection-bar-color: var(--secondary-color);
+				height: 64px;
+				margin: 0 auto;
+				text-align: center;
+				max-width: 512px;
+			}
+			
+			.nav paper-tab {
+				width: 33%;
+   	 		}
+
+			.nav paper-tab a {
+				list-style: none;
+   	 		    vertical-align: top;
+			}
+			
+			.nav a {
+				font-size: 20px;
+				text-decoration: none;
+				color: #fff;
+				font-weight: 300;
+				margin: 0 5px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                white-space: pre-line;
+			}
+
+			.nav .icon a {
+				line-height: 0;
+				min-width: 100px;
+			}
+
+			.nav .icon img {
+				height: 34px;
+			} 
+			
+			[threshold-triggered] {
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				z-index: 2;
+				-webkit-backdrop-filter: saturate(180%) blur(20px);
+				backdrop-filter: saturate(180%) blur(20px);
+			}
+
+			.logo {
+				max-height: 150px;
+				max-width: 100%;
+				position: relative;
+			}
+		</style>
+
+      <header>
+		<app-toolbar class="style-scope df-header x-scope app-toolbar-0">
+			<div class="header-cta style-scope df-header">
+				<div class="header-cta-content style-scope df-header">
+					<h1><img class="logo style-scope df-header" src="images/logo.svg"></h1>
+					<p class="rdv"><strong>21 juin</strong> 2018 <span class="place"><strong>IMT</strong> Lille-Douai</span></p>
+					<div class="header-cta-buttons style-scope df-header">
+						<paper-button raised class="primary style-scope df-header x-scope paper-button-0" onclick="navigateToYurplan(this)">Inscription</paper-button>
+						<paper-button raised class="primary style-scope df-header x-scope paper-button-0" onclick="navigateToAgenda(this)">Ajouter à l'agenda</paper-button>
+						<paper-button raised class="primary style-scope df-header x-scope paper-button-0" onclick="navigateToCFP(this)">CFP</paper-button>
+					</div>
+				</div>
+			</div>
+		</app-toolbar>
+        <app-box threshold="470" class="style-scope df-header x-scope app-box-0">
+			<div id="background" class="style-scope app-box">
+				<div id="backgroundFrontLayer" class="style-scope app-box">
+
+				</div>
+			</div>
+			<div id="contentContainer" class="style-scope app-box ">
+				<section role="navigation" class="nav style-scope df-header">
+					<paper-tabs selected="[[page]]" attr-for-selected="name" class="drawer-list style-scope df-header x-scope paper-tabs-0" role="navigation">
+						<paper-tab name="home" class="icon">
+							<a href="#/home">
+								<img src="/images/logo-devfest-light-white.svg" />
+							</a>
+						</paper-tab>
+						<paper-tab name="faq"><a href="#/faq">FAQ</a></paper-tab>
+					</paper-tabs>
+				</section>
+			</div>
+        </app-box>
+      </header>
+	</template>
+
+	<script>
+    Polymer({
+      is: 'df-header'
+    });
+
+    function navigateToYurplan(element) {
+        // Wait for ripple to finish.
+        element.addEventListener('transitionend', function (e) {
+            location.href = 'https://www.billetweb.fr/devfest-lille-2018';
+        });
+    }
+
+    function navigateToAgenda(element) {
+        // Wait for ripple to finish.
+        element.addEventListener('transitionend', function (e) {
+            location.href = 'https://calendar.google.com/event?action=TEMPLATE&tmeid=NjhwamljMW1jZ3NtMmJiMzZwaDY0YjlrNm9zamliYjFjOHFtY2I5aTY4cWphZDFvYzRzMzhwYjRjNCBmcmFuY29pcy5ncnVjaGFsYUBt&tmsrc=francois.gruchala%40gmail.com';
+        });
+    }
+
+	function navigateToCFP(element) {
+        // Wait for ripple to finish.
+        element.addEventListener('transitionend', function (e) {
+            location.href = 'https://devfestlille.cfp.io/#/dashboard';
+        });
+    }
+  </script>
+</dom-module>

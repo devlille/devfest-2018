@@ -1,0 +1,146 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/app-layout/app-box/app-box.html">
+<link rel="import" href="/bower_components/app-layout/app-scroll-effects/app-scroll-effects.html">
+<link rel="import" href="/bower_components/paper-button/paper-button.html">
+<link rel="import" href="/bower_components/google-map/google-map.html">
+<link rel="import" href="df-styles.html">
+<link rel="import" href="df-sponsors.html">
+
+<dom-module id="df-home">
+    <template>
+
+        <style include="shared-styles"></style>
+
+        <style>
+
+            .first,
+            .second {
+                height: 300px;
+            }
+
+            .first {
+                --app-box-background-front-layer: {
+                    background-position: bottom;
+                    padding-bottom: 120px;
+                    margin-top: -20px;
+                    height: 100%;
+                };
+            }
+
+            .second {
+                --app-box-background-front-layer: {
+                    background-position: bottom;
+                    padding-bottom: 120px;
+                    margin-top: -20px;
+                    height: 100%;
+                };
+            }
+
+            .navigate-button {
+                position: absolute;
+                bottom: 10px;
+                right: 6px;
+            }
+
+            #goals {
+                padding: 20px 0;
+                background-color: white;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+
+            #goals .goal {
+                flex: 1;
+                text-align: center;
+            }
+
+            #goals .goal h3,
+            #goals .goal h4 {
+                margin: 0;
+            }
+
+            #goals .goal h3 {
+                color: var(--primary-color);
+                text-transform: uppercase;
+            }
+
+            #goals .goal h4 {
+                font-weight: normal;
+            }
+        </style>
+
+        <main>
+            <section id="devfest">
+                <article>
+                    <h2>Devfest Lille 2018</h2>
+                    <hr/>
+                    <p class="small">Rejoignez nous pour une journ&eacute;e de <span class="primary text">conf&eacute;rences</span>,
+                        de <span
+                                class="primary text">code labs</span>, d'<span class="primary text">&eacute;changes</span> sur
+                        les
+                        sujets du <span class="secondary text">Web</span>, du <span class="secondary text">Mobile</span>,
+                        du <span class="secondary text">Cloud</span>, des <span class="secondary text">technologies Google</span>
+                        et de leur utilisation par les <span class="secondary text">acteurs locaux</span>.</p>
+                </article>
+            </section>
+
+            <section id="goals">
+                <div class="goal">
+                    <img src="../../images/share.png" alt="Echanger" />
+                    <h3>Echanger</h3>
+                    <h4>stands &amp; innovation</h4>
+                </div>
+                <div class="goal">
+                    <img src="../../images/learn.png" alt="Apprendre" />
+                    <h3>Apprendre</h3>
+                    <h4>avec nos conf&eacute;rences</h4>
+                </div>
+                <div class="goal">
+                    <img src="../../images/do.png" alt="Pratiquer" />
+                    <h3>Pratiquer</h3>
+                    <h4>pendant nos codelabs</h4>
+                </div>
+            </section>   
+
+            <app-box class="second" effects="parallax-background">
+                <google-map
+                        latitude="50.611791"
+                        longitude="3.134720"
+                        api-key="AIzaSyAIIO4U1G38TKIrJr8-CMi2t5mg7KGfrv8"
+                        zoom="13"
+                        additional-map-options='{"draggable": false, "zoomControl": false, "scrollwheel": false, "disableDoubleClickZoom": true}'>
+                    <google-map-marker latitude="50.611791" longitude="3.134720" draggable="false">
+                    </google-map-marker>
+                </google-map>
+                <paper-button raised class="primary navigate-button" onclick="navigateToMaps(this)">Y aller !
+                </paper-button>
+            </app-box>
+
+            <section id="location">
+                <article>
+                    <h2>Le lieu : <a href="http://imt-lille-douai.fr/">IMT Lille Douai</a>
+                    </h2>
+                    <hr/>
+                    <p class="justified">Issue de la fusion de Mines Douai et Télécom Lille au 1er janvier 2017, IMT Lille Douai représente la plus grande école d’ingénieurs au nord de Paris, pour former l’ingénieur du futur, généraliste et expert du numérique. Chaque année, IMT Lille Douai, école de l’IMT en partenariat avec l’Université de Lille, diplôme plus de 500 ingénieurs de talent, formés pour anticiper les évolutions économiques et sociétales.</p>
+                </article>
+            </section>
+
+            <df-sponsors></df-sponsors>
+        </main>
+    </template>
+
+    <script>
+        Polymer({
+            is: 'df-home'
+        });
+
+        function navigateToMaps(element) {
+            // Wait for ripple to finish.
+            element.addEventListener('transitionend', function (e) {
+                location.href = 'https://goo.gl/maps/GQbdBSnj1Vp';
+            });
+        }
+    </script>
+</dom-module>

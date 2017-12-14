@@ -1,0 +1,466 @@
+<link rel="import" href="bower_components/paper-card/paper-card.html">
+<link rel="import" href="bower_components/paper-dialog/paper-dialog.html">
+
+<dom-module id="df-schedule-item">
+
+    <style>
+
+        .schedule-item {
+            display: flex;
+            align-items: center;
+            padding: 0 8px 0 24px;
+            padding-bottom: var(--schedule-item__time-after-padding-bottom);
+            position: relative;
+            text-decoration: none;
+        }
+
+        .schedule-item:before {
+            content: '';
+            width: 2px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 48px;
+            background: var(--paper-grey-400);
+        }
+
+        .schedule-item__speaker {
+            align-items: center;
+            display: none;
+            flex: 0 0 auto;
+            flex-direction: column;
+            height: 80px;
+            position: relative;
+            width: 104px;
+        }
+
+        .schedule-item__placeholder .schedule-item__speaker-details, .schedule-item__speaker .schedule-item__speaker-details {
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            transform: translateY(100%);
+            text-align: center;
+            width: 104px;
+        }
+
+        .schedule-item__placeholder h2, .schedule-item__speaker h2 {
+            font-weight: 700;
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+            color: var(--paper-indigo-900);
+        }
+
+        .schedule-item__placeholder h3, .schedule-item__speaker h3 {
+            font-size: 13px;
+            color: var(--paper-deep-orange-500);
+            line-height: 24px;
+            margin: 0;
+            padding: 0
+        }
+
+        .schedule-item__speaker:before {
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: var(--paper-grey-400);
+            position: absolute;
+            top: 50%;
+            right: 0
+        }
+
+        .schedule-item__details-inner {
+            position: relative;
+            width: 100%;
+            z-index: -1;
+        }
+
+        .schedule-item__speaker-image {
+            background: var(--secondary-color);
+            clip-path: circle(49% at 50% 50%);
+            height: 75px;
+            margin: 0 auto;
+            width: 75px;
+        }
+
+        .schedule-item__speaker-image img {
+            clip-path: circle(49% at 50% 47%);
+            height: 75px;
+            width: 75px;
+            -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+        }
+
+        .schedule-item__time {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            flex: 0 0 auto;
+            align-self: stretch
+        }
+
+        .schedule-item__time:after, .schedule-item__time:before {
+            height: 100%;
+            width: 48px;
+            display: block;
+            content: '';
+            flex: 1
+        }
+
+        .schedule-item__time:after {
+            background: var(--schedule-item__time-after-background);
+        }
+
+        .schedule-item__time-value {
+            background: var(--paper-deep-orange-500);
+            color: #FFF;
+            border-radius: 50%;
+            font-size: 13px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 48px
+        }
+
+        .schedule-item__details {
+            align-items: center;
+            display: flex;
+            height: 120px;
+            margin-left: 16px;
+            padding: 16px;
+            position: relative;
+            text-align: left;
+            z-index: 1;
+        }
+
+        .schedule-item__details:before {
+            background: var(--paper-grey-400);
+            content: '';
+            display: block;
+            width: 16px;
+            flex: 1 0 auto;
+            height: 2px;
+            margin-right: 8px;
+            position: absolute;
+            top: 50%;
+            left: -16px;
+        }
+
+        .schedule-item__title {
+            color: var(--paper-indigo-900);
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 23px;
+            padding: 0;
+        }
+
+        .schedule-item__category {
+            color: var(--paper-deep-orange-500);
+            font-weight: bold;
+        }
+
+
+        .schedule-item__duration {
+            font-weight: bold;
+        }
+
+        .schedule-item__description {
+            color: #555;
+            flex: 1 0 auto;
+            font-size: 18px;
+            line-height: 24px;
+            margin: 0;
+            overflow-y: hidden;
+            padding: 0;
+            position: relative;
+        }
+
+        .schedule-item__description p {
+            margin: 0;
+            text-align: left;
+        }
+
+        .schedule-item__description__ellipsis {
+            bottom: 0;
+            font-size: 1.2em;
+            padding-right: 3px;
+            position: absolute;
+            right: 0px;
+            text-align: right;
+            width: 20px;
+
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eeeeee+0,eeeeee+100&0+0,1+50,1+100 */
+            background: -moz-linear-gradient(-45deg, rgba(238, 238, 238, 0) 0%, rgba(238, 238, 238, 1) 50%, rgba(238, 238, 238, 1) 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(-45deg, rgba(238, 238, 238, 0) 0%, rgba(238, 238, 238, 1) 50%, rgba(238, 238, 238, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(135deg, rgba(238, 238, 238, 0) 0%, rgba(238, 238, 238, 1) 50%, rgba(238, 238, 238, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00eeeeee', endColorstr='#eeeeee', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+
+        }
+
+        paper-button {
+            transform: translateX(-13px);
+        }
+
+        paper-button:hover {
+            cursor: pointer;
+        }
+
+        @media (min-width: 600px) {
+
+            .schedule-item__speaker {
+                display: flex
+            }
+
+            .schedule-item {
+                padding-left: 8px;
+            }
+
+            .schedule-item:before {
+                left: 135px
+            }
+        }
+
+        @media (min-width: 1000px) {
+
+            .schedule-item__speaker {
+                display: none
+            }
+
+            .schedule-item {
+                padding-left: 24px;
+            }
+
+            .schedule-item:before {
+                left: 48px
+
+            }
+
+        }
+
+        @media (min-width: 1300px) {
+
+            .schedule-item__speaker {
+                display: flex
+            }
+
+            .schedule-item {
+                padding-left: 8px;
+            }
+
+            .schedule-item:before {
+                left: 135px
+            }
+
+        }
+
+        .no-before:before {
+            visibility: hidden;
+        }
+
+        .transparent {
+            background: transparent;
+        }
+
+        #dialog .schedule-item {
+            padding: 0;
+            position: relative;
+        }
+
+        #dialog .schedule-item__title, #dialog paper-dialog-scrollable * {
+            font-family: 'Didact Gothic', sans-serif;
+            font-size: 1.05em;
+        }
+
+        #dialog paper-dialog-scrollable paper-button,
+        #dialog paper-dialog-scrollable .schedule-item__description__ellipsis {
+            display: none;
+        }
+
+        #dialog .schedule-item__speaker {
+            height: 105px;
+            width: 20%;
+        }
+
+        #dialog .schedule-item__speaker-details {
+            width: 100%;
+        }
+
+        #dialog .schedule-item__speaker-image,
+        #dialog .schedule-item__speaker-image img {
+            height: 100px;
+            width: 100px;
+        }
+
+        #dialog .schedule-item__title,
+        #dialog .schedule-item__speaker-details h2 {
+            font-size: 1.3em;
+            font-weight: bold;
+            white-space: normal;
+        }
+
+        #dialog .schedule-item__title {
+            margin-bottom: 16px;
+        }
+
+        #dialog .schedule-item__category {
+            padding-bottom: 8px;
+        }
+
+        #dialog .schedule-item__duration {
+            padding-bottom: 22px;
+        }
+
+        #dialog .schedule-item__description {
+            max-height: 40vh;
+            overflow-y: scroll;
+        }
+
+        #dialog .schedule-item__time-value {
+            height: 58px;
+            left: -20px;
+            position: absolute;
+            top: -38px;
+            width: 58px;
+        }
+
+        #dialog .schedule-item__details {
+            height: auto;
+        }
+
+        #dialog .schedule-item:before,
+        #dialog .schedule-item__details:before,
+        #dialog .schedule-item__speaker:before,
+        #dialog .schedule-item__time:before,
+        #dialog .schedule-item__time:after {
+            display: none;
+        }
+
+    </style>
+
+    <template>
+
+        <div class="schedule-item">
+
+            <div class$="schedule-item__speaker [[noBeforeClass]]">
+                <template is="dom-if" if="[[avatar]]">
+                    <div class="schedule-item__speaker-image">
+                        <img src="./images/speakers/[[avatar]]" alt="[[name]]"
+                             width="128" height="128">
+                    </div>
+                </template>
+
+                <div class="schedule-item__speaker-details">
+                    <h2>[[name]]</h2>
+                    <h3>[[company]]</h3>
+                </div>
+            </div>
+
+            <div class="schedule-item__time">
+                <time title="[[dateLabel]]" class$="schedule-item__time-value [[transparentClass]]"
+                      datetime="[[datetime]]">[[dateLabel]]
+                </time>
+            </div>
+
+            <div class$="schedule-item__details [[noBeforeClass]]">
+                <div class="schedule-item__details-inner">
+                    <h2 class="schedule-item__title">[[title]]</h2>
+                    <template is="dom-if" if="[[category]]">
+                        <div class="schedule-item__category">[[category]]</div>
+                    </template>
+                    <template is="dom-if" if="[[category]]">
+                        <div class="schedule-item__duration">[[type]] / [[duration]]</div>
+                        <paper-button class="primary" on-click="openDialog">Plus d'info</paper-button>
+                    </template>
+                </div>
+            </div>
+        </div>
+
+        <paper-dialog id="dialog"  modal
+                      entry-animation="scale-up-animation"
+                      exit-animation="fade-out-animation">
+
+            <paper-dialog-scrollable>
+
+                <div class="schedule-item">
+
+                    <div class="schedule-item__time">
+                        <time title="[[dateLabel]]" class$="schedule-item__time-value [[transparentClass]]"
+                              datetime="[[datetime]]">[[dateLabel]]
+                        </time>
+                    </div>
+
+                    <div class$="schedule-item__speaker [[noBeforeClass]]">
+                        <template is="dom-if" if="[[avatar]]">
+                            <div class="schedule-item__speaker-image">
+                                <img src="./images/speakers/[[avatar]]" alt="[[name]]"
+                                     width="128" height="128">
+                            </div>
+                        </template>
+
+                        <div class="schedule-item__speaker-details">
+                            <h2>[[name]]</h2>
+                            <h3>[[company]]</h3>
+                        </div>
+                    </div>
+
+                    <div class$="schedule-item__details [[noBeforeClass]]">
+                        <div class="schedule-item__details-inner">
+                            <h2 class="schedule-item__title">[[title]]</h2>
+                            <template is="dom-if" if="[[category]]">
+                                <div class="schedule-item__category">[[category]]</div>
+                            </template>
+                            <template is="dom-if" if="[[category]]">
+                                <div class="schedule-item__duration">[[type]] / [[duration]]</div>
+                                <paper-button class="primary" on-click="openDialog">Plus d'info</paper-button>
+                            </template>
+                            <template is="dom-if" if="[[abstract]]">
+                                <div class="schedule-item__description">
+                                    <p>[[abstract]]</p>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+
+            </paper-dialog-scrollable>
+            <div class="buttons">
+                <paper-button dialog-confirm autofocus>Fermer</paper-button>
+            </div>
+        </paper-dialog>
+    </template>
+    <script>
+        Polymer({
+            is: 'df-schedule-item',
+
+            properties: {
+                name: String,
+                type: String,
+                category: String,
+                company: String,
+                avatar: String,
+                title: String,
+                abstract: String,
+                duration: String,
+                datetime: Date,
+                dateLabel: String
+            },
+
+            ready: function () {
+                this.noBeforeClass = '';
+                this.transparentClass = '';
+
+                if (!this.avatar || this.avatar === '') {
+                    this.noBeforeClass = 'no-before';
+                }
+
+                if (!this.dateLabel || this.dateLabel === '') {
+                    this.transparentClass = 'transparent';
+                }
+            },
+
+            openDialog: function() {
+                this.$.dialog.open();
+            }
+        });
+    </script>
+</dom-module>
