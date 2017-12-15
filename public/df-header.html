@@ -6,7 +6,7 @@
 	<template>
 
 		<style include="shared-styles"></style>
-		
+
 		<style>
 			header {
 				display: block;
@@ -45,7 +45,10 @@
 				box-shadow: 0 0 5px rgba(0,0,0,.5);
 			}
 			div.header-cta-buttons [role="button"]:hover {box-shadow: none; cursor: pointer;}
-			h1 {order: 1;}
+			h1 {
+				order: 1;
+				width: 30%;
+			}
 			div.header-cta-buttons {order: 2;}
 			p.rdv {
 				order: 3;
@@ -106,7 +109,10 @@
 				}
 			}
 			@media screen and (min-width: 1250px) {
-				h1 {max-width: 100%; width: 192px; margin-top: 13vh;}
+				h1 {
+					width: 192px;
+					margin-top: 21vh;
+				}
 				#tabsContent {padding: 0 20%;}
 				div.header-cta-content {position: static;}
 				div.header-cta {
@@ -119,15 +125,16 @@
 				div.header-cta-buttons {
 					position: absolute;
 					width: auto;
-					top: 117px;
-					right: 0;
+					top: 217px;
+					right: 1050px;
+					margin-left: 5%;
 				}
 				div.header-cta-buttons [role=button] {}
 				p.rdv {
 					position: absolute;
 					width: 115px;
-					top: 110px;
-					left: 913px;
+					top: 89px;
+					left: 912px;
 					padding: 0;
 					margin: 0;
 					border: none;
@@ -154,7 +161,7 @@
 				text-align: center;
 				max-width: 512px;
 			}
-			
+
 			.nav paper-tab {
 				width: 33%;
    	 		}
@@ -163,7 +170,7 @@
 				list-style: none;
    	 		    vertical-align: top;
 			}
-			
+
 			.nav a {
 				font-size: 20px;
 				text-decoration: none;
@@ -183,8 +190,8 @@
 
 			.nav .icon img {
 				height: 34px;
-			} 
-			
+			}
+
 			[threshold-triggered] {
 				position: fixed;
 				top: 0;
@@ -196,7 +203,6 @@
 			}
 
 			.logo {
-				max-height: 150px;
 				max-width: 100%;
 				position: relative;
 			}
