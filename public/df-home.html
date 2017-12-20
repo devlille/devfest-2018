@@ -43,16 +43,15 @@
             }
 
             #goals {
-                padding: 20px 0;
-                background-color: white;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                margin-bottom: 20px;
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: space-around;
+              padding: 2rem 0;
+              background-color: white;
             }
 
             #goals .goal {
-                flex: 1;
+                min-width: 280px;
                 text-align: center;
             }
 
@@ -62,12 +61,15 @@
             }
 
             #goals .goal h3 {
+              font-size: 2rem;
                 color: var(--primary-color);
                 text-transform: uppercase;
             }
 
             #goals .goal h4 {
-                font-weight: normal;
+              font-size: 1.3rem;
+              line-height: 1.2;
+              font-weight: normal;
             }
         </style>
 
@@ -77,8 +79,7 @@
                     <h2>Devfest Lille 2018</h2>
                     <hr/>
                     <p class="small">Rejoignez nous pour une journ&eacute;e de <span class="primary text">conf&eacute;rences</span>,
-                        de <span
-                                class="primary text">code labs</span>, d'<span class="primary text">&eacute;changes</span> sur
+                        de <span class="primary text">code labs</span>, d'<span class="primary text">&eacute;changes</span> sur
                         les
                         sujets du <span class="secondary text">Web</span>, du <span class="secondary text">Mobile</span>,
                         du <span class="secondary text">Cloud</span>, des <span class="secondary text">technologies Google</span>
@@ -102,7 +103,7 @@
                     <h3>Pratiquer</h3>
                     <h4>pendant nos codelabs</h4>
                 </div>
-            </section>   
+            </section>
 
             <app-box class="second" effects="parallax-background">
                 <google-map
