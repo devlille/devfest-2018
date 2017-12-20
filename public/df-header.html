@@ -82,7 +82,7 @@
 				text-decoration: none;
 				color: #FFF;
 				background: #A31E24;
-				padding: 0.5rem;
+				padding: 0 0.5rem;
 			}
 			a.df-header img {position: relative; top: 0.2em;}
 			a.df-header::after {
@@ -93,18 +93,19 @@
 				bottom: -6px;
 				left: 0;
 				content: "";
-				background-color: #F0F0F0;
+				background-color: rgba(255,255,255,0);
 			}
+			[aria-selected=false] a.df-header::after {background-color: rgba(255,255,255,0);}
 			[aria-selected=true] a.df-header::after {background-color: #19A6BD;}
 			a.df-header:hover::after {background-color: #19A6BD;}
 
 			#tabsContent paper-tab:first-of-type a.df-header {width: 20px;}
 
-			
+
 			@media screen and (min-width: 1250px) {
 				h1 {
 					width: 192px;
-					margin-top: 21vh;
+					margin-top: 105px;
 				}
 				#tabsContent {padding: 0 20%;}
 				div.header-cta-content {position: static;}
@@ -171,10 +172,10 @@
 				color: #fff;
 				font-weight: 300;
 				margin: 0 5px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                white-space: pre-line;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        white-space: pre-line;
 			}
 
 			.nav .icon a {
