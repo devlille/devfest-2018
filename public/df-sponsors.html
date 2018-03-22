@@ -5,7 +5,6 @@
     <style include="shared-styles"></style>
     <style include="iron-flex iron-flex-alignment"></style>
     <style>
-
         .sponsors h3 {
             font-size: 28px;
         }
@@ -14,27 +13,27 @@
             text-decoration: none;
         }
 
-        .sponsors a > div {
+        .sponsors a>div {
             transition: transform 150ms ease-out;
         }
 
-        .sponsors a:hover > div {
+        .sponsors a:hover>div {
             cursor: pointer;
             transform: scale(1.05);
         }
 
-        .sponsors > div > a > div {
+        .sponsors>div>a>div {
             background-position: center center;
             background-repeat: no-repeat;
             background-size: contain;
         }
 
-        .sponsors .gold > a > div {
+        .sponsors .gold>a>div {
             height: 120px;
             width: 200px;
         }
 
-        .sponsors .silver > a > div {
+        .sponsors .silver>a>div {
             height: 120px;
             width: 160px;
         }
@@ -51,12 +50,12 @@
             color: var(--paper-deep-orange-500);
         }
 
-        .sponsors .bronze > a > div {
+        .sponsors .bronze>a>div {
             height: 120px;
             width: 120px;
         }
 
-        .sponsors .partner > a > div {
+        .sponsors .partner>a>div {
             height: 120px;
             width: 100px;
         }
@@ -74,7 +73,7 @@
         }
 
         .sponsors .sii {
-            background-image: url('./images/logo-sii.jpg');
+            background-image: url('./images/logo-sii.png');
         }
 
         .sponsors .vaduo {
@@ -124,7 +123,6 @@
         .partner .epitech {
             background-image: url('./images/logo-epitech.jpg');
         }
-        
     </style>
 
     <template>
@@ -132,9 +130,8 @@
             <article>
                 <h2>Sponsorisez le Devfest Lille</h2>
                 <hr>
-                <p class="justified">Profitez du Devfest Lille pour gagner en visibilit&eacute; et échanger avec la
-                    communauté des développeurs de la r&eacute;gion
-                    Haut de France.</p>
+                <p class="justified">Profitez du Devfest Lille pour gagner en visibilit&eacute; et échanger avec la communauté des développeurs
+                    de la r&eacute;gion Haut de France.</p>
 
                 <paper-button raised class="primary large" onclick="navigateToSponsorsDocument(this)">
                     Consultez notre dossier de sponsoring
@@ -143,7 +140,9 @@
             <article class="sponsors">
                 <h2>Merci à nos sponsors !</h2>
                 <hr>
-                <h3>Sponsors <span class="gold">Gold</span></h3>
+                <h3>Sponsors
+                    <span class="gold">Gold</span>
+                </h3>
                 <div class="layout horizontal wrap around-justified gold">
                     <a href="https://www.sfeir.com" target="_blank">
                         <div class="sponsor sfeir">&nbsp;</div>
@@ -154,12 +153,11 @@
                     <a href="https://www.decathlon.fr/" target="_blank">
                         <div class="sponsor decathlon">&nbsp;</div>
                     </a>
-                    <a href="http://www.groupe-sii.com/fr" target="_blank">
-                        <div class="sponsor sii">&nbsp;</div>
-                    </a>
                 </div>
                 <hr>
-                <h3>Sponsors <span class="silver">Silver</span></h3>
+                <h3>Sponsors
+                    <span class="silver">Silver</span>
+                </h3>
                 <div class="layout horizontal wrap around-justified silver">
                     <a href="http://vaduoconsulting.com/" target="_blank">
                         <div class="vaduo">&nbsp;</div>
@@ -184,7 +182,9 @@
                     </a>
                 </div>
                 <hr>
-                <h3>Sponsors <span class="bronze">Bronze</span></h3>
+                <h3>Sponsors
+                    <span class="bronze">Bronze</span>
+                </h3>
                 <div class="layout horizontal wrap around-justified bronze">
                     <a href="http://www.infotel.com/" target="_blank">
                         <div class="infotel">&nbsp;</div>
@@ -197,6 +197,9 @@
                     </a>
                     <a href="https://fr.7digital.com/" target="_blank">
                         <div class="seven-digital">&nbsp;</div>
+                    </a>
+                    <a href="http://www.groupe-sii.com/fr" target="_blank">
+                        <div class="sponsor sii">&nbsp;</div>
                     </a>
                 </div>
                 <hr>
