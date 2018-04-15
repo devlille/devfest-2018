@@ -30,7 +30,7 @@
         }
 
         .schedule-nav a:active, .schedule-nav a:focus, .schedule-nav a:hover {
-            color: var(--paper-indigo-900);
+            color: var(--primary-color);
         }
 
         schedule-item:nth-last-child(1) {
@@ -38,7 +38,7 @@
         }
 
         .schedule-items__title {
-            background: var(--paper-indigo-900);
+            background: var(--primary-color);
             border-radius: 48px;
             box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
             color: white;
@@ -127,24 +127,24 @@
                         </div>
                     </div>
 
-                    <!--<df-schedule-item name="Hubert Sablonnière"
-                                      company="Opendevise"
-                                      avatar="hub.png"
+                    <df-schedule-item name=""
+                                      company=""
+                                      avatar=""
                                       date-label="09:00"
                                       title="Keynote d'ouverture"
                                       abstract=""
                                       category=""
-                                      date="2017-06-09T09:00:00-02:00"
-                                      duration="40mn"
+                                      date="2017-06-21T09:00:00-02:00"
+                                      duration="50mn"
                                       type=""></df-schedule-item>
-                    <df-schedule-item name="Jeremie Martinez"
-                                      company="Trainline (Captain Train)"
-                                      avatar="jeremie-martinez.png"
+                    <df-schedule-item name="Sébastien FRIESS"
+                                      company="SFEIR"
+                                      avatar="sebastien-friess.jpeg"
                                       date-label="09:50"
-                                      title="L’évolution des notifications - Tips & tricks"
-                                      abstract="Les notifications sont un des éléments incontournables des applications Android. En effet, elles sont un point d’entrée très intéressant pour vos utilisateurs et peuvent apporter une vraie plus-value si elles sont utilisées correctement. Dans ce talk, nous commencerons par un peu d’historique et de contexte notamment sur leurs évolutions au cours des versions d’Android d’un point de vue UX et design. Introduite dés la version #1 d’Android, elles sont souvent sous-estimées et mal-utilisées. Nous verrons donc dans un second temps comment être un bon citoyen des notifications en s’appuyant sur des concepts comme la catégorie, la pertinence et la légitimité. Enfin, nous aborderons une série de tips & tricks afin de faire correspondre parfaitement leurs utilisations aux besoins de vos utilisateurs. En abordant des sujets comme la gestion multi-devices, le déclenchement et les API méconnues du framework, nous ferons un vrai tour horizon de leurs possibilités et des bonnes pratiques associées."
-                                      category="Mobile, IoT"
-                                      date="2017-06-09T09:50:00-02:00"
+                                      title="gRPC, communiquons autrement"
+                                      abstract="gRPC, tout le monde en parle mais personne ne l'a jamais utilisé. Qu'est ce qui différencie ce mode communication ? Comment ça marche ? Et si moi aussi je veux l'utiliser par quoi je commence ? Au travers d'une présentation et d'un cas d'application simple nous allons découvrir ce qu'est réellement gRPC et comment l'utiliser dans un programme en Go, parce qu'on le vaut bien."
+                                      category="Cloud"
+                                      date="2017-06-21T09:50:00-02:00"
                                       duration="50mn"
                                       type="Conférence"></df-schedule-item>
                     <df-schedule-item name=""
@@ -154,17 +154,17 @@
                                       title="Pause"
                                       abstract=""
                                       category=""
-                                      date="2017-06-09T10:40:00-02:00"
+                                      date="2017-06-21T10:40:00-02:00"
                                       duration="20mn"
                                       type="Conférence"></df-schedule-item>
-                    <df-schedule-item name="Angela Ricci"
-                                      company="Worldline"
-                                      avatar="angela-ricci.png"
+                    <df-schedule-item name="Maxime Ghignet"
+                                      company=""
+                                      avatar="maxime-ghignet.jpg"
                                       date-label="11:00"
-                                      title="Le Dao d'un projet Web front"
-                                      abstract="Une page web n’a jamais été une image figée ; néanmoins, on insiste à proposer aux clients de wireframes et de maquettes Photoshop statiques. Aujourd’hui, le besoin de démontrer cette expérience dans différents devices ne peut que donner une idée encore plus réductrice du résultat réel. L’approche de travail actuelle n’est plus adaptée ou soutenable. Ce constat nous obligent pas seulement à questionner notre façon de travailler, mais aussi la façon comme on va interagir avec nos clients et comment on doit enrichir nos livrables. Cette présentation a pour but d'explorer une nouvelle façon de travail plus en harmonie avec le media Web, et plus en phase avec les méthodologies Agiles."
-                                      category="Web, JS, HTML5 et UX"
-                                      date="2017-06-09T11:00:00-02:00"
+                                      title="Git dammit!"
+                                      abstract="T'as deux minutes ? J'ai un problème avec Git. Telle est la phrase que l'on entend très régulièrement, murmurée dans les open-spaces. Le but de ce talk est de reprendre les problèmes les plus souvent rencontrés sur Git au travers un ensemble de cas d'usages, illustrés par des démos."
+                                      category="Carabistoule"
+                                      date="2017-06-21T11:00:00-02:00"
                                       duration="50mn"
                                       type="Conférence"></df-schedule-item>
                     <df-schedule-item name=""
@@ -174,27 +174,27 @@
                                       title="Déjeuner"
                                       abstract=""
                                       category=""
-                                      date="2017-06-09T11:50:00-02:00"
+                                      date="2017-06-21T11:50:00-02:00"
                                       duration="60mn"
                                       type=""></df-schedule-item>
-                    <df-schedule-item name="Alain Helaili"
-                                      company="GitHub"
-                                      avatar="alain-helaili.png"
+                    <df-schedule-item name="Aurélien Loyer"
+                                      company="Zenika"
+                                      avatar="aurelien-loyer.jpeg"
                                       date-label="12:50"
-                                      title="Le changement, c'est maintenant !"
-                                      abstract="On parle d'agilité et de devops depuis pas mal d'années maintenant, mais pour la plupart cela se résume à des sprints de 2 semaines suivis d'une mise en prod mensuelle au mieux. C'est loin du Continuous Delivery ! Et si on découplait le planing de dev du planning de prod, du planing de QA et du planing du PO? Et si on poussait en prod tout nos changements immédiatement, ça changerait quoi? Et comment ça marche? Facile, on va le faire ensemble, là, maintenant, tout de suite en réutilisant les mêmes outils que l'équipe de dev de GitHub (Flipper, GH-ost, Scientist, Hubot et Jenkins) sur une appli existante."
-                                      category="DevOps, Agilité, Méthodologie & Tests"
-                                      date="2017-06-09T12:50:00-02:00"
-                                      duration="50mn"
+                                      title="Tout le monde sait comment utiliser Angular / React / VueJs ... mais savez-vous comment utiliser JavaScript ?"
+                                      abstract="Aujourd’hui tout le monde connait les frameworks Angular, React Vuejs, mais savez-vous utiliser Javascript ? Savez-vous modifier votre framework favori, comprendre comment fonctionne un binding , comment fonctionne un router ? Et pourquoi utiliser un framework pour un simple POC alors que parfois il est si simple de revenir aux sources ? Et si on se posait les bonnes questions ?"
+                                      category="Web"
+                                      date="2017-06-21T12:50:00-02:00"
+                                      duration="60mn"
                                       type="Conférence"></df-schedule-item>
-                    <df-schedule-item name="Emile Vauge"
-                                      company="Containous"
-                                      avatar="emile-vauge.png"
+                    <df-schedule-item name="Olivier Philippot"
+                                      company="Greenspector"
+                                      avatar="olivier-philippot.jpg"
                                       date-label="13:50"
-                                      title="Make load-balancing great again!"
-                                      abstract="Comment gérer efficacement le traffic réseau entrant de votre infrastructure orientée conteneurs? Cette conférence sera l'occasion d'approfondir les fonctionnalités de Traefik, un reverse proxy de nouvelle génération. Ce talk sera composé majoritairement de démos avec Kubernetes et Docker Swarm ainsi que d'un live coding d'un plugin pour Traefik en go."
-                                      category="DevOps, Agilité, Méthodologie & Tests"
-                                      date="2017-06-09T13:50:00-02:00"
+                                      title="Autopsie de la mémoire Android"
+                                      abstract="Crash mémoire, out of memory, fuites mémoires... autant de symptomes que l'on aime pas voir remonté chez nos utilisateurs. Bug simple mais analyse compliquée qui nécessite une comprehension du système. Les type de mémoire sont variés (privée / partagée, Clean / Dirty , USS, MMap, Zram...) et les outils (Android Studio, Dumpsys...) ne mesurent pas les mêmes données. Lors de cette session nous verrons comment mesurer la consommation des applications Android, comment détecter des problèmes (Tests statiques, stress test...) et surtout comment réduire la taille occupée (Actions sur les Images, SDK, réduction de la taille de l'APK...)"
+                                      category="Mobile / IOT"
+                                      date="2017-06-21T13:50:00-02:00"
                                       duration="50mn"
                                       type="Conférence"></df-schedule-item>
                     <df-schedule-item name=""
@@ -204,27 +204,33 @@
                                       title="Pause"
                                       abstract=""
                                       category=""
-                                      date="2017-06-09T14:40:00-02:00"
+                                      date="2017-06-21T14:40:00-02:00"
                                       duration="20mn"
                                       type=""></df-schedule-item>
-                    <df-schedule-item name="David Pilato"
-                                      company="Elastic"
-                                      avatar="david-pilato.png"
+                    <df-schedule-item name="Loïc Knuchel"
+                                      company="Criteo"
+                                      avatar=""
                                       date-label="15:00"
-                                      title="Advanced search for your legacy application"
-                                      abstract="How do you mix SQL and NoSQL worlds without starting a messy revolution? This live coding talk will show you how to add Elasticsearch to your legacy application without changing all your current development habits. Your application will have suddenly have advanced search features, all without the need to write complex SQL code! David will start from a RestX, Hibernate and Postgresql/MySQL based application and will add a complete integration of Elasticsearch, all live from the stage during his presentation."
-                                      category="Big Data, Machine Learning, IA & Analytic"
-                                      date="2017-06-09T15:00:00-02:00"
-                                      duration="50mn"
+                                      title="Comment Criteo documente ses données"
+                                      abstract="On sait tous que la documentation est très importante, mais personne n’aime le faire. Et sans un outil pratique et adapté, il n’y a aucune chance qu’elle soit lue, voire même écrite !
+                                      Il y a beaucoup d’outils pour documenter le code mais dès que l’on parle des données, ça devient beaucoup plus compliqué… Notamment car la donnée est l’état global partagé par beaucoup d’applications et de personnes, et ce, d’autant plus dans le monde Big Data.
+                                      A Criteo nous avons beaucoup de données, et donc de tables et colonnes… Et il peut être très difficile de savoir précisément quoi utiliser et comment.
+                                      Pour adresser le problème nous avons créé DataDoc, un outil qui gère et automatise autant que possible la documentation de la donnée !
+                                      Dans ce talk je parlerais du problème de la documentation de la donnée, des challenges et des solutions que nous avons apporté, ainsi qu’un bilan sur le résultat et son usage actuel."
+                                      category="Carabistoule"
+                                      date="2017-06-21T15:00:00-02:00"
+                                      duration="60mn"
                                       type="Conférence"></df-schedule-item>
-                    <df-schedule-item name="Sébastien Pertus"
-                                      company="Microsoft"
-                                      avatar="sebastien-pertus.jpg"
+                    <df-schedule-item name="David Gageot"
+                                      company="Google"
+                                      avatar="david-gageot.jpeg"
                                       date-label="16:00"
-                                      title="Futur de NodeJS"
-                                      abstract="NodeJS poursuit son avancé dans tous les écosystèmes. L'avènement de ES6 puis ES7 et l'intégration dans les navigateurs des dernières moutures d'ECMASCRIPT pousse vers l'avant NodeJS grâce aux avancées du moteur V8. Nous verrons ensemble quelles sont les nouvelles fonctionnalités apportées par NodeJS 7 voir NodeJS 8, et quelles sont les problématiques rencontrées par les équipes de dev NodeJS. Nous parlerons d'asynchronisme ou encore de modules ESM dans se talk résolument orienté vers les développeurs backend !"
-                                      category="Web, JS, HTML5 et UX"
-                                      date="2017-06-09T16:00:00-02:00"
+                                      title="Docker, Kubernetes et Istio, c'est utile pour mon monolithe?"
+                                      abstract="Pour développer et mettre en production une architecture à base de micro-services, Docker, Kubernetes et Istio s'imposent. Docker nous donne l'isolation des services, Kubernetes permet de les distribuer sur un cluster et Istio apporte de l'intelligence au réseau.
+                                      Mais voilà, comme 80% des développeurs, c'est une application monolithique et paléolithique que je dois moderniser. Comment puis-je tirer tous les bénéfices de ces outils ? Puis-je le faire sans toucher une ligne de code de mon application ?
+                                      Simplification des montées de version, Déploiement sur le Cloud, Sécurisation des flux, Terminaison SSL, Blue/Green deployments, A/B Testing, Monitoring des Apis... Autant de cas concrets que l'on mettra en oeuvre sans toucher au monolithe !!"
+                                      category="Devops"
+                                      date="2017-06-21T16:00:00-02:00"
                                       duration="50mn"
                                       type="Conférence"></df-schedule-item>
                     <df-schedule-item name=""
@@ -234,29 +240,30 @@
                                       title="Pause"
                                       abstract=""
                                       category=""
-                                      date="2017-06-09T16:50:00-02:00"
+                                      date="2017-06-21T16:50:00-02:00"
                                       duration="20mn"
                                       type=""></df-schedule-item>
-                    <df-schedule-item name="Sylvain Coste & Daishi Kaszer"
-                                      company="Eartsup"
-                                      avatar="sylvain-coste-daishi-kaszer.png"
+                    <df-schedule-item name="Geoffrey Garnotel"
+                                      company="SFEIR"
+                                      avatar=""
                                       date-label="17:10"
-                                      title="Découverte du design génératif pour la création graphique et artistique"
-                                      abstract="Le but de la présentation n'est pas de définir le design génératif mais plutôt de proposer un rapide tour d'horizon de projets graphiques et/ou artistiques résultant d'un algorithme."
-                                      category="Langages alternatifs"
-                                      date="2017-06-09T17:10:00-02:00"
-                                      duration="50mn"
+                                      title="Data Stream avec Apache Beam / Cloud Dataflow"
+                                      abstract="Gérer des flows de données et l'exploiter en temps réel est au coeur de nombreuses plateformes. Etre capable d'absorber des données de sources différentes, de les analyser, de les transformer ou de les enrichir pour différents clients ou exploitations est un besoin courant des différentes plateformes Data.
+                                      A l'aide d'apache Beam / Cloud Dataflow, nous allons explorer les paradigmes à prendre en compte lors de la mise en place de stream processing et se poser les bonnes questions lors de la mise en place de notre pipeline de donnée."
+                                      category="Cloud"
+                                      date="2017-06-21T17:10:00-02:00"
+                                      duration="60mn"
                                       type="Conférence"></df-schedule-item>
-                    <df-schedule-item name="CommitStrip"
+                    <df-schedule-item name=""
                                       company=""
-                                      avatar="commitstrip.png"
+                                      avatar=""
                                       date-label="18:10"
                                       title="Keynote de fermeture"
                                       abstract=""
                                       category=""
-                                      date="2017-06-09T18:10:00-02:00"
+                                      date="2017-06-21T18:10:00-02:00"
                                       duration="50mn"
-                                      type=""></df-schedule-item>-->
+                                      type=""></df-schedule-item>
 
                 </div>
 
