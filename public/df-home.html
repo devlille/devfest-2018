@@ -12,7 +12,6 @@
         <style include="shared-styles"></style>
 
         <style>
-
             .first,
             .second {
                 height: 300px;
@@ -24,7 +23,8 @@
                     padding-bottom: 120px;
                     margin-top: -20px;
                     height: 100%;
-                };
+                }
+                ;
             }
 
             .second {
@@ -33,7 +33,8 @@
                     padding-bottom: 120px;
                     margin-top: -20px;
                     height: 100%;
-                };
+                }
+                ;
             }
 
             .navigate-button {
@@ -43,11 +44,11 @@
             }
 
             #goals {
-              display: flex;
-              flex-wrap: wrap;
-              justify-content: space-around;
-              padding: 2rem 0;
-              background-color: white;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                padding: 2rem 0;
+                background-color: white;
             }
 
             #goals .goal {
@@ -61,25 +62,29 @@
             }
 
             #goals .goal h3 {
-              font-size: 2rem;
+                font-size: 2rem;
                 color: var(--primary-color);
                 text-transform: uppercase;
             }
 
             #goals .goal h4 {
-              font-size: 1.3rem;
-              line-height: 1.2;
-              font-weight: normal;
+                font-size: 1.3rem;
+                line-height: 1.2;
+                font-weight: normal;
             }
 
             div.stats {
-              display: flex;
-              flex-wrap: wrap;
-              text-align: center;
-              margin-bottom: 1rem;
+                display: flex;
+                flex-wrap: wrap;
+                text-align: center;
+                margin-bottom: 1rem;
             }
-              div.stats p {flex: 1 0 45%;}
-              div.stats strong {
+
+            div.stats p {
+                flex: 1 0 45%;
+            }
+
+            div.stats strong {
                 display: inline-block;
                 font-size: 2.5em;
                 width: 2.5em;
@@ -88,23 +93,30 @@
                 color: #FFF;
                 background: #19A6BD;
                 border-radius: 33.5em;
-              }
-              div.stats small {
+            }
+
+            div.stats small {
                 display: block;
                 font-size: 110%;
                 color: #19A6BD;
-              }
+            }
 
-              @media screen and (min-width: 1300px) {
-                #devfest {display: flex;}
-                #devfest article + div.stats {
-                  flex: 1 0 55%;
-                  align-items: center;
-                  margin: 0 5%;
+            @media screen and (min-width: 1300px) {
+                #devfest {
+                    display: flex;
                 }
-                div.stats p {flex: 1 1 auto;}
-                  div.stats p {flex: 1 0 45%;}
-              }
+                #devfest article+div.stats {
+                    flex: 1 0 55%;
+                    align-items: center;
+                    margin: 0 5%;
+                }
+                div.stats p {
+                    flex: 1 1 auto;
+                }
+                div.stats p {
+                    flex: 1 0 45%;
+                }
+            }
         </style>
 
         <main>
@@ -112,12 +124,16 @@
                 <article>
                     <h2>Devfest Lille 2018</h2>
                     <hr/>
-                    <p class="small">Rejoignez nous pour une journ&eacute;e de <span class="primary text">conf&eacute;rences</span>,
-                        de <span class="primary text">code labs</span>, d'<span class="primary text">&eacute;changes</span> sur
-                        les
-                        sujets du <span class="secondary text">Web</span>, du <span class="secondary text">Mobile</span>,
-                        du <span class="secondary text">Cloud</span>, des <span class="secondary text">technologies Google</span>
-                        et de leur utilisation par les <span class="secondary text">acteurs locaux</span>.</p>
+                    <p class="small">Rejoignez nous pour une journ&eacute;e de
+                        <span class="primary text">conf&eacute;rences</span>, de
+                        <span class="primary text">code labs</span>, d'
+                        <span class="primary text">&eacute;changes</span> sur les sujets du
+                        <span class="secondary text">Web</span>, du
+                        <span class="secondary text">Mobile</span>, du
+                        <span class="secondary text">Cloud</span>, des
+                        <span class="secondary text">technologies Google</span>
+                        et de leur utilisation par les
+                        <span class="secondary text">acteurs locaux</span>.</p>
                 </article>
                 <div class="stats">
                     <p>
@@ -158,12 +174,7 @@
             </section>
 
             <app-box class="second" effects="parallax-background">
-                <google-map
-                        latitude="50.611791"
-                        longitude="3.134720"
-                        api-key="AIzaSyAIIO4U1G38TKIrJr8-CMi2t5mg7KGfrv8"
-                        zoom="13"
-                        additional-map-options='{"draggable": false, "zoomControl": false, "scrollwheel": false, "disableDoubleClickZoom": true}'>
+                <google-map latitude="50.611791" longitude="3.134720" api-key="AIzaSyAIIO4U1G38TKIrJr8-CMi2t5mg7KGfrv8" zoom="13" additional-map-options='{"draggable": false, "zoomControl": false, "scrollwheel": false, "disableDoubleClickZoom": true}'>
                     <google-map-marker latitude="50.611791" longitude="3.134720" draggable="false">
                     </google-map-marker>
                 </google-map>
@@ -173,10 +184,18 @@
 
             <section id="location">
                 <article>
-                    <h2>Le lieu : <a href="http://imt-lille-douai.fr/">IMT Lille Douai</a>
+                    <h2>Le lieu :
+                        <a href="http://imt-lille-douai.fr/">IMT Lille Douai</a>
                     </h2>
+                    <p>
+                        <img src="images/imt.png">
+                    </p>
                     <hr/>
-                    <p class="justified">Issue de la fusion de Mines Douai et Télécom Lille au 1er janvier 2017, IMT Lille Douai représente la plus grande école d’ingénieurs au nord de Paris, pour former l’ingénieur du futur, généraliste et expert du numérique. Chaque année, IMT Lille Douai, école de l’IMT en partenariat avec l’Université de Lille, diplôme plus de 500 ingénieurs de talent, formés pour anticiper les évolutions économiques et sociétales.</p>
+                    <p class="justified">Issue de la fusion de Mines Douai et Télécom Lille au 1er janvier 2017, IMT Lille Douai représente la
+                        plus grande école d’ingénieurs au nord de Paris, pour former l’ingénieur du futur, généraliste et
+                        expert du numérique. Chaque année, IMT Lille Douai, école de l’IMT en partenariat avec l’Université
+                        de Lille, diplôme plus de 500 ingénieurs de talent, formés pour anticiper les évolutions économiques
+                        et sociétales.</p>
                 </article>
             </section>
 
