@@ -29,7 +29,9 @@
             margin-right: 16px
         }
 
-        .schedule-nav a:active, .schedule-nav a:focus, .schedule-nav a:hover {
+        .schedule-nav a:active,
+        .schedule-nav a:focus,
+        .schedule-nav a:hover {
             color: var(--primary-color);
         }
 
@@ -123,327 +125,271 @@
                 <div class="schedule-items">
                     <div class="schedule-items__title-container">
                         <div class="schedule-items__title">
-                            Amphi
+                            Amphi 1
                         </div>
                     </div>
 
-                    <df-schedule-item name=""
-                                      company=""
-                                      avatar=""
-                                      date-label="09:00"
-                                      title="Keynote d'ouverture"
-                                      abstract=""
-                                      category=""
-                                      date="2017-06-21T09:00:00-02:00"
-                                      duration="50mn"
-                                      type=""></df-schedule-item>
-                    <df-schedule-item name="Sébastien FRIESS"
-                                      company="SFEIR"
-                                      avatar="sebastien-friess.jpeg"
-                                      date-label="09:50"
-                                      title="gRPC, communiquons autrement"
-                                      abstract="gRPC, tout le monde en parle mais personne ne l'a jamais utilisé. Qu'est ce qui différencie ce mode communication ? Comment ça marche ? Et si moi aussi je veux l'utiliser par quoi je commence ? Au travers d'une présentation et d'un cas d'application simple nous allons découvrir ce qu'est réellement gRPC et comment l'utiliser dans un programme en Go, parce qu'on le vaut bien."
-                                      category="Cloud"
-                                      date="2017-06-21T09:50:00-02:00"
-                                      duration="50mn"
-                                      type="Conférence"></df-schedule-item>
-                    <df-schedule-item name=""
-                                      company=""
-                                      avatar=""
-                                      date-label="10:40"
-                                      title="Pause"
-                                      abstract=""
-                                      category=""
-                                      date="2017-06-21T10:40:00-02:00"
-                                      duration="20mn"
-                                      type="Conférence"></df-schedule-item>
-                    <df-schedule-item name="Maxime Ghignet"
-                                      company=""
-                                      avatar="maxime-ghignet.jpg"
-                                      date-label="11:00"
-                                      title="Git dammit!"
-                                      abstract="T'as deux minutes ? J'ai un problème avec Git. Telle est la phrase que l'on entend très régulièrement, murmurée dans les open-spaces. Le but de ce talk est de reprendre les problèmes les plus souvent rencontrés sur Git au travers un ensemble de cas d'usages, illustrés par des démos."
-                                      category="Carabistoule"
-                                      date="2017-06-21T11:00:00-02:00"
-                                      duration="50mn"
-                                      type="Conférence"></df-schedule-item>
-                    <df-schedule-item name=""
-                                      company=""
-                                      avatar=""
-                                      date-label="11:50"
-                                      title="Déjeuner"
-                                      abstract=""
-                                      category=""
-                                      date="2017-06-21T11:50:00-02:00"
-                                      duration="60mn"
-                                      type=""></df-schedule-item>
-                    <df-schedule-item name="Aurélien Loyer"
-                                      company="Zenika"
-                                      avatar="aurelien-loyer.jpeg"
-                                      date-label="12:50"
-                                      title="Tout le monde sait comment utiliser Angular / React / VueJs ... mais savez-vous comment utiliser JavaScript ?"
-                                      abstract="Aujourd’hui tout le monde connait les frameworks Angular, React Vuejs, mais savez-vous utiliser Javascript ? Savez-vous modifier votre framework favori, comprendre comment fonctionne un binding , comment fonctionne un router ? Et pourquoi utiliser un framework pour un simple POC alors que parfois il est si simple de revenir aux sources ? Et si on se posait les bonnes questions ?"
-                                      category="Web"
-                                      date="2017-06-21T12:50:00-02:00"
-                                      duration="60mn"
-                                      type="Conférence"></df-schedule-item>
-                    <df-schedule-item name="Olivier Philippot"
-                                      company="Greenspector"
-                                      avatar="olivier-philippot.jpg"
-                                      date-label="13:50"
-                                      title="Autopsie de la mémoire Android"
-                                      abstract="Crash mémoire, out of memory, fuites mémoires... autant de symptomes que l'on aime pas voir remonté chez nos utilisateurs. Bug simple mais analyse compliquée qui nécessite une comprehension du système. Les type de mémoire sont variés (privée / partagée, Clean / Dirty , USS, MMap, Zram...) et les outils (Android Studio, Dumpsys...) ne mesurent pas les mêmes données. Lors de cette session nous verrons comment mesurer la consommation des applications Android, comment détecter des problèmes (Tests statiques, stress test...) et surtout comment réduire la taille occupée (Actions sur les Images, SDK, réduction de la taille de l'APK...)"
-                                      category="Mobile / IOT"
-                                      date="2017-06-21T13:50:00-02:00"
-                                      duration="50mn"
-                                      type="Conférence"></df-schedule-item>
-                    <df-schedule-item name=""
-                                      company=""
-                                      avatar=""
-                                      date-label="14:40"
-                                      title="Pause"
-                                      abstract=""
-                                      category=""
-                                      date="2017-06-21T14:40:00-02:00"
-                                      duration="20mn"
-                                      type=""></df-schedule-item>
-                    <df-schedule-item name="Loïc Knuchel"
-                                      company="Criteo"
-                                      avatar=""
-                                      date-label="15:00"
-                                      title="Comment Criteo documente ses données"
-                                      abstract="On sait tous que la documentation est très importante, mais personne n’aime le faire. Et sans un outil pratique et adapté, il n’y a aucune chance qu’elle soit lue, voire même écrite !
-                                      Il y a beaucoup d’outils pour documenter le code mais dès que l’on parle des données, ça devient beaucoup plus compliqué… Notamment car la donnée est l’état global partagé par beaucoup d’applications et de personnes, et ce, d’autant plus dans le monde Big Data.
-                                      A Criteo nous avons beaucoup de données, et donc de tables et colonnes… Et il peut être très difficile de savoir précisément quoi utiliser et comment.
-                                      Pour adresser le problème nous avons créé DataDoc, un outil qui gère et automatise autant que possible la documentation de la donnée !
-                                      Dans ce talk je parlerais du problème de la documentation de la donnée, des challenges et des solutions que nous avons apporté, ainsi qu’un bilan sur le résultat et son usage actuel."
-                                      category="Carabistoule"
-                                      date="2017-06-21T15:00:00-02:00"
-                                      duration="60mn"
-                                      type="Conférence"></df-schedule-item>
-                    <df-schedule-item name="David Gageot"
-                                      company="Google"
-                                      avatar="david-gageot.jpeg"
-                                      date-label="16:00"
-                                      title="Docker, Kubernetes et Istio, c'est utile pour mon monolithe?"
-                                      abstract="Pour développer et mettre en production une architecture à base de micro-services, Docker, Kubernetes et Istio s'imposent. Docker nous donne l'isolation des services, Kubernetes permet de les distribuer sur un cluster et Istio apporte de l'intelligence au réseau.
+                    <df-schedule-item name="" company="" avatar="" date-label="09:00" title="Keynote d'ouverture" abstract="" category="" date="2017-06-21T09:00:00-02:00"
+                        duration="50mn" type=""></df-schedule-item>
+                    <df-schedule-item name="Sébastien FRIESS" company="SFEIR" avatar="sebastien-friess.jpg" date-label="09:50" title="gRPC, communiquons autrement"
+                        abstract="gRPC, tout le monde en parle mais personne ne l'a jamais utilisé. Qu'est ce qui différencie ce mode communication ? Comment ça marche ? Et si moi aussi je veux l'utiliser par quoi je commence ? Au travers d'une présentation et d'un cas d'application simple nous allons découvrir ce qu'est réellement gRPC et comment l'utiliser dans un programme en Go, parce qu'on le vaut bien."
+                        category="Cloud" date="2017-06-21T09:50:00-02:00" duration="50mn" type="Conférence"></df-schedule-item>
+                    <df-schedule-item name="" company="" avatar="" date-label="10:40" title="Pause" abstract="" category="" date="2017-06-21T10:40:00-02:00"
+                        duration="20mn" type="Conférence"></df-schedule-item>
+                    <df-schedule-item name="Maxime Ghignet" company="" avatar="maxime-ghignet.jpg" date-label="11:00" title="Git dammit!" abstract="T'as deux minutes ? J'ai un problème avec Git. Telle est la phrase que l'on entend très régulièrement, murmurée dans les open-spaces. Le but de ce talk est de reprendre les problèmes les plus souvent rencontrés sur Git au travers un ensemble de cas d'usages, illustrés par des démos."
+                        category="Carabistoule" date="2017-06-21T11:00:00-02:00" duration="50mn" type="Conférence"></df-schedule-item>
+                    <df-schedule-item name="" company="" avatar="" date-label="11:50" title="Déjeuner" abstract="" category="" date="2017-06-21T11:50:00-02:00"
+                        duration="50mn" type=""></df-schedule-item>
+                    <df-schedule-item name="Aurélien Loyer & Nathan Damie" company="Zenika" avatar="aurelien-loyer.jpeg" date-label="12:50" title="Tout le monde sait comment utiliser Angular / React / VueJs ... mais savez-vous comment utiliser JavaScript ?"
+                        abstract="Aujourd’hui tout le monde connait les frameworks Angular, React Vuejs, mais savez-vous utiliser Javascript ? Savez-vous modifier votre framework favori, comprendre comment fonctionne un binding , comment fonctionne un router ? Et pourquoi utiliser un framework pour un simple POC alors que parfois il est si simple de revenir aux sources ? Et si on se posait les bonnes questions ?"
+                        category="Web" date="2017-06-21T12:50:00-02:00" duration="50mn" type="Conférence"></df-schedule-item>
+                    <df-schedule-item name="Olivier Philippot" company="Greenspector" avatar="olivier-philippot.jpg" date-label="13:50" title="Autopsie de la mémoire Android"
+                        abstract="Crash mémoire, out of memory, fuites mémoires... autant de symptomes que l'on aime pas voir remonté chez nos utilisateurs. Bug simple mais analyse compliquée qui nécessite une comprehension du système. Les type de mémoire sont variés (privée / partagée, Clean / Dirty , USS, MMap, Zram...) et les outils (Android Studio, Dumpsys...) ne mesurent pas les mêmes données. Lors de cette session nous verrons comment mesurer la consommation des applications Android, comment détecter des problèmes (Tests statiques, stress test...) et surtout comment réduire la taille occupée (Actions sur les Images, SDK, réduction de la taille de l'APK...)"
+                        category="Mobile / IOT" date="2017-06-21T13:50:00-02:00" duration="50mn" type="Conférence"></df-schedule-item>
+                    <df-schedule-item name="" company="" avatar="" date-label="14:40" title="Pause" abstract="" category="" date="2017-06-21T14:40:00-02:00"
+                        duration="20mn" type=""></df-schedule-item>
+                    <df-schedule-item name="Léo Unbekandt" avatar="leo-unbekandt.jpg" date-label="15:00" title="Modern API Authentication 101"
+                        abstract="L'authentification est quelque chose de difficile mais de nécessaire. C'est par ce procédé qu'une application est à même de confirmer l'identité d'un de ses utilisteurs, en d'autres mots, la sécurité de votre API en dépend. Quelles sont aujourd'hui les technologies disponibles pour vous ? Cette présentation présente des méthodes modernes d'authentification scalables, stateless et distribuées. Oubliez le token unique envoyé via HTTP basic auth, accueillez OAuth, JWT et la gestion de token avancée."
+                        category="Carabistoule" date="2017-06-21T15:00:00-02:00" duration="50mn" type="Conférence"></df-schedule-item>
+                    <df-schedule-item name="David Gageot" company="Google" avatar="david-gageot.jpeg" date-label="16:00" title="Docker, Kubernetes et Istio, c'est utile pour mon monolithe?"
+                        abstract="Pour développer et mettre en production une architecture à base de micro-services, Docker, Kubernetes et Istio s'imposent. Docker nous donne l'isolation des services, Kubernetes permet de les distribuer sur un cluster et Istio apporte de l'intelligence au réseau.
                                       Mais voilà, comme 80% des développeurs, c'est une application monolithique et paléolithique que je dois moderniser. Comment puis-je tirer tous les bénéfices de ces outils ? Puis-je le faire sans toucher une ligne de code de mon application ?
                                       Simplification des montées de version, Déploiement sur le Cloud, Sécurisation des flux, Terminaison SSL, Blue/Green deployments, A/B Testing, Monitoring des Apis... Autant de cas concrets que l'on mettra en oeuvre sans toucher au monolithe !!"
-                                      category="Devops"
-                                      date="2017-06-21T16:00:00-02:00"
-                                      duration="50mn"
-                                      type="Conférence"></df-schedule-item>
-                    <df-schedule-item name=""
-                                      company=""
-                                      avatar=""
-                                      date-label="16:50"
-                                      title="Pause"
-                                      abstract=""
-                                      category=""
-                                      date="2017-06-21T16:50:00-02:00"
-                                      duration="20mn"
-                                      type=""></df-schedule-item>
-                    <df-schedule-item name="Geoffrey Garnotel"
-                                      company="SFEIR"
-                                      avatar=""
-                                      date-label="17:10"
-                                      title="Data Stream avec Apache Beam / Cloud Dataflow"
-                                      abstract="Gérer des flows de données et l'exploiter en temps réel est au coeur de nombreuses plateformes. Etre capable d'absorber des données de sources différentes, de les analyser, de les transformer ou de les enrichir pour différents clients ou exploitations est un besoin courant des différentes plateformes Data.
+                        category="Devops" date="2017-06-21T16:00:00-02:00" duration="50mn" type="Conférence"></df-schedule-item>
+                    <df-schedule-item name="" company="" avatar="" date-label="16:50" title="Pause" abstract="" category="" date="2017-06-21T16:50:00-02:00"
+                        duration="20mn" type=""></df-schedule-item>
+                    <df-schedule-item name="Geoffrey Garnotel" company="SFEIR" avatar="" date-label="17:10" title="Data Stream avec Apache Beam / Cloud Dataflow"
+                        abstract="Gérer des flows de données et l'exploiter en temps réel est au coeur de nombreuses plateformes. Etre capable d'absorber des données de sources différentes, de les analyser, de les transformer ou de les enrichir pour différents clients ou exploitations est un besoin courant des différentes plateformes Data.
                                       A l'aide d'apache Beam / Cloud Dataflow, nous allons explorer les paradigmes à prendre en compte lors de la mise en place de stream processing et se poser les bonnes questions lors de la mise en place de notre pipeline de donnée."
-                                      category="Cloud"
-                                      date="2017-06-21T17:10:00-02:00"
-                                      duration="60mn"
-                                      type="Conférence"></df-schedule-item>
-                    <df-schedule-item name=""
-                                      company=""
-                                      avatar=""
-                                      date-label="18:10"
-                                      title="Keynote de fermeture"
-                                      abstract=""
-                                      category=""
-                                      date="2017-06-21T18:10:00-02:00"
-                                      duration="50mn"
-                                      type=""></df-schedule-item>
+                        category="Cloud" date="2017-06-21T17:10:00-02:00" duration="50mn" type="Conférence"></df-schedule-item>
+                    <df-schedule-item name="" company="" avatar="" date-label="18:10" title="Keynote de fermeture" abstract="" category="" date="2017-06-21T18:10:00-02:00"
+                        duration="50mn" type=""></df-schedule-item>
 
                 </div>
 
                 <div class="schedule-items">
                     <div class="schedule-items__title-container">
                         <div class="schedule-items__title">
-                            Talk room
+                            Amphi 2
                         </div>
                     </div>
 
-                    <!--<df-schedule-item class="padding-to-hide"></df-schedule-item>
-                    <df-schedule-item name="Xavier Dutreilh"
-                                      company="SFEIR"
-                                      avatar="xavier-dutreilh.png"
-                                      date-label="09:50"
-                                      title="Tous les bundlers au monde"
-                                      abstract="Aujourd'hui, il existe beaucoup d'outils pour packager les applications JavaScript. Il y a tellement de solutions que nous pouvons rapidement nous sentir dépassés et incompétents. Pourtant, le problème réside dans la complexité technique de ces outils, pas en nous. Par exemple, nous pouvons facilement passer des heures, voire des jours, à essayer de comprendre comment ils fonctionnent ou comment ils réécrivent notre code. Dans cette présentation, nous plongerons dans les méandres des bundlers JavaScript les plus courants : de Webpack et Rollup à Browserify et Brunch. Nous étudierons les spécificités de chacun et verrons comment ils peuvent nous être utiles. Nous discuterons également de leur coût en matière de performance et apprendrons comment ils affectent le débogage, la qualité de code, et la sécurité."
-                                      category="Web, JS, HTML5 et UX"
-                                      date="2017-06-09T09:50:00-02:00"
-                                      duration="50mn"
-                                      type="Conférence"></df-schedule-item>
-                    <df-schedule-item name=""
-                                      company=""
-                                      avatar=""
-                                      date-label="10:40"
-                                      title="Pause"
-                                      abstract=""
-                                      category=""
-                                      date="2017-06-09T10:40:00-02:00"
-                                      duration="20mn"
-                                      type=""></df-schedule-item>
-                    <df-schedule-item name="Marion Hayoun"
-                                      company=""
-                                      avatar="marion-hayoun.png"
-                                      date-label="11:00"
-                                      title="Let's create 2017's layouts together"
-                                      abstract="Mai 2016, les équipes de Google nous annoncaient l’arrivé d’un nouveau layout : ConstraintLayout. Nous verrons ensemble ce qui le rend si disruptif, pourquoi il s’agit bien plus d’une nouvelle corde à notre arc, en tant que développeurs Android. Nous verrons également ensemble démonstration à l’appui quelques cas d’usage plus “avancés” pour explorer ses possibilités."
-                                      category="Mobile, IoT"
-                                      date="2017-06-09T11:00:00-02:00"
-                                      duration="50mn"
-                                      type="Conférence"></df-schedule-item>
-                    <df-schedule-item name=""
-                                      company=""
-                                      avatar=""
-                                      date-label="11:50"
-                                      title="Déjeuner"
-                                      abstract=""
-                                      category=""
-                                      date="2017-06-09T11:50:00-02:00"
-                                      duration="60mn"
-                                      type=""></df-schedule-item>
-                    <df-schedule-item name="Julien Landuré & Eric Briand"
-                                      company="Zenika"
-                                      avatar="julien-landure-eric-briand.png"
-                                      date-label="12:50"
-                                      title="Serverless: just a buzzword?"
-                                      abstract="Les conteneurs se généralisent depuis maintenant quelques temps. Et un nouveau concept est déjà en train de pointer le bout de son nez : le serverless. Qu’est-ce que c’est ? Est-ce un buzz ou une réelle évolution ? Est-ce que l’on doit déjà mettre à la poubelle les conteneurs ? Au cours de cette présentation, nous présenterons les principes du serverless et nous ferons une mise en application avec AWS Lambda, Google Cloud Functions et le framework serverless. Nous essaierons d’apporter un éclairage sur l’intérêt de cette technologie à travers des exemples d’utilisation."
-                                      category="Cloud, Container et Scalabilité"
-                                      date="2017-06-09T12:50:00-02:00"
-                                      duration="50mn"
-                                      type="Conférence"></df-schedule-item>
-                    <df-schedule-item name="Jérémie Huchet & Erwann Thebault & Yoan Rousseau"
-                                      company="Zenika"
-                                      avatar="jeremie-huchet-erwann-thebault-yoan-rousseau.png"
-                                      date-label="13:50"
-                                      title="Lolcat on IoT"
-                                      abstract="Tout le monde sait que les chats règnent en maîtres sur Internet, mais comment domineront-ils l’IoT ? En partant d’un MVP “trouver mon chat”, nous avons transformé un simple collier en objet connecté. Notre objectif : créer un MAAS (Matou As A Service) et un Cat Social Network. À base d’arduino, capteurs, GPS et réseau sans fil LoRa, nous avons mis en place une solution de communication en temps réel avec notre chat. Nous aborderons les difficultés rencontrées pour réaliser le prototype et les challenges à relever pour passer à grande échelle (notamment avec le réseau LoRa). PS : Aucun animal ne sera maltraité durant cette session."
-                                      category="Mobile, IoT"
-                                      date="2017-06-09T13:50:00-02:00"
-                                      duration="50mn"
-                                      type="Conférence"></df-schedule-item>
-                    <df-schedule-item name=""
-                                      company=""
-                                      avatar=""
-                                      date-label="14:40"
-                                      title="Pause"
-                                      abstract=""
-                                      category=""
-                                      date="2017-06-09T14:40:00-02:00"
-                                      duration="20mn"
-                                      type=""></df-schedule-item>
-                    <df-schedule-item name="Régis Schneider"
-                                      company="Valtech"
-                                      avatar="regis-schneider.png"
-                                      date-label="15:00"
-                                      title="#JeVisAvecUnCycleEnV"
-                                      abstract="Pérégrinations d'un agiliste au coeur d'une transformation agile à la maison (avec 1 Chef de projet et 2 jeunes enfants) quand sa moitié n'en comprend pas tout à fait l'état d'esprit... Que ce soit au boulot ou à la maison, les situations, les résistances, les outils et les apprentissages se retrouvent. Agile ne nous aide pas uniquement dans le développement logiciel. Ses valeurs nous accompagnent dans la vie de tous les jours, à la maison par exemple. La session, sous la forme d'une respiration, vise à partager ces valeurs, à échanger sur les expériences que nous menons, peut-être même dans le savoir !"
-                                      category="DevOps, Agilité, Méthodologie & Tests"
-                                      date="2017-06-09T15:00:00-02:00"
-                                      duration="50mn"
-                                      type="Conférence"></df-schedule-item>
-                    <df-schedule-item name="Eliza Camberogiannis"
-                                      company="Pixplicity"
-                                      avatar="eliza-Camberogiannis.png"
-                                      date-label="16:00"
-                                      title="Impress your user's inner child!"
-                                      abstract="Tying up the users to your app is the most important and yet one of the most puzzling parts. Users will already have a strong impression about your app the first 30''; Yes, including splash screens or empty lists and loading indicators, that are pretty much impossible to avoid in most of the apps. So all we need is some stardust, say the 'abracadabra' 3 times, and the boring splash screen or the empty screen will transform to something entertaining and interesting that will impress our users! Wait... what?! How do I do this? A great place to start is learning to leverage Android's animation SDKs ;-)"
-                                      category="Mobile, IoT"
-                                      date="2017-06-09T16:00:00-02:00"
-                                      duration="50mn"
-                                      type="Conférence"></df-schedule-item>
-                    <df-schedule-item name=""
-                                      company=""
-                                      avatar=""
-                                      date-label="16:50"
-                                      title="Pause"
-                                      abstract=""
-                                      category=""
-                                      date="2017-06-09T16:50:00-02:00"
-                                      duration="20mn"
-                                      type=""></df-schedule-item>
-                    <df-schedule-item name="Thomas Balouet & Fabien Benetou"
-                                      company="LucidWeb"
-                                      avatar="thomas-balouet-fabien-benetou.png"
-                                      date-label="17:10"
-                                      title="La Réalité Virtuelle: un nouveau médium pour une nouvelle façon d'explorer le Web ?"
-                                      abstract="La Réalité Virtuelle est longtemps resté un rêve mais après de nombreuses années de développement le rêve est devenu accessible. Quel impact cela aura sur notre façon de percevoir les informations ? De consommer des média, et plus précisément qu'est-ce que ça peut apporter de concret au Web tel qu'on le connaît aujourd'hui ?"
-                                      category="Future, Robotique"
-                                      date="2017-06-09T17:10:00-02:00"
-                                      duration="50mn"
-                                      type="Conférence"></df-schedule-item>-->
+                    <df-schedule-item name="" company="" avatar="" date-label="09:00"></df-schedule-item>
+                    <df-schedule-item name="Antoine Gerard & Romain XXX" company="Smart&Soft" avatar="antoine-gerard.jpeg" date-label="09:50"
+                        title="Rendez vos applications Android instantanée avec les Instant Apps" abstract="Google propose un nouveau “format” d’application, les Instant Apps. La promesse est de permettre à l’utilisateur de tester une application native sans passer par l’installation de celle-ci sur le Play Store. Cela peut être une bonne opportunité pour convertir une audience web mobile vers l’application et améliorer l’expérience utilisateur.
+
+                        Nous allons voir comment créer et/ou transformer une application Android en Instant App. À la suite de ce développement pour LCI, nous vous proposons un retour d’expérience : Qu’est ce qu’une Instant App ? Comment en faire une ? Quels sont les prérequis à avoir et les erreurs à éviter ?
+                        
+                        A l’issue de ce talk vous serez alors paré pour réaliser vous même une Instant App." category="Mobile / IOT"
+                        date="2017-06-21T09:50:00-02:00" duration="50mn" type="Conférence"></df-schedule-item>
+                    <df-schedule-item name="" company="" avatar="" date-label="10:40" title="Pause" abstract="" category="" date="2017-06-21T10:40:00-02:00"
+                        duration="20mn" type="Conférence"></df-schedule-item>
+                    <df-schedule-item name="Francois Teychene & Estelle Landry" company="TabMo" avatar="froncois-teychene.jpg" date-label="11:00"
+                        title="L'UX a sauvé mon Devops" abstract="Elle s’appelle UX, lui s’appelle Devops. Ils sont amoureux mais sont au coeur de disputes entre deux familles rivales tels les Capulet et les Montaigu.
+
+                    Elle partage beaucoup de points communs avec lui :
+                    
+                    Ils ne voient jamais un projet dans son intégralité.
+                    Les deux sont des concepts émergeants des années 2010 au sein de l’IT.
+                    Ils sont tous les deux au centre des équipes et servent de liant entre les développeurs. Mais malgré tout, tout les sépare ! Cependant, les choses ont changé et les meurs ont évolué.
+                    Un jour, alors que notre Devops tentait en vain de convaincre sa hiérarchie, de désespoir, il se tourna vers UX et pria pour son assistance. Ce qu’il vit alors l’enchanta et il compris … Ses faiblesses étaient ses forces et il pouvait lui apporter autant. Son idéation était semblable à son automatisation. Quand il lui parlait de Scale, elle comprenait même si ce n’était pas la même chose (analytics scale) et leurs objectifs étaient beaucoup trop semblables pour que ce soit une coincidence …
+                    
+                    Venez voir l’histoire d’amour la plus improbable des ces 10 dernières années !" category="Mobile / IOT"
+                        date="2017-06-21T11:00:00-02:00" duration="50mn" type="Conférence"></df-schedule-item>
+                    <df-schedule-item name="" company="" avatar="" date-label="11:50" title="Déjeuner" abstract="" category="" date="2017-06-21T11:50:00-02:00"
+                        duration="50mn" type=""></df-schedule-item>
+                    <df-schedule-item name="Benjamin Monjoie" company="Appkers" avatar="benjamin-monjoie.jpg" date-label="12:50" title="A Kotlink between worlds"
+                        abstract="Kotlin is very popular in the Android community but Jetbrains hasn't focused only on the Java related worlds. They have targeted Javascript from the beginning and now they are also broadening their scope to other realms like iOS. Therefore, it's time for you to get acquainted on how you can share code between your projects. That is why, through the help of a little game called "
+                        Magic Square
+                        ", Benjamin will take you through the steps and lessons learned of how you can share code between a Javascript based interface and an Android application. The talk will focus on the best practices to achieve better code sharing, ensure your code is testable and what are the pitfalls you may encounter on your journey to an all platform Kotlin code." category="Mobile / IOT" date="2017-06-21T12:50:00-02:00" duration="50mn" type="Conférence"></df-schedule-item>
+                    <df-schedule-item name="Alexis Hassler" company="Sewatech" avatar="alexis-hassler.png" date-label="13:50" title="HTTP2 en pratique"
+                        abstract="Je suppose que vous avez déjà vu cette démo montrant une image morcelée qui s'affiche tellement plus vite en HTTP/2. Si ce n'est pas le cas, je vous la montrerai, et je vous expliquerai brièvement pourquoi c'est aussi rapide.
+
+                        Le but de cette présentation, c'est surtout de vous montrer comment HTTP/2 est implémenté aujourd'hui dans les principaux serveurs Web du marché, comme Apache httpd, nginx ou NodeJS. Comme souvent, le cas de Java est un peu plus compliqué. Rien que pour Tomcat, il y a plusieurs variantes : en h2 ou h2c, avec Java 8 ou Java 9, avec JSSE ou OpenSSL. Je vous expliquerai pourquoi toutes ces variantes.
+                        
+                        Enfin nous évaluerons l'impact que peut avoir HTTP/2 sur notre code et comment les API Push peuvent faire charger l'image morcelée encore plus rapidement."
+                        category="Web" date="2017-06-21T13:50:00-02:00" duration="50mn" type="Conférence"></df-schedule-item>
+                    <df-schedule-item name="" company="" avatar="" date-label="14:40" title="Pause" abstract="" category="" date="2017-06-21T14:40:00-02:00"
+                        duration="20mn" type=""></df-schedule-item>
+                    <df-schedule-item name="Hubert SABLONNIÈRE" company="Clever Cloud" avatar="hubert-sablonniere.jpg" date-label="15:00" title="#RetourAuxSources : Les cookies HTTP"
+                        abstract="Les cookies HTTP sont partout ! Pas une journée sans qu’un site nous demande “d’accepter les cookies”. Rares sont les projets Web qui ne les utilisent pas et pourtant leur fonctionnement nous échappe trop souvent.
+
+                    On confond les règles auxquelles ils sont soumis au sein des navigateurs. On fait des amalgames avec les sessions côté serveur. Ces petits trous dans le gigantesque éventail de connaissances du développeur moderne ont parfois des impacts non négligeables sur la sécurité de nos applications et sur la préservation de notre vie privée en tant qu’utilisateur du Web.
+                    
+                    Au menu de cette session, je vous propose de (re)découvrir les cookies HTTP par l’exemple et la pratique. Nous reviendrons sur leurs origines et nous verrons en détails le fonctionnement au sein des navigateurs et des serveurs. Enfin, nous aborderons les aspects les plus récent dans le domaine (SameSite, cookie prefix...). Ce talk sera plus généralement l’occasion de parler de sécurité, de tracking et de vie privée."
+                        category="Web" date="2017-06-21T15:00:00-02:00" duration="50mn" type="Conférence"></df-schedule-item>
+                    <df-schedule-item name="Thomas Lalaux" company="Norauto" avatar="thomas-lalaux.jpg" date-label="16:00" title="Comment mettre en place une chaine de deéploiement continu avec Github, Jenkins, Kubernetes sur AWS"
+                        abstract="L'idée de ce talk sera de voir comment mettre en place un process d'intégration continue direct en production grâce aux outils GitHub, Jenkins et Kubernetes. Ce talk parlera d'automatisation, de qualité, de conteneurs et d'AWS.
+
+                        " category="Devops" date="2017-06-21T16:00:00-02:00" duration="50mn" type="Conférence"></df-schedule-item>
+                    <df-schedule-item name="" company="" avatar="" date-label="16:50" title="Pause" abstract="" category="" date="2017-06-21T16:50:00-02:00"
+                        duration="20mn" type=""></df-schedule-item>
+                    <df-schedule-item name="Julien Debon" company="Decathlon" avatar="julien-debon.png" date-label="17:10" title="De Java7 à la programmation fonctionnelle"
+                        abstract="La Programmation fonctionnelle permet de résoudre les problèmes de façon plus simple et plus humaine. C'est pourquoi elle a le vent en poupe, même les principaux langages Objet tendent de plus en plus dans cette direction (Java, C++, etc.).
+
+                        Nous allons aborder/rappeler comment faire du Fonctionnel en Java en s'appuyant sur Java 8 et Vavr, puis nous migrerons une application web Java 7 en fonctionnel pour démystifier le traditionnel argument  : C'est cool pour les nouveaux projets mais ça marchera jamais sur mon application existante."
+                        category="Web" date="2017-06-21T17:10:00-02:00" duration="50mn" type="Conférence"></df-schedule-item>
+
+                    <df-schedule-item name="" company="" avatar="" date-label="18:10"></df-schedule-item>
 
                 </div>
                 <div class="schedule-items">
                     <div class="schedule-items__title-container">
                         <div class="schedule-items__title">
-                            Codelab room
+                            Amphi 3
                         </div>
                     </div>
 
-                    <!--<df-schedule-item class="padding-to-hide"></df-schedule-item>
-                    <df-schedule-item name="Damien Duportal & Jean-Marc Meessen"
-                                      company="CloudBees"
-                                      avatar="damien-duportal-jeanmarc-messen.png"
-                                      date-label="09:50"
-                                      title="Livraison Continue & BlueOcean : écrivons ensemble des Pipelines Jenkins Déclaratifs pour votre application"
-                                      abstract="Le projet Jenkins profite de cette année 2017 pour 'rénover mur et toiture' : Une nouvelle interface graphique 'BlueOcean' (réécriture de zéro en ReactJS), Des nouveaux Pipelines Déclaratifs (stop au Groovy, accès facilité aux débutants), Une (ré)adaptation aux pratiques récentes (Git/Github flows, collaboration, DevOps, Docker), Au delà des 'promesses électorales', qu'en est-il réellement ? (SPOILER alerte: nous travaillons pour CloudBees, mais adorons aussi utiliser Travis et GitLab CI). L'objectif de cet atelier est de se faire une idée concrète du Jenkins 'sauce 2017' par la pratique plutôt que par le marketing. Nous réaliserons ensemble un 'Pipeline' de livraison continue basé sur du Jenkins BlueOcean. Au menu: Intégration avec Git Configuration de l'environnement de build Compilation Tests & valorisation des rapports Visualisation Déploiement et interactions avec les Ops Des environnements hébergés dans Amazon seront mis à disposition (Navigateur Web HTML5 requis). Des machines VirtualBox seront toutefois disponibles, en secours, si l'Internet devait se révéler défaillant. Ces VMs vous permettrons de rejouer l'atelier après la conférence."
-                                      category="DevOps, Agilité, Méthodologie & Tests"
-                                      date="2017-06-09T09:50:00-02:00"
-                                      duration="2h"
-                                      type="Codelab"></df-schedule-item>
-                    <df-schedule-item class="padding-to-hide"></df-schedule-item>
-                    <df-schedule-item class="padding-to-hide"></df-schedule-item>
-                    <df-schedule-item name=""
-                                      company=""
-                                      avatar=""
-                                      date-label="11:50"
-                                      title="Déjeuner"
-                                      abstract=""
-                                      category=""
-                                      date="2017-06-09T11:50:00-02:00"
-                                      duration="60mn"
-                                      type=""></df-schedule-item>
+                    <df-schedule-item name="" company="" avatar="" date-label="09:00"></df-schedule-item>
+                    <df-schedule-item name="Sebastien Pertus" company="Microsoft" avatar="sebastien-pertus.jpeg" date-label="09:50" title="ESM : EcmaScript Modules in browser and NodeJS. It's about time !"
+                        abstract="ES5 et la vague NodeJS nous ont apportés une nouvelle méthode d'architecture de notre code JavaScript : Les Modules.
+                        Depuis ES6, les modules sont (enfin) définis et normés. Mais il va falloir comprendre pourquoi et comment les intégrer dans votre code.
+                        Nous verrons ensemble comment utiliser cette nouvelle syntaxe, comment elle s'intègre dans votre code client et désormais dans votre code NodeJS.
+                        Et comme on part de loin, d'un historique pharaonique, nous verrons quels sont les défis pour chaque développeur, que ce soit Front ou Back, quand il va s'agir de migrer un code existant, utilisant RequireJS ou CommonJS ?
+                        Be prepared !! On va parler de normes, d'évolution de JavaScript, et de Michael Jackson !! (si si, ça a un rapport :) )"
+                        category="Web" date="2017-06-21T09:50:00-02:00" duration="50mn" type="Conférence"></df-schedule-item>
+                    <df-schedule-item name="" company="" avatar="" date-label="10:40" title="Pause" abstract="" category="" date="2017-06-21T10:40:00-02:00"
+                        duration="20mn" type="Conférence"></df-schedule-item>
+                    <df-schedule-item name="Olivier Wulveryck" company="Octo" avatar="olivier-wulveryck.jpg" date-label="11:00" title="Le machine learning par un imp-op-steur"
+                        abstract="D'Admin Sys à SRE en passant par le DevOps, le développement logiciel fait désormais partie intégrante des métiers de l'infra. D'un autre côté, on assiste à l'émergence du 'logiciel 2.0' (Google lui même se réécrivant en logiciel 2.0).
 
-                    <df-schedule-item name="Aurélien Loyer"
-                                      company="Zenika"
-                                      avatar="aurelien-loyer.png"
-                                      date-label="12:50"
-                                      title="Après Angular et React, voici ... VueJS"
-                                      abstract="Depuis le temps que vous allez à des conférences, vous avez sûrement participé à des codelabs React et/ou Angular2. Vous êtes même devenu peut-être un expert sur l'une de ces technos. C'est pour cela que nous avons décidé de ne pas choisir l'un de ces deux projets. Pendant ce codelab, nous avons choisi une toute autre librairie que nous sommes en train de tester pour des projets perso : VueJS. A travers ces 3 heures, nous allons aborder tous les concepts vous permettant de créer une application riche : composants, directives, mixins, routers, ... A la fin de ce codelab, vous allez pouvoir vous rendre compte que VueJS gagne le combat des frameworks/librairies JavaScript par sa simplicité et sa facilité de mise en oeuvre, tout en réutilisant certains concepts de ses deux concurrents."
-                                      category="Web, JS, HTML5 et UX"
-                                      date="2017-06-09T12:50:00-02:00"
-                                      duration="2h"
-                                      type="Codelab"></df-schedule-item>
-                    <df-schedule-item class="padding-to-hide"></df-schedule-item>
-                    <df-schedule-item class="padding-to-hide"></df-schedule-item>
+                        Le logiciel mange aussi le monde de l'Ops.
+                        
+                        Le machine learning peut-il aider à analyser les root-cause des incidents ? A analyser une facture AWS ? A faire du capacity planning ?
+                        
+                        Peut-on remplacer plus de 10 ans d'expérience par une robot ?
+                        
+                        L'Ops de demain est peut-être un codeur de Bot-Ops, l'Ops d'aujourd'hui peut en être le mentor
+                        
+                        Cette présentation s'adresse à tous les geek curieux qui se retrouvent davantage dans
+                        
+                        'que vais-je mijoter pour l'avenir ?'' plutôt que dans 'à quelle sauce vais-je être mangé ?'.
+                        
+                        " category="Devops" date="2017-06-21T11:00:00-02:00" duration="50mn" type="Conférence"></df-schedule-item>
+                    <df-schedule-item name="" company="" avatar="" date-label="11:50" title="Déjeuner" abstract="" category="" date="2017-06-21T11:50:00-02:00"
+                        duration="50mn" type=""></df-schedule-item>
+                    <df-schedule-item name="Julien Durillon" company="Clever Cloud" avatar="julien-durillon.jpg" date-label="12:50" title="À tables ! Router efficacement avec Iproute et Netfilter."
+                        abstract="Avant, tout était simple. On lançait toutes nos applications sur la même machine. Tout le monde écoutait sur localhost:808X et on était content. Maintenant, ton CTO te demande de tout mettre dans des conteneurs, parce que « ça va plus vite à packager et c’est microservices-ready ! »
 
-                    <df-schedule-item name="Romain Lespinasse & Sébastien Friess"
-                                      company="SFEIR"
-                                      avatar="romain-lespinasse-sebastien-friess.png"
-                                      date-label="15:00"
-                                      title="Votre premier microservice en Go"
-                                      abstract="De plus en plus de développeurs Java se tournent vers le Go, langage backend qui monte, qui monte. Profitez de cet atelier pour mettre les mains dans le code et vous familiariser avec le langage et son écosystème (test, makefile, vendors, etc.). Il est recommandé d'avoir fait le tour of Go et d'être déjà à l'aise avec le langage pour rentrer plus facilement dans le sujet. Un workspace de développement est fourni pour les OS Unix friendly (linux, mac) et des VM sont à disposition des utilisateurs Windows ou de ceux qui le souhaitent. Lors de cet atelier, nous vous proposons de développer du sol au plafond un petit service web REST qui expose des données récupérées dans un MongoDB au format JSON. Nous commencerons par le parsing d'argument de la ligne de commande et le logging. Nous verrons ensuite comment modéliser et manipuler la data avec MongoDB. Pour finir nous attaquerons la partie web avec le routage, les middleware et les handler. En bonus, nous pourrons déployer le tout dans un docker-compose avec un instance de Mongo."
-                                      category="Langages alternatifs"
-                                      date="2017-06-09T15:00:00-02:00"
-                                      duration="2h"
-                                      type="Codelab"></df-schedule-item>-->
+                        Et là, tu commences à flipper parce qu’il faut faire du réseau. Et toi, pendant les cours sur IPv4 et TCP, bah tu dormais, bercé(e) par le ballet des trames ethernet.
+                        
+                        Dans ce talk, nous allons décortiquer différents outils. Voir comment les utiliser ensemble pour que les paquets aillent où on veut qu’ils aillent."
+                        category="Devops" date="2017-06-21T12:50:00-02:00" duration="50mn" type="Conférence"></df-schedule-item>
+                    <df-schedule-item name="Guillaume Laforge & Wassim Chegham" company="Google" avatar="guillaume-laforge.jpeg" date-label="13:50"
+                        title="Chatbots, et si on passait la seconde ? " abstract="Après l’étape de conception du persona de votre chatbot, de ses dialogues, il est maintenant temps de passer la seconde et de se plonger dans des sujets plus avancés. Nous allons continuer notre exploration de Dialogflow, de la plateforme Actions on Google, pour parler d’authentification des utilisateurs (par exemple, avec “account linking”), comment peut-on effectuer des transactions, comment au mieux tirer parti de la “surface” d’utilisation (téléphone, enceinte connectée), ou bien quelles informations peuvent être demandées (localisation, adresse, nom, etc.)"
+                        category="Carabistoule" date="2017-06-21T13:50:00-02:00" duration="50mn" type="Conférence"></df-schedule-item>
+                    <df-schedule-item name="" company="" avatar="" date-label="14:40" title="Pause" abstract="" category="" date="2017-06-21T14:40:00-02:00"
+                        duration="20mn" type=""></df-schedule-item>
+                    <df-schedule-item name="Gautier Mechling" company="Nilhcem" avatar="gautier-mechling.jpeg" date-label="15:00" title="De la domotique faite-maison avec Android Things et le Google Assistant"
+                        abstract="La domotique, c'est aussi cool que c'est reuch. Mais l'avantage à être pauvre, c'est qu'on peut apprendre plein de choses en les faisant nous même.
+
+                        Comme si on allait dépenser plus de 100€ pour des ampoules compatibles Google Home alors que pour 10 fois moins cher on peut tout faire nous-même en achetant des objets sur des sites chinois pour les retro-engineerer et écrire du code Android Things et Actions on Google afin de pouvoir les contrôler à la voix.
+                        
+                        Tiens ben d'ailleurs c'est ce qu'on va faire, ça va nous permettre de découvrir Android Things, le Google Assistant, voir comment on peut hacker des objets made-in-china, et surtout, ça nous permettra d'économiser des billets violets."
+                        category="Mobile / IOT" date="2017-06-21T15:00:00-02:00" duration="50mn" type="Conférence"></df-schedule-item>
+                    <df-schedule-item name="Guillaume Gillon & David Brassely" company="Decathlon" avatar="guillaume-gillon.jpg" date-label="16:00"
+                        title="L'open-source à la rescousse de mes APIS: comment les sécuriser grâce à Gravitee.io et Keycloak"
+                        abstract="Les concepts de CORS, OAuth, OpenID Connect, SAML, JWT rate-limiting, quota,... sont maintenant largement répandus mais pourtant mal maîtrisés et pas toujours mis en oeuvre dans les règles de l'art. Pour faciliter la vie du développeur, nous allons voir comment mettre en place la sécurisation de vos APIs sans avoir à intervenir sur vos backends grâce aux outils open-source que sont Gravitee.io et Keycloak."
+                        category="Web" date="2017-06-21T16:00:00-02:00" duration="50mn" type="Conférence"></df-schedule-item>
+                    <df-schedule-item name="" company="" avatar="" date-label="16:50" title="Pause" abstract="" category="" date="2017-06-21T16:50:00-02:00"
+                        duration="20mn" type=""></df-schedule-item>
+                    <df-schedule-item name="Yoan Rousseau & Pierre-Yves Aillet" company="Zenika" avatar="yoan-rousseau.jpg" date-label="17:10"
+                        title="Métrologie et Alerting avec Prometheus et Grafana" abstract="Les infrastructures élastiques, les conteneurs, et plus globalement les approches Devops ont bouleversé le déploiement des applications, mais également leur supervision. L'objectif de Prometheus est de répondre à ces changements. Lors de cette présentation, nous vous proposons de découvrir Prometheus. Nous évoquerons l'histoire du projet, ses différents composants et leur articulation. Nous vous ferons une démonstration de son usage pour monitorer des machines, mais aussi une Delorean, une invasion d'aliens ..."
+                        category="Devops" date="2017-06-21T17:10:00-02:00" duration="50mn" type="Conférence"></df-schedule-item>
+                    <df-schedule-item name="" company="" avatar="" date-label="18:10"></df-schedule-item>
 
                 </div>
 
+            </article>
+            <article>
+                <div class="schedule-items">
+                    <div class="schedule-items__title-container">
+                        <div class="schedule-items__title">
+                            Codelab 1
+                        </div>
+                    </div>
+
+                    <df-schedule-item name="" company="" avatar="" date-label="09:00"></df-schedule-item>
+                    <df-schedule-item name="Grégory Bévan & Thomas Betous" company="Zenika" avatar="gregory-bevan.jpg" date-label="09:50" title="Devenez un backend hero abec Kotlin"
+                        abstract="Kotlin gagne en popularité depuis la sortie officielle de sa version 1.0. Petit à petit, il devient la référence à la fois dans le monde du mobile (Android), du backend (Spring) et des outils (Gradle).
+
+                        Dans ce codelab nous allons introduire progressivement les concepts clé du langage à travers le développement du backend d'une application permettant de tester les capacités des développeurs, type CodinGame."
+                        category="Web" date="2017-06-21T09:50:00-02:00" duration="120mn" type="Codelab"></df-schedule-item>
+                    <df-schedule-item name="" company="" avatar="" date-label="11:50" title="Déjeuner" abstract="" category="" date="2017-06-21T11:50:00-02:00"
+                        duration="50mn" type=""></df-schedule-item>
+                    <df-schedule-item name="Christophe Furmaniak & Nicolas Lassalle" company="Appkers" avatar="christophe-furmaniak.jpg" date-label="12:50"
+                        title="Tout le monde parle de Kubernetes, et si vous vous y mettiez vous aussi?" abstract="De nos jours il est difficile de ne pas avoir entendu parler de Kubernetes.
+
+                        Que l'on fasse partie de ceux qui pensent que c'est un accélérateur de la containerisation ou de ceux qui trouvent que c'est plus compliqué que Docker Swarm et son descripteur docker-compose.yml, une chose est sûre, il faut mettre les mains dans le cambouis pour se faire sa propre idée. C'est justement ce que nous vous proposons dans ce CodeLab!
+                        
+                        Nous irons à l'essentiel et vous serez en mesure de déployer rapidement votre première application dans un cluster Kubernetes hébergé sur GKE (Googke Kubernetes Engine) qui sera provisionné pour vous. En sortant du codelab, vous aurez eu l'occasion de découvrir ce que sont les pods, deployments, services et ingress et vous serez en mesure de partir sur de bonnes bases pour vos explorations futures des nombreuses fonctionnalités proposées par cet orchestrateur de containers.
+                        
+                        Les seuls outils dont vous aurez besoin :
+                        
+                        votre éditeur de texte préféré pour écrire les descripteurs Kubernetes au format YAML
+                        kubectl, la ligne de commande permettant d'intéragir avec l'instance Kubernetes qui sera mise à votre disposition
+                        git pour récupérer les fichiers qui vous permettront de partir du bon pied
+                        Que vous soyez développeurs, gestionnaire d'infrastructure ou architecte, venez découvrir Kubernetes avec nous!"
+                        category="Devops" date="2017-06-21T12:50:00-02:00" duration="120mn" type="Codelab"></df-schedule-item>
+                    <df-schedule-item name="" company="" avatar="" date-label="14:40" title="Pause" abstract="" category="" date="2017-06-21T14:40:00-02:00"
+                        duration="20mn" type=""></df-schedule-item>
+                    <df-schedule-item name="Antoine Neveux & Michel Daviot" company="Worldline" avatar="antoine-neveux.jpeg" date-label="15:00"
+                        title="Le Pair Programming sous toutes ses formes" abstract="Bien que souvent résumée à mettre deux développeur·se·s derrière un même clavier, la pratique du Pair Programming n'est pas triviale, et se retrouve en bien des occasions comme pointée du doigt car peu efficace, ou frustrante pour les participant·e·s.
+
+                        Lors de ce codelab, vous découvrirez que le Pair Programming peut se décliner sous de multiples formes selon vos objectifs : découvrir un nouveau langage, résoudre un problème complexe, faire découvrir une technologie, ou simplement pratiquer des techniques de développement. A la manière de katas d'arts martiaux, et en se basant sur la pratique, nous illustrerons différentes façons d'appréhender l'art du travail en binôme pour écrire du code.
+                        
+                        Vous découvrirez lors de cet atelier différentes techniques et approches réutilisables vous permettant un travail actif des deux membres du duo ! Tout ceci au travers d'exercices et de défis de programmation amusants, à réaliser dans le langage de votre choix ! Mais bien entendu, toujours en binôme ;)
+                        
+                        A la suite de cet atelier, vous pourrez réutiliser toutes ces techniques pour animer vos séances de Pair Programming et pour favoriser le travail de groupe dans vos équipes : parfait par exemple pour vous lancer dans l'aventure DevOps !"
+                        category="Devops" date="2017-06-21T15:00:00-02:00" duration="120mn" type="Codelab"></df-schedule-item>
+
+                    <df-schedule-item name="" company="" avatar="" date-label="18:10"></df-schedule-item>
+
+                </div>
+                <div class="schedule-items">
+                    <div class="schedule-items__title-container">
+                        <div class="schedule-items__title">
+                            Codelab 2
+                        </div>
+                    </div>
+
+                    <df-schedule-item name="" company="" avatar="" date-label="09:00"></df-schedule-item>
+                    <df-schedule-item name="Pierre Zemb & Horacio Gonzalez & Aurelien Hebert" company="OVH" avatar="pierre-zemb.png" date-label="09:50"
+                        title="Redécouvrir l’univers connu avec le dataset de la NASA" abstract="Cela fait des années que l’humanité explore le ciel, rêvant de voyages intersidérales et de nouvelles colonies planétaires. Et toi, as-tu envie de partir 2h avec nous à la découverte de l'univers ?
+
+                        Il se trouve que la NASA possède un formidable jeu de données publiques, notamment celui qui est utilisé pour la recherche d’exoplanètes, c’est-à-dire de planètes situées en dehors de notre système solaire.
+                        
+                        Nous vous guiderons, au cours de ce Codelab, dans les différentes étapes permettant de redécouvrir des exoplanètes en utilisant Warp10, une plateforme open-source de traitement de séries temporelles."
+                        category="Carabistoule" date="2017-06-21T09:50:00-02:00" duration="120mn" type="Codelab"></df-schedule-item>
+                    <df-schedule-item name="" company="" avatar="" date-label="11:50" title="Déjeuner" abstract="" category="" date="2017-06-21T11:50:00-02:00"
+                        duration="50mn" type=""></df-schedule-item>
+                    <df-schedule-item name="Philippe Charrière & Nicolas Leroux" company="Clever Cloud / Lunatech" avatar="philippe-charriere.jpg"
+                        date-label="12:50" title="Scala pour ceux qui n'en ont jamais fait, par l'exemple, 2h pour être opérationnel(le)"
+                        abstract="J’avoue, j’ai trollé longtemps sans connaître, j’ai essayé plusieurs fois sans succès… Et finalement un jour, l’illumination. Je suis persuadé que:
+
+                        On peut écrire du code Scala simple
+                        Scala c’est aussi simple que du JavaScript
+                        Que ça ouvre l’esprit pour programmer autrement avec d’autres langages (ceux que vous utilisez actuellement ou d’autres)
+                        Cette université est destinée à vous apprendre Scala par l'exemple.
+                        
+                        Nous aborderons les sujets suivants: setup, hello world, ma 1ère classe, companion object, les traits
+                        les case classes, de la magie noire avec un peu d'implicits, les fonctions, les functors et le monades, les collections
+                        option, either, try, et si vous avez tenu jusqu'ici, une petite WebApp
+                        L'objectif étant de vous démontrer que vous pouvez faire du code simple et lisible en Scala, et vous faire plaisir."
+                        category="Carabistoule" date="2017-06-21T12:50:00-02:00" duration="120mn" type="Codelab"></df-schedule-item>
+                    <df-schedule-item name="" company="" avatar="" date-label="14:40" title="Pause" abstract="" category="" date="2017-06-21T14:40:00-02:00"
+                        duration="20mn" type=""></df-schedule-item>
+                    <df-schedule-item name="Antoine Cellier & Thomas Betous" company="Zenika" avatar="antoine-cellier.jpg" date-label="15:00"
+                        title="Propulsez votre application Angular avec GraphQL et Apollo" abstract="GraphQL est une spécification et un langage de requêtage possédant de nombreuses implémentations côté serveur mais aussi côté client.
+
+                        Nous allons propulser notre application grâce à l’implémentation client fournie par Apollo. Les performances vont être améliorées grâce à un système de cache, mais aussi l'expérience utilisateur avec le pattern optimistic UI.
+                        
+                        A partir d’une application Angular, nous exploiterons les données d’une API GraphQL à l’aide d’Apollo. Profitons des avantages de GraphQL mais pas que!"
+                        category="Web" date="2017-06-21T15:00:00-02:00" duration="120mn" type="Codelab"></df-schedule-item>
+
+                    <df-schedule-item name="" company="" avatar="" date-label="18:10"></df-schedule-item>
+
+                </div>
             </article>
         </section>
     </template>

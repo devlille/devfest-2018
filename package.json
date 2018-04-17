@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "Website for the devfest lille",
   "main": "index.js",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "bower": "^1.8.0",
     "firebase-tools": "^3.3.0"
