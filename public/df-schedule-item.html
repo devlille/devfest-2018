@@ -369,7 +369,9 @@
                     </template>
                     <template is="dom-if" if="[[category]]">
                         <div class="schedule-item__duration">[[type]] / [[duration]]</div>
-                        <paper-button class="primary" on-click="openDialog">Plus d'info</paper-button>
+                        <template is="dom-if" if="[[abstract]]">
+                            <paper-button class="primary" on-click="openDialog">Plus d'info</paper-button>
+                        </template>
                     </template>
                 </div>
             </div>
