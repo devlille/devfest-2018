@@ -1,0 +1,270 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>DEVFEST LILLE 2018</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+      * {padding: 0; margin: 0;}
+      :root {}
+
+      body {
+        font: 100%/1.2 "Century Gothic", "Gill Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        color: #FFF;
+        background-color: #FFF;
+        margin: 5vh 5%;
+      }
+
+      #the-canvas {background: #2db3e2;}
+
+      @keyframes growd {
+        0% {transform: translate(0, -500px);}
+        100% {transform: translate(0, 500px)}
+      }
+      @keyframes growu {
+        0% {transform: translate(0, 500px);}
+        100% {transform: translate(0, -500px)}
+      }
+      @keyframes slideR {
+        0% {transform: scaleX(1) translateX(0);}
+        50% {transform: scaleX(0.01) translateX(100%);}
+        60% {transform: scaleY(0.01);}
+        80% {transform: scale(0.5); opacity: 1;}
+        100% {transform: scale(1); opacity: 0;}
+      }
+      @keyframes slideL {
+        0% {transform: scaleX(1)}
+        50% {transform: scaleX(0.01);}
+        60% {transform: scaleY(0.01);}
+        80% {transform: scale(0.5); opacity: 1;}
+        100% {transform: scale(1); opacity: 0;}
+      }
+      @keyframes place1 {
+        0% {opacity: 0; transform: translate(0);}
+        50% {opacity: 1;}
+        100% {opacity: 1; transform: translate(-60px);}
+      }
+      @keyframes place2 {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+      }
+      @keyframes place3 {
+        0% {opacity: 0; transform: translate(0);}
+        50% {opacity: 1;}
+        100% {opacity: 1; transform: translate(60px);}
+      }
+      .growu {
+        animation-fill-mode: forwards;
+        animation-duration: 1s;
+        animation-name: growu;
+      }
+      .growd {
+        animation-fill-mode: forwards;
+        animation-duration: 1s;
+        animation-name: growd;
+      }
+      .slideR {
+        transform-origin: center;
+        animation-fill-mode: forwards;
+        animation-duration: 5s;
+        animation-name: slideR;
+      }
+      .slideL {
+        transform-origin: center;
+        animation-fill-mode: forwards;
+        animation-duration: 2s;
+        animation-name: slideL;
+      }
+
+      .place1 {
+        transform-origin: center;
+        animation-fill-mode: forwards;
+        animation-duration: 2s;
+        animation-name: place1;
+      }
+      .place2 {
+        transform-origin: center;
+        animation-fill-mode: forwards;
+        animation-duration: 3s;
+        animation-name: place2;
+      }
+      .place3 {
+        transform-origin: center;
+        animation-fill-mode: forwards;
+        animation-duration: 2s;
+        animation-name: place3;
+      }
+
+      @keyframes gir1 {
+        0% {bottom: -500px;}
+        100% {bottom: 0;}
+      }
+      @keyframes gir1-out {
+        0% {bottom: 0;}
+        100% {bottom: -500px;}
+      }
+      @keyframes the-bubble {
+        0% {right: -20em;}
+        100% {right: 5%;}
+      }
+      @keyframes the-bubble-out {
+        0% {right: 5%;}
+        100% {right: -20em;}
+      }
+
+
+      .block {position: relative; overflow: hidden;}
+      #gir1 {
+        position: absolute;
+        left: 0;
+        bottom: -500px;
+      }
+      #gir2 {
+        position: absolute;
+        width: 300px;
+        left: 0;
+        bottom: -500px;
+      }
+      #gir1.in {
+        animation-fill-mode: forwards;
+        animation-duration: 3s;
+        animation-name: gir1;
+      }
+      #gir1.out {
+        animation-fill-mode: forwards;
+        animation-duration: 3s;
+        animation-name: gir1-out;
+      }
+      #bubble.in {
+          animation-fill-mode: forwards;
+          animation-duration: .5s;
+          animation-name: the-bubble;
+      }
+
+      #bubble.out {
+          animation-fill-mode: forwards;
+          animation-duration: 1s;
+          animation-name: the-bubble-out;
+      }
+
+      #bubble {
+        position: absolute;
+        width: 10em;
+        top: 5vh;
+        right: -20em;
+        font-size: 2em;
+        text-align: center;
+        padding: 2em 1em;
+      }
+      #bubble::before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: rgba(255,255,255,.3);
+        border-radius: 90%;
+      }
+      #bubble::after {
+        position: absolute;
+        bottom: -100px;
+        right: 10%;
+        content: "";
+        width: 1px;
+        height: 150px;
+        background: rgba(255,255,255,1);
+        transform: rotate(-45deg);
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="block">
+    <svg id="the-canvas" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 500" preserveAspectRatio="xMinYMin meet">
+      <defs>
+        <filter id="MyFilter" filterUnits="userSpaceOnUse">
+          <desc>Produces a 3D lighting effect.</desc>
+          <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur"/>
+          <feOffset in="blur" dx="4" dy="4" result="offsetBlur"/>
+          <feSpecularLighting in="blur" surfaceScale="5" specularConstant=".2"
+                              specularExponent="60" lighting-color="#dddddd"
+                              result="specOut">
+            <fePointLight x="-5000" y="-10000" z="20000"/>
+          </feSpecularLighting>
+          <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut"/>
+          <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic"
+                       k1="0" k2="1" k3="1" k4="0" result="litPaint"/>
+          <feMerge>
+            <feMergeNode in="offsetBlur"/>
+            <feMergeNode in="litPaint"/>
+          </feMerge>
+        </filter>
+      </defs>
+
+      <g id="wave" style="opacity:0.13">
+        <path d="M411.34,281.68C296.15,194.73,183.56,78.93,33.23,59.09A284.33,284.33,0,0,0,0,56.7v98.64a254.05,254.05,0,0,1,54.83-6.11c113,0,179.81,79.87,251.7,154.85,146.29,152.59,327.59,171.7,509.12,101.26C662.35,414.49,542.72,380.84,411.34,281.68Z" style="fill:#e2dede"/>
+        <path d="M1984,147.28C1868.07,40.21,1697.8-17.29,1547.74,4.61c-254.9,37.22-430.52,244.85-647.59,361.58a757.36,757.36,0,0,1-84.5,39.15c21.44-1.28,43.53-3.39,66.41-6.28,173.58-21.94,270.87-102.52,415.3-186.87C1514.2,85.55,1786,103.13,1984,243.63Z" style="fill:#e2dede"/>
+      </g>
+      <g id="cloud">
+        <path d="M167,40h0c-.35-22.14-24.15-40-53.48-40-27.4,0-50,15.6-53.11,35.7a45,45,0,1,0-2.57,85.44C66.13,132.44,81.24,140,98.5,140c21.81,0,40.18-12.08,45.76-28.53A58,58,0,0,0,167,116c26.51,0,48-17,48-38S193.51,40,167,40Z" style="fill:#fff;opacity: 0.2"/>
+      </g>
+      <g id="group">
+        <rect id="rect-b" x="340px" y="100px" width="60" height="320" fill="#0E6994"></rect>
+        <rect id="rect-r" x="420px" y="100px" width="60" height="320" fill="#C62127"></rect>
+        <rect id="rect-o" x="500px" y="100px" width="60" height="320" fill="#F8991D"></rect>
+        <circle id="circle-b" cx="610px" cy="130px" r="30" fill="#0E6994"></circle>
+        <circle id="circle-r" cx="610px" cy="210px" r="30" fill="#C62127"></circle>
+        <circle id="circle-o" cx="610px" cy="290px" r="30" fill="#F8991D"></circle>
+      </g>
+    </svg>
+
+    <img id="gir1" src="girafe.png" alt="" />
+    <p id="bubble">Dégage, Charlie!</p>
+  </div>
+  </body>
+
+  <script src="TweenMax.min.js"></script>
+  <script>
+
+    let group = document.getElementById('group');
+    let gir1 = document.getElementById('gir1');
+    let bubble = document.getElementById('bubble');
+
+    TweenMax.from('#rect-b', 1, {x: '80px'});
+    TweenMax.from('#rect-o', 1, {x: '-80px'});
+
+    TweenMax.staggerFrom('circle', 1, {y: '-1000px', ease: Bounce.easeOut}, 2);
+
+    window.setTimeout(function() {
+      group.setAttribute('filter', 'url(#MyFilter)');
+    }, 6500);
+
+    //Girafe
+    window.setTimeout(function() {
+      gir1.classList.add('in');
+    }, 8500);
+    window.setTimeout(function() {
+      bubble.classList.add('in');
+    }, 11000);
+
+    window.setTimeout(function() {
+      gir1.classList.add('out');
+    }, 12500);
+
+    window.setTimeout(function() {
+      bubble.classList.add('out');
+    }, 14000);
+
+    TweenMax.to('#wave', 5, {x: '-800px', y: '250px', repeat: 5, yoyo: true});
+    TweenMax.fromTo('#cloud', 5, {x: '-500px', y: '130px', ease: SteppedEase.easeIn, delay: 1}, {x: '550px', ease: SteppedEase.easeIn, delay: 1});
+    TweenMax.to('#cloud', 1, {scale: '1.5', ease: Bounce.easeOut, yoyoEase:Power2.easeOut, delay: 6});
+
+  </script>
+
+</html>
