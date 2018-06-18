@@ -265,6 +265,10 @@
     TweenMax.fromTo('#cloud', 5, {x: '-500px', y: '130px', ease: SteppedEase.easeIn, delay: 1}, {x: '550px', ease: SteppedEase.easeIn, delay: 1});
     TweenMax.to('#cloud', 1, {scale: '1.5', ease: Bounce.easeOut, yoyoEase:Power2.easeOut, delay: 6});
 
+    window.setInterval(function() {
+      window.location.reload(true);
+    }, 34000);
+    
   </script>
 
 </html>
