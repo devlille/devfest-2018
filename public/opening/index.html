@@ -245,21 +245,21 @@
       group.setAttribute('filter', 'url(#MyFilter)');
     }, 6500);
 
-    //Girafe
+   //Girafe
     window.setTimeout(function() {
       gir1.classList.add('in');
-    }, 8500);
+    }, 10500);
     window.setTimeout(function() {
       bubble.classList.add('in');
-    }, 11000);
+    }, 13000);
 
     window.setTimeout(function() {
       gir1.classList.add('out');
-    }, 12500);
+    }, 14500);
 
     window.setTimeout(function() {
       bubble.classList.add('out');
-    }, 14000);
+    }, 16000);
 
     TweenMax.to('#wave', 5, {x: '-800px', y: '250px', repeat: 5, yoyo: true});
     TweenMax.fromTo('#cloud', 5, {x: '-500px', y: '130px', ease: SteppedEase.easeIn, delay: 1}, {x: '550px', ease: SteppedEase.easeIn, delay: 1});
@@ -267,7 +267,7 @@
 
     window.setInterval(function() {
       window.location.reload(true);
-    }, 34000);
+    }, 35000);
     
   </script>
 
