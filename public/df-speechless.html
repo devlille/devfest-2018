@@ -1,0 +1,25 @@
+<dom-module id="df-speechless">
+
+    <style include="shared-styles"></style>
+
+    <template>
+        <section>
+            <article>
+                <h2>Redirection en cours</h2>
+
+                <p class="justified">
+                    Si la vous n'êtes pas redirigés automatiquement, merci de suivre ce lien : 
+                    <a href="https://goo.gl/forms/v77dZq87xT1LienW2">https://goo.gl/forms/v77dZq87xT1LienW2</a>
+                </p>
+            </article>
+        </section>
+    </template>
+    <script>
+        Polymer({
+            is: 'df-speechless',
+            ready: function() {
+                window.location.href = "https://goo.gl/forms/v77dZq87xT1LienW2";
+            }
+        });
+    </script>
+</dom-module>
