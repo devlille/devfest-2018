@@ -34,7 +34,7 @@
                 padding: 32px 25%;
             }
 
-            footer > * {
+            footer>* {
                 margin: 4px;
             }
 
@@ -53,21 +53,12 @@
         </style>
 
         <app-location route="{{route}}" use-hash-as-path></app-location>
-        <app-route
-                route="{{route}}"
-                pattern="/:page"
-                data="{{routeData}}"
-                tail="{{subroute}}"></app-route>
+        <app-route route="{{route}}" pattern="/:page" data="{{routeData}}" tail="{{subroute}}"></app-route>
 
-        <df-header
-                page="{{page}}">
+        <df-header page="{{page}}">
         </df-header>
 
-        <iron-pages
-                selected="[[page]]"
-                attr-for-selected="name"
-                fallback-selection="view404"
-                role="main">
+        <iron-pages selected="[[page]]" attr-for-selected="name" fallback-selection="view404" role="main">
             <df-home name="home"></df-home>
             <df-schedule name="schedule"></df-schedule>
             <df-speakers name="speakers"></df-speakers>
@@ -82,13 +73,23 @@
 
         <footer>
             <span>Le Devfest Lille est organis&eacute; par le</span>
-            <a href="http://www.meetup.com/GDG-Lille"><img class="gdg-logo" src="./images/GDG_Lille_Logo.png"></a>
+            <a href="http://www.meetup.com/GDG-Lille">
+                <img class="gdg-logo" src="./images/GDG_Lille_Logo.png">
+            </a>
             <a href="mailto:contact@gdglille.org">Contactez-nous !</a>
+            <a href="#/speechless">Speechless</a>
+            <a href="#/faq">FAQ</a>
             <a href="../../archives/2017/index.html" target="_blank">Edition 2017</a>
             <div class="social">
-                <a href="https://twitter.com/gdglille"><img src="./images/twitter.png"></a>
-                <a href="https://www.facebook.com/GoogleDeveloperGroupLille/"><img src="./images/facebook.png"></a>
-                <a href="https://www.linkedin.com/company/gdg-lille/"><img src="./images/linkedin.png"></a>
+                <a href="https://twitter.com/gdglille">
+                    <img src="./images/twitter.png">
+                </a>
+                <a href="https://www.facebook.com/GoogleDeveloperGroupLille/">
+                    <img src="./images/facebook.png">
+                </a>
+                <a href="https://www.linkedin.com/company/gdg-lille/">
+                    <img src="./images/linkedin.png">
+                </a>
             </div>
         </footer>
     </template>

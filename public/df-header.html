@@ -38,18 +38,27 @@
 				font-size: 0.9em;
 				text-align: center;
 				color: #000;
-				background-color: rgba(255,255,255,.6);
+				background-color: rgba(255, 255, 255, .6);
 				padding: 0.8rem;
 				margin-bottom: 1rem;
 				margin-bottom: 2vh;
-				box-shadow: 0 0 5px rgba(0,0,0,.5);
+				box-shadow: 0 0 5px rgba(0, 0, 0, .5);
 			}
-			div.header-cta-buttons [role="button"]:hover {box-shadow: none; cursor: pointer;}
+
+			div.header-cta-buttons [role="button"]:hover {
+				box-shadow: none;
+				cursor: pointer;
+			}
+
 			h1 {
 				order: 1;
 				width: 30%;
 			}
-			div.header-cta-buttons {order: 2;}
+
+			div.header-cta-buttons {
+				order: 2;
+			}
+
 			p.rdv {
 				order: 3;
 				width: 100%;
@@ -59,11 +68,13 @@
 				padding: 0.3em 0;
 				margin-top: 2rem;
 				margin-top: 3vh;
-				border-top: 1px dotted rgba(255,255,255,.8);
-				border-bottom: 1px dotted rgba(255,255,255,.8);
+				border-top: 1px dotted rgba(255, 255, 255, .8);
+				border-bottom: 1px dotted rgba(255, 255, 255, .8);
 			}
 
-			.place::before {content: " - ";}
+			.place::before {
+				content: " - ";
+			}
 
 			#tabsContent {
 				display: flex;
@@ -71,9 +82,13 @@
 				align-items: center;
 				color: #FFF;
 				background: #A31E24;
-				border-top: 1px solid rgba(255,255,255,.8);
+				border-top: 1px solid rgba(255, 255, 255, .8);
 			}
-			div.tab-content {position: relative;}
+
+			div.tab-content {
+				position: relative;
+			}
+
 			a.df-header {
 				display: block;
 				min-height: 30px;
@@ -84,7 +99,12 @@
 				background: #A31E24;
 				padding: 0 0.5rem;
 			}
-			a.df-header img {position: relative; top: 0.2em;}
+
+			a.df-header img {
+				position: relative;
+				top: 0.2em;
+			}
+
 			a.df-header::after {
 				display: block;
 				position: absolute;
@@ -93,21 +113,36 @@
 				bottom: -6px;
 				left: 0;
 				content: "";
-				background-color: rgba(255,255,255,0);
+				background-color: rgba(255, 255, 255, 0);
 			}
-			[aria-selected=false] a.df-header::after {background-color: rgba(255,255,255,0);}
-			[aria-selected=true] a.df-header::after {background-color: #19A6BD;}
-			a.df-header:hover::after {background-color: #19A6BD;}
 
-			#tabsContent paper-tab:first-of-type a.df-header {width: 20px;}
+			[aria-selected=false] a.df-header::after {
+				background-color: rgba(255, 255, 255, 0);
+			}
+
+			[aria-selected=true] a.df-header::after {
+				background-color: #19A6BD;
+			}
+
+			a.df-header:hover::after {
+				background-color: #19A6BD;
+			}
+
+			#tabsContent paper-tab:first-of-type a.df-header {
+				width: 20px;
+			}
 
 			@media screen and (min-width: 1250px) {
 				h1 {
 					width: 192px;
 					margin-top: 105px;
 				}
-				#tabsContent {padding: 0 20%;}
-				div.header-cta-content {position: static;}
+				#tabsContent {
+					padding: 0 20%;
+				}
+				div.header-cta-content {
+					position: static;
+				}
 				div.header-cta {
 					position: relative;
 					min-height: 470px;
@@ -133,19 +168,28 @@
 					margin: 0;
 					border: none;
 				}
-				p.rdv strong {display: block; font-size: 150%;}
-				p.rdv span {display: block;}
-				.place {margin-top: 3rem;}
-				.place::before {content: none;}
+				p.rdv strong {
+					display: block;
+					font-size: 150%;
+				}
+				p.rdv span {
+					display: block;
+				}
+				.place {
+					margin-top: 3rem;
+				}
+				.place::before {
+					content: none;
+				}
 			}
 
-            .nav {
+			.nav {
 				height: 64px;
 				margin: 0;
 				padding: 0;
 				text-align: center;
 				background-color: var(--primary-color);
-				box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+				box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
 			}
 
 			.nav paper-tabs {
@@ -156,7 +200,7 @@
 				max-width: 565px;
 			}
 
-			@media screen and (max-width: 600px){
+			@media screen and (max-width: 600px) {
 				.nav paper-tabs {
 					overflow-x: scroll;
 				}
@@ -164,11 +208,11 @@
 
 			.nav paper-tab {
 				width: 33%;
-   	 		}
+			}
 
 			.nav paper-tab a {
 				list-style: none;
-   	 		    vertical-align: top;
+				vertical-align: top;
 			}
 
 			.nav a {
@@ -177,10 +221,10 @@
 				color: #fff;
 				font-weight: 300;
 				margin: 0 5px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        white-space: pre-line;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				white-space: pre-line;
 			}
 
 			.nav .icon a {
@@ -208,69 +252,77 @@
 			}
 		</style>
 
-      <header>
-		<app-toolbar class="style-scope df-header x-scope app-toolbar-0">
-			<div class="header-cta style-scope df-header">
-				<div class="header-cta-content style-scope df-header">
-					<h1><img class="logo style-scope df-header" src="images/logo.svg"></h1>
-					<p class="rdv"><strong>21 juin</strong> 2018 <span class="place"><strong>IMT</strong> Lille-Douai</span></p>
-					<div class="header-cta-buttons style-scope df-header">
-						<paper-button raised class="primary style-scope df-header x-scope paper-button-0" onclick="navigateToYurplan(this)">Inscription</paper-button>
-						<paper-button raised class="primary style-scope df-header x-scope paper-button-0" onclick="navigateToAgenda(this)">Ajouter à l'agenda</paper-button>
-						<paper-button raised class="primary style-scope df-header x-scope paper-button-0" onclick="navigateToCFP(this)">CFP</paper-button>
+		<header>
+			<app-toolbar class="style-scope df-header x-scope app-toolbar-0">
+				<div class="header-cta style-scope df-header">
+					<div class="header-cta-content style-scope df-header">
+						<h1>
+							<img class="logo style-scope df-header" src="images/logo.svg">
+						</h1>
+						<p class="rdv">
+							<strong>21 juin</strong> 2018
+							<span class="place">
+								<strong>IMT</strong> Lille-Douai</span>
+						</p>
+						<div class="header-cta-buttons style-scope df-header">
+							<paper-button raised class="primary style-scope df-header x-scope paper-button-0" onclick="navigateToYurplan(this)">Inscription</paper-button>
+							<paper-button raised class="primary style-scope df-header x-scope paper-button-0" onclick="navigateToAgenda(this)">Ajouter à l'agenda</paper-button>
+							<paper-button raised class="primary style-scope df-header x-scope paper-button-0" onclick="navigateToCFP(this)">CFP</paper-button>
+						</div>
 					</div>
 				</div>
-			</div>
-		</app-toolbar>
-        <app-box threshold="470" class="style-scope df-header x-scope app-box-0">
-			<div id="background" class="style-scope app-box">
-				<div id="backgroundFrontLayer" class="style-scope app-box">
+			</app-toolbar>
+			<app-box threshold="470" class="style-scope df-header x-scope app-box-0">
+				<div id="background" class="style-scope app-box">
+					<div id="backgroundFrontLayer" class="style-scope app-box">
 
+					</div>
 				</div>
-			</div>
-			<div id="contentContainer" class="style-scope app-box ">
-				<section role="navigation" class="nav style-scope df-header">
-					<paper-tabs selected="[[page]]" attr-for-selected="name" class="drawer-list style-scope df-header x-scope paper-tabs-0" role="navigation">
-						<paper-tab name="home" class="icon">
-							<a href="#/home">
-								<img src="/images/logo-devfest-light-white.svg" />
-							</a>
-						</paper-tab>
-						<paper-tab name="speakers"><a href="#/speakers">Speakers</a></paper-tab>
-						<paper-tab name="schedule"><a href="#/schedule">Planning</a></paper-tab>
-						<paper-tab name="speechless"><a href="#/speechless">Speechless</a></paper-tab>
-						<paper-tab name="faq"><a href="#/faq">FAQ</a></paper-tab>
-					</paper-tabs>
-				</section>
-			</div>
-        </app-box>
-      </header>
+				<div id="contentContainer" class="style-scope app-box ">
+					<section role="navigation" class="nav style-scope df-header">
+						<paper-tabs selected="[[page]]" attr-for-selected="name" class="drawer-list style-scope df-header x-scope paper-tabs-0" role="navigation">
+							<paper-tab name="home" class="icon">
+								<a href="#/home">
+									<img src="/images/logo-devfest-light-white.svg" />
+								</a>
+							</paper-tab>
+							<paper-tab name="speakers">
+								<a href="#/speakers">Speakers</a>
+							</paper-tab>
+							<paper-tab name="schedule">
+								<a href="#/schedule">Planning</a>
+							</paper-tab>
+						</paper-tabs>
+					</section>
+				</div>
+			</app-box>
+		</header>
 	</template>
 
 	<script>
-    Polymer({
-      is: 'df-header'
-    });
+		Polymer({
+			is: 'df-header'
+		});
 
-    function navigateToYurplan(element) {
-        // Wait for ripple to finish.
-        element.addEventListener('transitionend', function (e) {
-            location.href = 'https://www.billetweb.fr/devfest-lille-2018';
-        });
-    }
+		function navigateToYurplan(element) {
+			// Wait for ripple to finish.
+			element.addEventListener('transitionend', function (e) {
+				location.href = 'https://www.billetweb.fr/devfest-lille-2018';
+			});
+		}
 
-    function navigateToAgenda(element) {
-        // Wait for ripple to finish.
-        element.addEventListener('transitionend', function (e) {
-            location.href = 'https://calendar.google.com/calendar/r/eventedit?text=Devfest+Lille&dates=20180621T070000Z/20180621T170000Z&details=Plus+d%27infos+ici:+https://devfest.gdglille.org&location=IMT+Lille+Douai+20+Rue+Guglielmo+Marconi+59650+Villeneuve-d%27Ascq&sf=true&output=xml#eventpage_6';
-        });
-    }
+		function navigateToAgenda(element) {
+			// Wait for ripple to finish.
+			element.addEventListener('transitionend', function (e) {
+				location.href = 'https://calendar.google.com/calendar/r/eventedit?text=Devfest+Lille&dates=20180621T070000Z/20180621T170000Z&details=Plus+d%27infos+ici:+https://devfest.gdglille.org&location=IMT+Lille+Douai+20+Rue+Guglielmo+Marconi+59650+Villeneuve-d%27Ascq&sf=true&output=xml#eventpage_6';
+			});
+		}
 
-	function navigateToCFP(element) {
-        // Wait for ripple to finish.
-        element.addEventListener('transitionend', function (e) {
-            location.href = 'https://devfestlille.cfp.io/#/dashboard';
-        });
-    }
-  </script>
+		function navigateToCFP(element) {
+			// Wait for ripple to finish.
+			element.addEventListener('transitionend', function (e) {
+				location.href = 'https://devfestlille.cfp.io/#/dashboard';
+			});
+		}
+	</script>
 </dom-module>
